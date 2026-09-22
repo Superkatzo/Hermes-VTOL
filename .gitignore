@@ -1,0 +1,154 @@
+# ============================================================
+# Hermes-VTOL — .gitignore
+# ============================================================
+
+# Generell
+*~
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Build/Output
+/build/*
+!/build/.gitkeep
+!/build/exports/.gitkeep
+!/build/simulations/.gitkeep
+
+# ============================================================
+# CAD (Fusion 360, Onshape)
+# ============================================================
+# Fusion 360 — lokale Caches
+*.f3d
+*.f3z
+*.fbm
+*.fusion360
+*.cam360
+*.sim360
+*.drawing360
+*.recovery
+*.log
+
+# Onshape — Part Studios / Assemblies werden in Cloud gespeichert
+# Lokale Exports ggf. versionieren
+*.onshape
+
+# Generische CAD-Exchanges
+*.step.bak
+*.iges.bak
+*.x_t.bak
+*.x_b.bak
+*.3dxml.bak
+
+# ============================================================
+# Aerodynamik (OpenVSP, XFLR5)
+# ============================================================
+# OpenVSP — temporäre Berechnungsdateien
+*.vsp3~
+*.vspa
+*.vspb
+*.vspc
+*.degen
+*.adb
+*.history
+*.compgeom
+*.polar
+*.lod
+*.polar.txt
+*.res
+
+# XFLR5 — temporäre Dateien
+*.wpa
+*.xfl
+*.xfoil
+*~lock*
+
+# ============================================================
+# CNC / Fertigung
+# ============================================================
+# G-Code (groß, rekonstruierbar aus CAM)
+*.gcode
+*.nc
+*.tap
+*.cnc
+*.ngc
+*.mpf
+*.h
+
+# 3D-Druck-Slicer-Profile
+*.curaprofile
+*.3mf
+*.form
+*.sl1
+*.sl1s
+*.chitubox
+*.ctb
+*.cbddlp
+*.photon
+
+# ============================================================
+# Bilder / Renderings
+# ============================================================
+# Renderings speichern wir, aber temporäre Previews ignorieren
+*_prev.png
+*_thumb.png
+*.psd
+*.ai
+*.sketch
+
+# ============================================================
+# Software-Entwicklung
+# ============================================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# C/C++ (PX4-Build-Artefakte)
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+cmake-build-*/
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================
+# Geheimnisse / Lokal
+# ============================================================
+# Persönliche Daten NIEMALS committen
+.env
+.env.*
+*.pem
+*.key
+*.crt
+secrets.yaml
+local_config.yaml
+
+# Downloads / temporäre Inhalte
+/Downloads/
+/Desktop.ini

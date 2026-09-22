@@ -1,0 +1,98 @@
+name: Lastenheft Validator
+
+on:
+  push:
+    paths:
+      - '01_Dokumentation/Lastenheft/**'
+  pull_request:
+    paths:
+      - '01_Dokumentation/Lastenheft/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Check required sections
+        run: |
+          python << 'EOF'
+          import sys
+          from pathlib import Path
+
+          lh_path = Path('01_Dokumentation/Lastenheft/Lastenheft-VTOL-Zivildrohne.md')
+          if not lh_path.exists():
+              print(f"❌ Lastenheft nicht gefunden: {lh_path}")
+              sys.exit(1)
+
+          content = lh_path.read_text(encoding='utf-8')
+
+          # Required sections (sanity checks for canonical structure)
+          required = [
+              "# Lastenheft",
+              "## 1. Projektübersicht",
+              "## 2. Missionsprofil",
+              "## 3. Technische Spezifikation",
+              "## 4. Payload-System",
+              "## 5. Sicherheitsanforderungen",
+              "## 6. Tests",
+              "## 7. Wartung",
+              "## 8. Anhänge",
+              "## 9. Offene Punkte",
+          ]
+
+          missing = [s for s in required if s not in content]
+          if missing:
+              print(f"❌ Fehlende Abschnitte: {missing}")
+              sys.exit(1)
+
+          # Required data values
+          data_checks = {
+              "MTOM 16,0 kg": "16,0 kg",
+              "Schwebeschub-Faktor 2,10×": "2,10×",
+              "P60 KV170 Motor": "P60 KV170",
+              "MN501-S KV340 Pusher": "MN501-S KV340",
+              "14S3P Akku": "14S3P",
+              "14S2P Akku": "14S2P",
+              "Wortmann FX 63-137 Profil": "FX 63-137",
+          }
+
+          data_missing = []
+          for label, value in data_checks.items():
+              if value not in content:
+                  data_missing.append(f"{label} ({value})")
+
+          if data_missing:
+              print(f"❌ Fehlende Pflichtwerte: {data_missing}")
+              sys.exit(1)
+
+          print(f"✅ Lastenheft-Validierung OK ({len(content)} Zeichen)")
+          EOF
+
+      - name: Statistics
+        run: |
+          python << 'EOF'
+          from pathlib import Path
+          p = Path('01_Dokumentation/Lastenheft/Lastenheft-VTOL-Zivildrohne.md')
+          content = p.read_text(encoding='utf-8')
+          lines = content.splitlines()
+          words = content.split()
+          tables = content.count('|---')
+          sections = sum(1 for l in lines if l.startswith('## '))
+
+          print(f"📊 Lastenheft-Statistik:")
+          print(f"   - Zeilen: {len(lines)}")
+          print(f"   - Wörter: {len(words)}")
+          print(f"   - Tabellen: {tables}")
+          print(f"   - Hauptabschnitte: {sections}")
+          EOF
