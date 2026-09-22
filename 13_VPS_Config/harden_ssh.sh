@@ -26,8 +26,10 @@ GSSAPIAuthentication no
 
 # Zusätzliche Härtung
 X11Forwarding no
-AllowTcpForwarding no
+AllowTcpForwarding local
 AllowAgentForwarding no
+AllowStreamLocalForwarding no
+GatewayPorts no
 MaxAuthTries 3
 MaxSessions 3
 LoginGraceTime 30
