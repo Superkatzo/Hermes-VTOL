@@ -1,0 +1,5 @@
+name,source_file,n_points,max_thickness,max_thickness_pos,max_camber,max_camber_pos,leading_edge_radius,trailing_edge_thickness
+E423,eppler423.dat,71,11.78,14.0,5.81,14.0,0.005,0.0
+WORTMANN FX 63-137 AIRFOIL,fx63137.dat,97,13.71,31.0,5.85,46.0,0.011,0
+MH 114  13.02%,mh114.dat,67,13.06,30.0,6.13,33.0,0.005,0.0
+NACA 4412,naca4412.dat,35,12.02,30.0,4.0,40.0,0.03,0.26
