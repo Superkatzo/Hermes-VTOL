@@ -58,6 +58,7 @@ Hermes-VTOL/
 ├── 10_Beschaffung/            Lieferanten, Datenblätter, Bestellungen
 ├── 11_Bilder_Renderings/      CAD-Renderings, Prototyp-Fotos
 ├── 12_Skripte_Tools/          Python-Simulationen, OpenVSP-Batch, CAD-Makros
+├── 13_VPS_Config/             Hostinger-VPS-Setup (Hermes-Agent-Instanz)
 ├── build/                     Generierte Outputs (Git-ignored)
 └── .github/                   CI/CD Workflows + Issue-Templates
 ```
