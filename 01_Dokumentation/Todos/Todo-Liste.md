@@ -13,10 +13,19 @@
 
 ## 🔴 Aktuell in Arbeit (Heute / Morgen)
 
+### Job #0 — Komplett auf VPS umstellen (SECURITY, 2026-09-22)
+- [ ] **MiniMax-Account auf VPS-Hermes ist der einzige** — kein lokaler MiniMax-Login mehr auf PC/Laptop
+- [ ] **Hermes-Desktop-App auf PC: VPS-Profil nutzen** (nicht lokales Profil) — Desktop-App wird zum reinen Client
+- [ ] **Hermes-Desktop-App auf Laptop: VPS-Profil nutzen** — Laptop darf KEINEN direkten MiniMax-Zugang haben
+- [ ] **Lokale Tokens entfernen/prüfen** — `MEMORY.md` auf PC enthält keine Credentials mehr (oder Account abmelden)
+- [ ] **GitHub-Token nur auf VPS** — lokaler `gh auth` nicht nötig, PC pusht über VPN oder behält nur Lese-Rechte
+- [ ] **SSH-Keys für VPS bleiben lokal** (PC braucht sie für Tunnel) — sind ok, weil VPS-spezifisch
+- [ ] **Containment-Ziel erreicht:** Agent-Bugs beschränken sich auf VPS, niemals auf PC/Laptop
+
 ### Job #1 — Experten-Bot-Team für VTOL (2026-09-22)
 - [ ] **Aero-Wing-Bot erstellen** — Persona: Aerodynamik + Profil-Design (Tragflügel, XFLR5, OpenVSP, Polaren, Reynolds, Stall, Böen-Lasten). Verweist bei Struktur/Antrieb/Avionik auf andere Bots.
 - [ ] **Regulatory-Bot erstellen** — Persona: Regulatorik + Zulassung (EU/EASA, USA/FAA, SORA, Pilot-Lizenzen, Versicherung, Drohnenklassen). Verweist bei technischen Fragen auf andere Bots.
-- [ ] **Profile in Hermes anlegen** (PC oder VPS — siehe Klärung)
+- [ ] **Profile in Hermes anlegen** (VPS bevorzugt nach Job #0)
 - [ ] **Persona-Dokumente** für jeden Bot erstellen (Rollen, Tools, Ausschlüsse)
 - [ ] **Wissen einspeisen** (1. Konversation pro Bot mit Domänenwissen)
 - [ ] **Erste echte Fragen** testen (Aero: „vergleich 4 Profile", Regulatory: „was gilt für 16 kg in DE?")
@@ -168,6 +177,7 @@
 | 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
 | 2026-09-22 | Job #1 hinzugefügt: Aero-Wing-Bot + Regulatory-Bot erstellen |
 | 2026-09-22 | Telegram ↔ GitHub Connection als laufende Aufgabe hinzugefügt (Falscheintrag CAD-Modell-Rebuild korrigiert) |
+| 2026-09-22 | **Job #0 ganz oben hinzugefügt: Komplett auf VPS umstellen (SECURITY)** — wegen Containment-Argument: Agent-Bugs dürfen nie dein lokales System betreffen |
 
 ---
 
