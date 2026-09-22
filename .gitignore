@@ -149,6 +149,10 @@ cmake-build-*/
 secrets.yaml
 local_config.yaml
 
+# Hermes-VPS-Backups (enthalten ADMIN_PASSWORD, AUTH_SECRET etc.)
+/13_VPS_Config/backups/*
+!/13_VPS_Config/backups/.gitkeep
+
 # Downloads / temporäre Inhalte
 /Downloads/
 /Desktop.ini
