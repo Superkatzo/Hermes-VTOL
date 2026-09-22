@@ -1,0 +1,164 @@
+# 📋 Todo-Liste — Hermes-VTOL Projekt
+
+> **Dynamische, lebendige TODO-Liste** für das VTOL-Drohnen-Projekt (ziviler Einsatz).
+> Diese Liste wird **bei jeder Erwähnung im Chat** ergänzt: einfach „speichere dies für später" sagen.
+
+**Verwendung:**
+- Neue Tasks unten anhängen
+- Erledigte mit `[x]` markieren (nicht löschen — Historie behalten)
+- Cron-Jobs können einzelne Sektionen automatisieren
+- Immer mit Datum versehen
+
+---
+
+## 🔴 Aktuell in Arbeit (Heute / Morgen)
+
+- [ ] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — Aufgabe 4+5 ausstehend
+- [ ] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden)
+- [ ] **2 Experten-Bots** erstellen (Aero-Wing-Bot, Regulatory-Bot)
+- [ ] **Memory-Persistenz** testen: Erinnerung geben, neuen Tab öffnen, prüfen
+
+---
+
+## 🟠 VPS & Infrastruktur (Hostinger KVM 1)
+
+- [x] VPS bestellt + bereitgestellt (2026-09-22)
+- [x] SSH-Key generiert + hinterlegt
+- [x] VPS gehärtet (Bootstrap, harden_ssh, setup_firewall)
+- [x] Hermes-Agent läuft
+- [x] MiniMax M3 OAuth eingerichtet
+- [x] Telegram-Bot aktiv
+- [x] Tool-Whitelist gesetzt (computer_use aus)
+- [x] Cron: Health-Monitor (jede Stunde)
+- [x] Cron: Backup (täglich 03:00 UTC)
+- [x] Cron: Update-Check (täglich 04:00 UTC)
+- [x] Backup-Strategie mit Retention
+- [ ] Traefik + HTTPS + eigene Domain (für öffentlichen Zugang)
+- [ ] Watchtower oder Alternative für Container-Auto-Updates
+- [ ] Caddy/Nginx als zweiter Reverse-Proxy für Performance
+
+---
+
+## 🟡 Hermes-Setup & Tools
+
+- [x] Hermes-Desktop-App auf Laptop installiert
+- [x] Laptop-Login via Nous-Portal-Account
+- [x] MiniMax-OAuth auf Laptop aktiv
+- [x] SSH-Keys auf Laptop kopiert
+- [x] SSH-Config auf PC + Laptop mit Port 32768
+- [ ] SSH-Tunnel als Scheduled Task auf Laptop (analog zu PC)
+- [ ] Memory-Tools aktivieren (was soll sich Hermes merken?)
+- [ ] Skill: „vtol-experte" erstellen (sammelt Domänenwissen)
+
+---
+
+## 🟢 VTOL-Design (laufendes Projekt)
+
+### Aerodynamik
+- [ ] **Profil-Vergleich** mit XFLR5: Wortmann FX 63-137 vs. NACA 4412 vs. Eppler 423
+- [ ] **OpenVSP-Modell** aufbauen (Flügel + Rumpf + Ausleger)
+- [ ] **Polaren-Berechnung** für 4 Profile (CL, CD, CM bei Re=300000)
+- [ ] **Stall-Verhalten** dokumentieren
+- [ ] **Böen-Lasten** nach ECS / DIN 8947
+
+### Struktur (CFK)
+- [ ] **Materialauswahl** T800 vs. T700 vs. M40J (Festigkeit/Gewicht/Kosten)
+- [ ] **Laminat-Aufbau** definieren (Biax/Unidirectional-Verhältnis)
+- [ ] **Holm-Dimensionierung** (statische + dynamische Lasten)
+- [ ] **Rippen-Layout** (CNC-Fräsplan)
+- [ ] **Schalenformen** (3D-Druck-Plan)
+- [ ] **FEM-Analyse** mit Fusion 360 oder ANSYS
+
+### Antrieb
+- [ ] **Motor-Auswahl** final (T-Motor P60 KV170 vs. MN501-S KV340 vs. KDE)
+- [ ] **Propeller-Dimensionierung** (15×8 Klappprop?)
+- [ ] **Akku-Konfiguration** final (14S3P vs. 14S4P, Molicel P45B vs. Samsung 40T)
+- [ ] **ESC-Auslegung** (40A vs. 60A, BLHeli-32 vs. KISS)
+- [ ] **Reichweiten-Berechnung** (effektiver Verbrauch, Reserve)
+
+### Avionik & Software
+- [ ] **Flight-Stack-Entscheidung** (PX4 vs. ArduPilot)
+- [ ] **Companion-PC-Auswahl** (NVIDIA Jetson Orin NX 16GB)
+- [ ] **KI-Modell** für Object-Detection (YOLOv8?)
+- [ ] **MAVLink-Routing** (QGroundControl ↔ Companion)
+- [ ] **Telemetrie-Cloud** (an VPS anbinden)
+
+### Payload-Module
+- [ ] **M1 SAR-Modul** (Thermal, Personenerkennung)
+- [ ] **M2 Wildschutz-Modul** (Multispektral, Tiererkennung)
+- [ ] **M3 Behörden-Modul** (Kamera + LiDAR)
+- [ ] **M4 Vermessungs-Modul** (RTK-GPS, Photogrammetrie)
+- [ ] **Universal-Container** (austauschbar, Schnellverschluss)
+
+---
+
+## 🔵 Regulatorik & Zulassung (für Regulatory-Bot)
+
+### EU (EASA)
+- [ ] **Drohnenklassen** (C0-C6) und Pflichten
+- [ ] **MTOM-Klassifizierung** (aktuell 16 kg → Kategorie „offen" oder „speziell"?)
+- [ ] **SORA-Pfad** (Specific Operations Risk Assessment)
+- [ ] **OSO-Anforderungen** (Operational Safety Objectives)
+- [ ] **Pilotenlizenzen** (A1/A3, A2, STS)
+- [ ] **Versicherungs-Pflichten**
+
+### USA (FAA)
+- [ ] **Part 107** (Commercial Drone Operations)
+- [ ] **Remote ID** (Compliance ab 2023)
+- [ ] **Waivers** (für BVLOS, Nacht, Personen)
+- [ ] **LAANC** (Low Altitude Authorization)
+
+### International
+- [ ] **Versicherungs-Vergleich** (HDI, Allianz, Drone-Guard)
+- [ ] **Export-Kontrolle** (falls Komponenten aus USA)
+
+---
+
+## 🟣 Doku & Repo
+
+- [x] Lastenheft v1.1 (MTOM 16 kg, Payload 2,28 kg, Schwebeschub-Faktor 2,10×)
+- [x] Repo-Struktur (13 Verzeichnisse)
+- [x] GitHub Actions (markdown-lint, lastenheft-validator)
+- [ ] **CAD-Modell** (Fusion 360) als STEP + STL in `03_CAD/`
+- [ ] **FEM-Ergebnisse** (Statik, Mode-Shapes) in `04_FEM_Simulation/`
+- [ ] **Test-Protokolle** (Bodentests, Flugtests) in `07_Tests/`
+- [ ] **Bilder & Renderings** in `11_Bilder_Renderings/`
+- [ ] **Drohnenklasse-Doku** (vollständige EU/US-Vorschriften) in `09_Regulatorik/`
+
+---
+
+## ⚪️ Ideen-Pool (nicht eilig)
+
+- Hermes-VPS als **MAVLink-Router** für Live-Telemetrie
+- **Web-UI-Theme** customizen (VTOL-Branding)
+- **Discord-Bot** als Alternative zu Telegram (Community)
+- **Telegram-Bot-Skills**: Skills automatisch bei wichtigen Events triggern
+- **VTOL-3D-Modell** als interaktive WebGL-Ansicht
+- **Open-Source-Veröffentlichung** von Teilen (CFK-Recipes, Software)
+
+---
+
+## 📊 Status-Übersicht
+
+| Bereich | Erledigt | Offen | Total |
+|---------|----------|-------|-------|
+| VPS & Infrastruktur | 11 | 3 | 14 |
+| Hermes-Setup | 5 | 3 | 8 |
+| VTOL-Design | 0 | 26 | 26 |
+| Regulatorik | 0 | 11 | 11 |
+| Doku & Repo | 3 | 5 | 8 |
+| Ideen-Pool | 0 | 6 | 6 |
+| **Total** | **19** | **54** | **73** |
+
+---
+
+## 📅 Chronik
+
+| Datum | Was hinzugefügt wurde |
+|-------|------------------------|
+| 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
+| TBD | Weitere Einträge folgen |
+
+---
+
+> **Hinweis:** Diese Datei wird **automatisch per Chat aktualisiert**, wenn du „speichere XYZ für später" sagst. Du kannst sie auch manuell editieren oder ich tue es auf Zuruf.
