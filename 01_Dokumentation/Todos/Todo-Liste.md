@@ -25,6 +25,7 @@
 - [ ] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — Aufgabe 4+5 ausstehend
 - [ ] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden)
 - [ ] **Memory-Persistenz** testen: Erinnerung geben, neuen Tab öffnen, prüfen
+- [ ] **Telegram ↔ GitHub Connection einrichten** — Telegram-Bot soll Todo-Liste vom Handy aus ergänzen können (GitHub Personal Access Token auf VPS in .env, Workflow-Regel in Hermes: „speichere X" → push zu GitHub)
 
 ---
 
@@ -143,7 +144,6 @@
 - **Telegram-Bot-Skills**: Skills automatisch bei wichtigen Events triggern
 - **VTOL-3D-Modell** als interaktive WebGL-Ansicht
 - **Open-Source-Veröffentlichung** von Teilen (CFK-Recipes, Software)
-- **CAD-Modell in Fusion 360 nochmal sauber aufbauen** (komplettes VTOL-Modell mit allen Komponenten, Spannweite 2,2–2,4 m, klappbar, CFK-Schale + Rippen + Holm) — User-Anweisung 2026-09-22 nach erstem Tee
 
 ---
 
@@ -167,7 +167,7 @@
 |-------|------------------------|
 | 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
 | 2026-09-22 | Job #1 hinzugefügt: Aero-Wing-Bot + Regulatory-Bot erstellen |
-| 2026-09-22 | Punkt hinzugefügt: CAD-Modell in Fusion 360 sauber neu aufbauen |
+| 2026-09-22 | Telegram ↔ GitHub Connection als laufende Aufgabe hinzugefügt (Falscheintrag CAD-Modell-Rebuild korrigiert) |
 
 ---
 
