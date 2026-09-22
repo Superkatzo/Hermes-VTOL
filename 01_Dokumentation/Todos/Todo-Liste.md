@@ -13,9 +13,17 @@
 
 ## 🔴 Aktuell in Arbeit (Heute / Morgen)
 
+### Job #1 — Experten-Bot-Team für VTOL (2026-09-22)
+- [ ] **Aero-Wing-Bot erstellen** — Persona: Aerodynamik + Profil-Design (Tragflügel, XFLR5, OpenVSP, Polaren, Reynolds, Stall, Böen-Lasten). Verweist bei Struktur/Antrieb/Avionik auf andere Bots.
+- [ ] **Regulatory-Bot erstellen** — Persona: Regulatorik + Zulassung (EU/EASA, USA/FAA, SORA, Pilot-Lizenzen, Versicherung, Drohnenklassen). Verweist bei technischen Fragen auf andere Bots.
+- [ ] **Profile in Hermes anlegen** (PC oder VPS — siehe Klärung)
+- [ ] **Persona-Dokumente** für jeden Bot erstellen (Rollen, Tools, Ausschlüsse)
+- [ ] **Wissen einspeisen** (1. Konversation pro Bot mit Domänenwissen)
+- [ ] **Erste echte Fragen** testen (Aero: „vergleich 4 Profile", Regulatory: „was gilt für 16 kg in DE?")
+
+### Laufende Aufgaben
 - [ ] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — Aufgabe 4+5 ausstehend
 - [ ] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden)
-- [ ] **2 Experten-Bots** erstellen (Aero-Wing-Bot, Regulatory-Bot)
 - [ ] **Memory-Persistenz** testen: Erinnerung geben, neuen Tab öffnen, prüfen
 
 ---
@@ -157,7 +165,7 @@
 | Datum | Was hinzugefügt wurde |
 |-------|------------------------|
 | 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
-| TBD | Weitere Einträge folgen |
+| 2026-09-22 | Job #1 hinzugefügt: Aero-Wing-Bot + Regulatory-Bot erstellen |
 
 ---
 
