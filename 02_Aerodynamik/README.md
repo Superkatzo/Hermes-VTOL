@@ -4,12 +4,13 @@ Aerodynamische Analyse und Modellbildung.
 
 ## Inhalt
 
-| Ordner | Zweck |
-|--------|-------|
+| Ordner/Datei | Zweck |
+|---|---|
 | **XFLR5_Profile/** | Profil-Koordinaten (.dat) für Wortmann FX 63-137, Vergleichsprofile |
 | **XFLR5_Polaren/** | XFLR5-Polaren-Analysen (Cl/Cd/Cm über alpha bei verschiedenen Re) |
 | **OpenVSP_Modell/** | OpenVSP-Modell-Dateien (.vsp3) für das Gesamtdrohnen-Modell |
 | **OpenVSP_Analysen/** | VSPAERO-Ergebnisse (Stability, Control, Surface-Autorität) |
+| **XFLR5-Profil-Vergleich-Input.md** | Vorbereitete Eingabeparameter für Profil-Vergleich (3 Profile × 5 Re-Zahlen × α-Sweep) |
 
 ## Workflow
 
