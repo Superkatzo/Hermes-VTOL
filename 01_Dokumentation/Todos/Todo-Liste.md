@@ -137,6 +137,9 @@
 - [x] Lastenheft v1.1 (MTOM 16 kg, Payload 2,28 kg, Schwebeschub-Faktor 2,10×)
 - [x] Repo-Struktur (13 Verzeichnisse)
 - [x] GitHub Actions (markdown-lint, lastenheft-validator)
+- [ ] **Privates Repo `Hermes-VTOL-CAD` einrichten** — Hybrid-Strategie: STEP/STL/G-Code hier, .f3d-Originale in Fusion-Cloud. Erstellt 2026-09-22.
+- [ ] **Erste CAD-Exporte** aus Fusion 360 (Tragflügel-Rumpf als Test-Exports) — sobald CAD-Modell fertig
+- [ ] **CAD-Versions-Konventionen** im VERSIONS.md des privaten Repos dokumentiert
 - [ ] **CAD-Modell** (Fusion 360) als STEP + STL in `03_CAD/`
 - [ ] **FEM-Ergebnisse** (Statik, Mode-Shapes) in `04_FEM_Simulation/`
 - [ ] **Test-Protokolle** (Bodentests, Flugtests) in `07_Tests/`
