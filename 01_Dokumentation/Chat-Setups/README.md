@@ -1,74 +1,81 @@
-# Themenchats — Setup-Anleitung
+# Themenchats — Setup-Anleitung (2-Chat-Struktur)
 
-> **Zweck:** Statt eines einzigen Mega-Chats, der mit der Zeit instabil wird, arbeitest du in **6 themen-basierten Chats**. Jeder hat ein vorbereitetes Setup-File.
+> **Zweck:** Du arbeitest in **2 themen-basierten Chats**, jeweils an unterschiedlichen Workspaces verankert. Das ist einfacher als 6 Mini-Chats und passt zur natürlichen Arbeitsteilung: **Bauen** vs. **Planen & Verkaufen**.
 
-## Die 6 Chats
+## Die 2 Chats
 
-| # | Datei | Thema | Wann rein |
+| # | Datei | Thema | Workspace |
 |---|---|---|---|
-| 0 | [`00-Strategie-Planung.md`](./00-Strategie-Planung.md) | 🧠 **Dirigent** — Wochenrückblick, Priorisierung, Architektur-Entscheidungen, Bot-Team-Setup | 1× pro Woche, oder bei großen Entscheidungen |
-| 1 | [`01-Aerodynamik.md`](./01-Aerodynamik.md) | 🪶 Profil-Auswahl, Polaren, OpenVSP, Stall, Böen | Wenn du am Flügel arbeitest |
-| 2 | [`02-Tech-Stack-Mechanik.md`](./02-Tech-Stack-Mechanik.md) | ⚙️ CAD, CFK, FEM, Antrieb, Avionik, Payload | Wenn du an Hardware/Software arbeitest |
-| 3 | [`03-Regulatorik-CE.md`](./03-Regulatorik-CE.md) | 📜 EASA, CE, SORA, FAA, Pilot-Lizenzen, Versicherung | Wenn du Behörden-/Verkaufsthemen klären musst |
-| 4 | [`04-Vermarktung-Produkthaftung.md`](./04-Vermarktung-Produkthaftung.md) | 🛒 Käufer-Persona, Pricing, Marketing-Material | Wenn du an Verkaufs-/Marketing-Sachen arbeitest |
-| 5 | [`05-Infra-DevOps.md`](./05-Infra-DevOps.md) | 🏗️ VPS, Cron, Telegram, Git, Bug, Containment | Wenn du an Server-Setup/Pipeline arbeitest |
+| 1 | [`NEU-01-Technik-Hardware.md`](./NEU-01-Technik-Hardware.md) | 🛠️ **Technik & Hardware** — Aerodynamik, CAD, CFK, FEM, Antrieb, Avionik, Payload | `VTOL-Projekt` (Repo-Root) |
+| 2 | [`NEU-02-Strategie-Umfeld.md`](./NEU-02-Strategie-Umfeld.md) | 🧠 **Strategie & Umfeld** — Strategie, Regulatorik, CE, Vermarktung, Infra | `VTOL-Doku` (`01_Dokumentation/`) |
 
 ---
 
-## So legst du einen neuen Chat an
+## So legst du die 2 neuen Chats an
 
-### Schritt 1: Im Hermes-Desktop neuen Tab öffnen
-- Sidebar → `+ New Chat` (oder Tastenkürzel, je nach Version)
-- **Erste Nachricht = Setup-Text** aus dem jeweiligen `.md`
+### Chat 1: 🛠️ Technik & Hardware
+1. Workspace `VTOL-Projekt` aktivieren
+2. `+ New Chat`
+3. Inhalt aus `NEU-01-Technik-Hardware.md` ab **„Du bist jetzt im Technik & Hardware-Chat …"** reinkopieren
+4. Erste Frage: „Hallo Technik-Bot, lies den Stand aus Projekt-Memory.md nach. Was steht heute an?"
 
-### Schritt 2: Setup-Text reinkopieren
-Öffne die `.md`-Datei in deinem Editor, **kopiere den kompletten Inhalt ab „Du bist jetzt im Themenchat…"**, und füge ihn als **erste Nachricht** in den neuen Chat ein.
-
-Der Bot liest dann den Text, lädt `01_Dokumentation/Projekt-Memory.md`, und ist betriebsbereit.
-
-### Schritt 3: Brücke schlagen (optional aber empfohlen)
-Wenn du aus einem anderen Themenchat rüber willst, sag dem neuen Chat:
-> „Brücke aus Themenchat [Name]: wir hatten entschieden, dass X. Lade bitte `01_Dokumentation/Projekt-Memory.md` und lies kurz die letzten Commits im betroffenen Bereich."
-
----
-
-## Reihenfolge zum Aufsetzen (heute)
-
-Du brauchst nicht alle 6 heute. Empfohlene Reihenfolge nach Dringlichkeit:
-
-1. **🧠 Strategie & Planung** (`00`) — der Dirigent, hier fängst du normalerweise an
-2. **🏗️ Infra & DevOps** (`05`) — wenn du den Bug noch fixen oder Containment weitertreiben willst
-3. **🪶 Aerodynamik** (`01`) — wenn du am Profil-Vergleich weiterarbeiten willst
-4. **⚙️ Tech-Stack** (`02`) — wenn du am CAD/Antrieb weiterarbeiten willst
-5. **📜 Regulatorik** (`03`) — wenn du CE/SORA vorbereiten willst
-6. **🛒 Vermarktung** (`04`) — für den späteren Verkaufsaufbau
+### Chat 2: 🧠 Strategie & Umfeld
+1. Workspace `VTOL-Doku` aktivieren
+2. `+ New Chat`
+3. Inhalt aus `NEU-02-Strategie-Umfeld.md` ab **„Du bist jetzt im Strategie & Umfeld-Chat …"** reinkopieren
+4. Erste Frage: „Hallo Strategie-Bot, lies den Stand aus Projekt-Memory.md + Todo-Liste nach. Wo stehen wir?"
 
 ---
 
-## Brücke zwischen den Chats: Die Todo-Liste
+## Wann welcher Chat?
 
-Die **`01_Dokumentation/Todos/Todo-Liste.md`** ist die **Wahrheit** zwischen den Chats. Jeder Bot liest sie am Anfang und ergänzt sie am Ende. Wenn du in einem Chat eine Entscheidung triffst, soll er:
+### 🛠️ Technik & Hardware
+- Profil-Vergleich / Polaren rechnen
+- OpenVSP-Modell aufbauen
+- CAD in Fusion 360
+- FEM-Mesh & Lastanalyse
+- Motor/Prop/Akku auswählen
+- PX4/ArduPilot konfigurieren
+- Payload-Module konstruieren
+- **Alles, was eine Bauplan- oder Spec-Frage ist**
 
-1. Eintrag in Todo-Liste (Chronik-Zeile)
-2. Commit + Push
-3. Im Strategie-Chat im nächsten Rückblick erwähnen
+### 🧠 Strategie & Umfeld
+- Wochenrückblick / Priorisierung
+- SORA-Recherche / EASA-C3-Pfad
+- ConOps-Vorlage für Käufer schreiben
+- Marketing-Material / Website-Text
+- VPS-Setup / Cronjob / Bug-Fix
+- Bot-Team-Setup (aero-wing-bot, regulatory-bot)
+- **Alles, was eine Entscheidungs- oder Doku-Frage ist**
 
 ---
 
-## Memory- & Persistenz-Regel (für alle Bots gleich)
+## Brücke zwischen den Chats
 
-- **Hermes-Memory** = nur Quick-Reference (VPS-IP, Hard-Rules, Containment-Ziel) → wird von Hermes automatisch geladen
-- **Repo-Datei `Projekt-Memory.md`** = alles Detaillierte → bei jedem Chat-Start einmal manuell oder per Bot laden
+Die **Todo-Liste** (`01_Dokumentation/Todos/Todo-Liste.md`) ist die Wahrheit zwischen den Chats.
+
+Wenn der Strategie-Bot entscheidet „PX4 statt ArduPilot", schreibt er:
+1. Eintrag in `Entscheidungen.md`
+2. Eintrag in `Todo-Liste.md` (Chronik)
+3. → Im nächsten Technik-Chat sagst du: „Brücke aus Strategie: wir haben auf PX4 entschieden. Lade `01_Dokumentation/Entscheidungen.md` und lies die letzte Entscheidung."
+
+---
+
+## Persistenz-Regel
+
+- **Hermes-Memory** = nur Quick-Reference (VPS-IP, Hard-Rules, Containment-Ziel) → wird automatisch geladen
+- **`01_Dokumentation/Projekt-Memory.md`** = alles Detaillierte → einmal pro Chat-Start laden lassen
 - **Subagent-Sessions** haben kein `memory()` und kein `skills_list` → Persistenz nur via Repo oder finalem Summary
 
 ---
 
-## Pflege der Setup-Files
+## Alte 6-Chat-Variante (archiviert)
 
-Wenn sich etwas Grundsätzliches ändert (neuer Bot, neues Tool, neue Strategie), bitte **die Setup-Files updaten und committen**, nicht nur im Chat erwähnen. So überleben sie auch, wenn ein Bot „den Kontext verliert".
+Die alten `00–05` Setup-Files aus dem ersten Entwurf liegen noch im Repo und sind nicht gelöscht — sie können als Inspiration dienen, falls du später doch feiner trennen willst. Für den normalen Workflow reichen die 2 neuen Chats.
 
 ## Chronik
 
 | Datum | Änderung |
 |---|---|
-| 2026-09-24 | Initiale 6 Setup-Files + diese Anleitung angelegt |
+| 2026-09-24 | Initiale 6 Themenchat-Setups + README angelegt |
+| 2026-09-24 | **Überarbeitet auf 2-Chat-Struktur**: 🛠️ Technik & Hardware + 🧠 Strategie & Umfeld. Alte 6-Setups bleiben archiviert im Repo, README aktualisiert |
