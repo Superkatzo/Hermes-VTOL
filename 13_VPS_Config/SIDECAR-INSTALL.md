@@ -107,6 +107,40 @@ Auf GitHub sollte in `01_Dokumentation/Todos/Todo-Liste.md` ein neuer Eintrag in
 
 ---
 
+## ⚠️ Konflikte mit Hauptbot vermeiden
+
+**Wichtig (Stand 2026-09-23):** Der Sidecar hat jetzt einen **Health-Check** eingebaut, der vor dem Start prüft, ob der Hauptbot-Polling aktiv ist.
+
+### Standard-Verhalten (sicher)
+
+```bash
+python3 /home/hermes/telegram_sidecar.py
+```
+
+Wenn der Hauptbot aktiv ist, **blockiert** der Sidecar mit Exit-Code 1 und klarer Warnung:
+
+```
+HEALTH-CHECK WARNUNG: Hauptbot-Polling wahrscheinlich aktiv!
+Grund: hauptbot_docker_active
+Detail: Container-Hauptbot laeuft ohne Webhook -> wahrscheinlich Polling-Konflikt
+Sidecar wird NICHT gestartet. Verwende --force zum Erzwingen.
+Bessere Loesung: Hauptbot auf Webhook umstellen (siehe Protokoll).
+```
+
+### Erzwungener Start (mit Konflikt)
+
+```bash
+python3 /home/hermes/telegram_sidecar.py --force
+```
+
+**Achtung:** `--force` umgeht den Health-Check. Der Hauptbot wird 20-50s in einer Retry-Schleife gefangen sein, bis der Sidecar wieder stoppt. Nur verwenden, wenn du weißt was du tust (z. B. Sidecar nach Hauptbot-Stop starten).
+
+### Langfristige Lösung
+
+**Hauptbot auf Webhook umstellen** (`TELEGRAM_WEBHOOK_URL=...`). Dann ist Sidecar dauerhaft parallel lauffähig ohne Konflikte. Siehe Vorfall-Protokoll: `01_Dokumentation/Protokolle/Telegram-Bot-Polling-Konflikt-2026-09-23.md`.
+
+---
+
 ## ⚠️ Voraussetzung: GitHub-Auth
 
 Der `telegram_to_github.sh` braucht Auth auf dem VPS, um zu pushen. Siehe `13_VPS_Config/GITHUB-PAT-ANLEITUNG.md` für:
