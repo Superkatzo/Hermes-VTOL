@@ -1,51 +1,30 @@
 #!/bin/bash
-# ============================================================
-# Hermes-VPS Container-Update-Check
-# Prüft verfügbare Image-Updates, OHNE automatisch upzudaten
-# ============================================================
+# Container-Update-Check mit Telegram-Alert
+ALERT="/home/hermes/telegram_alert.sh"
+LOG="/home/hermes/hermes/logs/updates.log"
 
-TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-LOG_FILE="$HOME/hermes/logs/updates.log"
+echo "[$(date)] Update-Check gestartet" >> "$LOG"
 
-mkdir -p "$(dirname "$LOG_FILE")"
-
-log() {
-    echo "[$TIMESTAMP] $1" | tee -a "$LOG_FILE"
-}
-
-log "=== Container-Update-Check gestartet ==="
-
-# === Liste der zu prüfenden Images ===
-IMAGES=(
-    "ghcr.io/hostinger/hvps-hermes-agent:latest"
-    "traefik:latest"
-)
-
-UPDATES_AVAILABLE=0
-
-for IMAGE in "${IMAGES[@]}"; do
-    # Lokale Version (Image-Hash)
-    LOCAL_HASH=$(sudo docker images --format "{{.Repository}}:{{.Tag}} {{.ID}}" 2>/dev/null | grep -F "$IMAGE" | awk '{print $2}' | head -1)
-
-    # Remote-Version (Digest von Docker Hub)
-    if [[ "$IMAGE" == *"ghcr.io"* ]]; then
-        # GitHub Container Registry
-        REGISTRY="ghcr.io"
-    else
-        # Docker Hub
-        REGISTRY="docker.io"
-    fi
-
-    log "Prüfe $IMAGE..."
-
-    # Versuche, das neueste Image zu pullen (ohne laufende Container zu stören)
-    if sudo docker pull "$IMAGE" 2>&1 | grep -q "Status: Image is up to date"; then
-        log "  ✓ $IMAGE ist aktuell"
-    else
-        log "  ⚠️ $IMAGE hat möglicherweise ein Update!"
-        UPDATES_AVAILABLE=$((UPDATES_AVAILABLE + 1))
+UPDATES=""
+for c in $(sudo -S -p '' docker ps --format '{{.Names}}'); do
+    IMAGE=$(sudo -S -p '' docker inspect -f '{{.Config.Image}}' "$c" 2>/dev/null)
+    if [ -z "$IMAGE" ]; then continue; fi
+    
+    # Versuche update-check
+    RESULT=$(sudo -S -p '' docker pull "$IMAGE" 2>&1)
+    if echo "$RESULT" | grep -q "Status: Image is up to date"; then
+        # OK
+        :
+    elif echo "$RESULT" | grep -q "Downloaded\|Pulling"; then
+        UPDATES="${UPDATES}${IMAGE}, "
     fi
 done
 
-log "=== Update-Check abgeschlossen ($UPDATES_AVAILABLE Updates verfügbar) ==="
-log ""
+if [ -n "$UPDATES" ]; then
+    "$ALERT" "WARN" "Container-Updates verfügbar" "Diese Images haben neue Versionen:
+${UPDATES}
+Manuell prüfen mit 'docker ps' und ggf. updaten." > /dev/null
+    echo "[$(date)] Updates gefunden: $UPDATES" >> "$LOG"
+else
+    echo "[$(date)] Alle Container aktuell" >> "$LOG"
+fi
