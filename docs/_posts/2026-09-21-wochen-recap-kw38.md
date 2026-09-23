@@ -12,9 +12,9 @@ excerpt: "Diese Woche: ConOps-Vorlage-SAR.md veröffentlicht, fünf regulatorisc
 
 ---
 
-## 📋 Was diese Woche passiert ist
+## Was diese Woche passiert ist
 
-### 🎯 Strategie-Wechsel
+### Strategie-Wechsel
 
 | Vorher | Nachher |
 |--------|---------|
@@ -102,5 +102,10 @@ Die ConOps-Vorlage ist mein Verkaufs-Trumpf. Der Kosten-Plan zeigt, dass €24k 
 ---
 
 *Morgen-Briefing via Telegram um 10:00 MESZ. Wochen-Rückblick Sonntag-Abend. Bleibt dran.*
+
+<div class="callout-warn">
+  <div class="label">Fragen oder Feedback?</div>
+  <p style="margin: 0.4rem 0 0;">Issue direkt im <a href="https://github.com/Superkatzo/Hermes-VTOL/issues">GitHub-Repo</a> oder im nächsten Recap.</p>
+</div>
 
 **— will, am 21.09.2026**
