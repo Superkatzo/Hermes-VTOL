@@ -1,8 +1,8 @@
 title: "Hermes-VTOL"
 description: "Zivile VTOL-Drohne (Quadplane) für SAR, Wildschutz, Behörden und kommerzielle Inspektion. Open-Source-Dokumentation und Entwicklungs-Tagebuch."
-theme: minima
 author: "willow"
 url: "https://Superkatzo.github.io/Hermes-VTOL"
+baseurl: ""
 
 lang: de
 encoding: UTF-8

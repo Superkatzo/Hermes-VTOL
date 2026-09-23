@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'de' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% feed_meta %}
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="{{ '/' | relative_url }}" class="site-title">🚁 {{ site.title }}</a>
+            <nav class="site-nav">
+                <a href="{{ '/' | relative_url }}">Übersicht</a>
+                <a href="{{ '/wochen-recap-kw38.html' | relative_url }}">Blog</a>
+                <a href="https://github.com/Superkatzo/Hermes-VTOL" target="_blank" rel="noopener">GitHub ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p><strong>{{ site.title }}</strong> — {{ site.description | truncate: 120 }}</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+                📜 <a href="https://github.com/Superkatzo/Hermes-VTOL/blob/main/LICENSE">Lizenz</a>
+                · <a href="https://github.com/Superkatzo/Hermes-VTOL">Quell-Repo</a>
+                · <a href="https://github.com/Superkatzo/Hermes-VTOL/issues">Issues</a>
+            </p>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.8rem;">
+                Hard-Rules: Zivil-only · Keine Waffen · Keine Cyberpunk-Ästhetik
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
