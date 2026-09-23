@@ -1,0 +1,22 @@
+[Unit]
+Description=Hermes Telegram Sidecar — leitet "speichere X"-Messages an GitHub weiter
+Documentation=https://github.com/Superkatzo/Hermes-VTOL/blob/main/13_VPS_Config/telegram_sidecar.py
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /home/hermes/telegram_sidecar.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/home/hermes/logs/telegram_sidecar.log
+StandardError=append:/home/hermes/logs/telegram_sidecar.log
+
+# Sicherheit
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target
