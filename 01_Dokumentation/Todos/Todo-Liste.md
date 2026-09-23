@@ -181,6 +181,7 @@
 
 | Datum | Was hinzugefügt wurde |
 |---
+| 2026-09-23 21:51 UTC | Via Telegram: Telegram-Sidecar FINAL-TEST: Trenner intakt, Zeile in Chronik-Tabelle |
 | 2026-09-23 21:51 UTC | Via Telegram: Telegram-Sidecar FIX-TEST: Chronik-Eintrag korrekt platziert |----|------------------------|
 | 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
 | 2026-09-22 | Job #1 hinzugefügt: Aero-Wing-Bot + Regulatory-Bot erstellen |
