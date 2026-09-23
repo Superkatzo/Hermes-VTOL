@@ -1,225 +1,223 @@
-# 📜 Regulatorische Kurzfassung — was du als Drohnen-Betreiber wissen musst
+# 📜 Regulatorische Kurzfassung — aus Hersteller/Verkäufer-Sicht
 
-> **Diese Kurzfassung ist ein Schnell-Überblick.** Die Original-Dokumente sind
-> rechtlich verbindlich — bei Unsicherheit gilt immer das Original.
->
-> Originale werden lokal gespeichert unter `C:\Users\willow\Documents\EASA\`.
+> **Du verkaufst die Drohne, du fliegst sie nicht.**
+> Das ändert die Pflichten grundlegend — hier sind deine Hersteller-Pflichten.
 
----
-
-## 🎯 In 60 Sekunden: was geht, was geht nicht?
-
-| Darfst du immer? | Darfst du nicht ohne Erlaubnis? |
-|------------------|------------------------------|
-| Indoor fliegen (in deiner eigenen Halle) | Über Menschenmengen |
-| Im Privatgelände (mit Erlaubnis) | In Kontrollzonen (CTR) ohne Freigabe |
-| Auf deinem Feld (wenn dein Land ist) | BVLOS (Beyond Visual Line Of Sight) ohne Waiver |
-| Bis 120 m Höhe in freier Gegend | Über Personen die nicht beteiligt sind |
-| Kleinere Drohnen in offener Klasse | Nachts ohne zusätzliche Beleuchtung |
-| | Über Autobahnen, Bahnlinien |
-| | Über Krankenhäusern, Polizei |
-| | Über Industrie-Anlagen mit Auflagen |
-
-**Für dein 16-kg VTOL mit SAR-Einsatz = „Specific Category" — du brauchst eine SORA-Analyse.**
+**Originale werden lokal gespeichert unter `C:\Users\willow\Documents\EASA\`**.
 
 ---
 
-## 🇪🇺 EU-VO 2019/947 — die Kernregeln
+## 🎯 Dein Standpunkt in 60 Sekunden
 
-### Klassen-Übersicht
+| Als Hersteller/Verkäufer... | Was du NICHT machst |
+|-----------------------------|----------------------|
+| ✅ Drohne designen und produzieren | ❌ Du kaufst keine Operator-Versicherung |
+| ✅ SORA-Vorlage erstellen (Marketing-Hebel) | ❌ Du machst keine Pilot-Lizenz |
+| ✅ ConOps-Vorlage liefern (SAR, Wildschutz etc.) | ❌ Du meldest dich nicht beim LBA als Operator an |
+| ✅ CE-Kennzeichnung vergeben (Klasse C) | ❌ Du fliegst die Drohne selbst |
+| ✅ Produkthaftung tragen | ❌ Du machst keine SAR-Operationen |
+| ✅ Wartungs-/Inspektions-Plan mitliefern | |
+| ✅ Bedienungsanleitung + Sicherheits-Anweisungen | |
+| ✅ Bei Bedarf: Fallschirm, Geo-Fence, Safe-Landing | |
 
-| Klasse | Was | Was du brauchst |
-|-------|-----|-----------------|
-| **Open Category** | Risikoarm, max 25 kg, eingeschränkte Zonen | **Nichts** (außer Versicherung + Registration) |
-| **Specific Category** | Risiko-basiert (SORA) | **SORA-Analyse + LBA-Genehmigung** |
-| **Certified Category** | Wie bemannte Luftfahrt | **Type-Certificate + Lizensierung** |
+**Was du Kunden lieferst: eine „Ready-to-Use-Solution" — Drohne + Vorlagen + Schulungs-Empfehlung.**
 
-### Welche Klasse für deine Drohne?
+---
 
-| Drohneneigenschaft | Klasse |
-|---------------------|--------|
-| <25 kg + nicht über Menschen | oft Open |
-| 16 kg + SAR + Behörden + über Strukturflächen | **Specific** (SORA erforderlich) |
-| >25 kg oder Menschen transportieren | **Certified** |
+## 🏭 Deine Pflichten als Hersteller/Verkäufer
 
-### Operator-Pflichten
+### 1️⃣ Type-Design und Bau
 
-| Was | Wo definiert |
-|-----|-------------|
-| **Registrations-Pflicht** (Operator-Nummer) | Artikel 14 |
-| **EU-Drohnen-Operator-Registrierung** | https://eud.euroavia.eu (über LBA verfügbar) |
-| **Versicherungspflicht** (mind. 750k SZR) | Querverweis zu 785/2004 |
-| **Anwesenheits-Pflicht** (Pilot muss sehen oder beobachten) | Artikel 16 |
-| **Privacy-Schutz** | Artikel 56ff (GDPR-Crossref) |
-
-### Was musst du konkret für dein VTOL?
-
-| Schritt | Aktion |
+| Pflicht | Quelle |
 |---------|--------|
-| 1 | **Beim LBA als Operator registrieren** (Online, kostenlos) |
-| 2 | **e-ID bekommen** (Operator-Number, in DE aufkleben) |
-| 3 | **Haftpflicht-Versicherung abschließen** (mind. 750k Sonderziehungsrechte) |
-| 4 | **SORA-Analyse durchführen** (lassen oder selbst machen) |
-| 5 | **LBA-Bescheid abwarten** (Genehmigung für Specific Category) |
-| 6 | **Eintragung ins Betreiber-Register** der zuständigen Landesluftfahrtbehörde |
+| Drohne nach EU-VO 2019/945 in eine Klasse einordnen (C0-C6) | EU-VO 2019/945 |
+| Sicherheits-Anforderungen einhalten (Schub-Limit, Akku-Schutz, etc.) | EU-VO 2019/945 |
+| Identifikations-System einbauen (Direct Remote Identification) | EU-VO 2019/945 |
+| Geo-Awareness (z. B. eingebauter NO-FLY-Zonen-Sensor) | EU-VO 2019/945, Annex |
+
+### 2️⃣ CE-Kennzeichnung
+
+| Klasse | Was | Beispiel |
+|--------|-----|----------|
+| **Klasse C0** | bis 250 g, in Open Category | Spielzeug-Drohne |
+| **Klasse C1** | bis 80 Joule kinetische Energie, < 900 g | DJI Mini-Style |
+| **Klasse C2** | bis 4 kg, mechanical/electronic ID | Kleine Pro |
+| **Klasse C3** | < 25 kg, Active Geo-Awareness | Mittel-Pro |
+| **Klasse C4** | < 25 kg, kein Flug über Unbeteiligte | Mittel-Pro |
+| **Klasse C5** | 25–100 kg (oder CEPT-Standard) | Größere Drohnen |
+| **Klasse C6** | ähnlich C5, eingeschränkt auf Unterlagen | Speziell |
+
+**Dein 16-kg VTOL fällt wahrscheinlich in C5** (oder sogar in die „Certified Category", wenn es über 25 kg sein sollte oder „manned"-Risiken birgt).
+
+→ Konkret: du brauchst wahrscheinlich **mehr als nur CE**: **EASA Type-Certificate** (oder eine LBA-Genehmigung im Specific Category für 25-150 kg).
+
+### 3️⃣ Produkthaftung
+
+| Was du dokumentieren musst | Wo |
+|----------------------------|-----|
+| Design-Historie | im Qualitäts-Management-System |
+| Material-Liste (BoM) | im Wartungs-Plan |
+| Test-Protokolle (Schub, Vibration, etc.) | intern + beim Kunden |
+| Risiko-Analyse (FMEA) | im Design-Report |
+| Wartungs-Inspektions-Intervalle | im Handbuch |
+| Modifikations-Verbot für Käufer | im AGB/Vertrag |
+
+### 4️⃣ Bedienungsanleitung + Dokumentation
+
+| Lieferumfang | Was |
+|--------------|-----|
+| **Bedienungsanleitung** (multi-language) | Pflicht |
+| **Wartungs-Plan** | Pflicht |
+| **Sicherheits-Anweisungen** | Pflicht |
+| **SORA-Vorlage für SAR** | „Pickup Truck der Lüfte"-Marketing-Hebel |
+| **ConOps-Vorlage für Käufer** | Customization für Wildschutz, Infrastruktur etc. |
+| **Empfohlene Pilot-Schulungen** | Verweis auf AOPA, UAV DACH |
+| **Hersteller-Kontakt für Rückfragen** | Impressum, Hotline |
 
 ---
 
-## 🇩🇪 LuftVO (Luftverkehrs-Ordnung) — die nationalen Regeln
+## 🛡️ Was bleibt beim Käufer (deiner Verantwortung nicht)
 
-### Drohnen-relevante §§
-
-| § | Thema | Pflicht? |
-|---|-------|----------|
-| **§21h** | Versicherungspflicht | 🔴 Pflicht |
-| **§21i** | Kennzeichnungspflicht (Aufkleber) | 🔴 Pflicht |
-| **§21j** | Verbots-Zonen | 🔴 Pflicht zu kennen |
-| **§21k** | Betriebserlaubnis-Pflicht | 🔴 Relevant bei SAR |
-| **§21l** | Allgemeine Betriebsanforderungen | 🔴 Pflicht |
-| **§21m** | Sichtverbindung | 🔴 Pflicht |
-
-### §21h — Versicherungspflicht (Kurzfassung)
-
-> Jeder Drohnenbetreiber muss eine **Haftpflicht-Versicherung** haben.
-> Mindestdeckung: **750.000 Sonderziehungsrechte (SZR)** = aktuell ~1,0 Mio €
-> Betrifft: **alle gewerblichen und behördlichen Einsätze**.
-
-**Anbieter (DE):**
-
-| Versicherer | Was | Typische Kosten |
-|------------|-----|-----------------|
-| **HDI** | Drohnen-Haftpflicht (Standard) | ~300–800 €/Jahr |
-| **Allianz** | Spezialisierte Police | ähnlich |
-| **ARISKA** | Drohnen-Spezialist | ähnlich |
-| **Lupus** | Drohnen-Versicherungen | ähnlich |
-
-### §21i — Kennzeichnungspflicht
-
-| Was du brauchst | Wo |
-|-----------------|-----|
-| **Feuerschutz-Aufkleber** mit Operator-ID | sichtbar außen am Gerät |
-| **CE-Logo** (falls Pflicht) | sichtbar |
-| **Akustische oder visuelle Modul-Warnung** | bei bestimmten Klassen |
-
-### §21k — Betriebserlaubnis-Pflicht
-
-**Wenn eines der folgenden zutrifft, brauchst du eine Erlaubnis:**
-
-| Bedingung | Relevant für dich? |
-|-----------|---------------------|
-| Drohne > 5 kg und außerhalb Sichtweite | ❌ du bist meist nicht >5 kg |
-| Drohne > 25 kg | ❌ du bist bei 16 kg |
-| Über Menschenmengen | ⚠️ SAR-Einsätze möglich |
-| In Flugverbotszonen (CTRs, Militär, etc.) | ⚠️ Behörden-Koord. nötig |
-| Auf Sensorflügen außerhalb Bebauung | ⚠️ Behörden-Koord. nötig |
-| Nachts (zwischen Sonnenuntergang und -aufgang) | ⚠️ Tag+Nacht geplant |
-
-**→ Du brauchst sehr wahrscheinlich eine §21k-Erlaubnis (= LBA-Genehmigung).**
-
-### §21l — allgemeine Betriebsanforderungen
-
-| Anforderung | Was |
-|-------------|-----|
-| **Max Höhe** | 120 m über Grund |
-| **Sichtverbindung** | Pilot muss Gerät sehen oder Beobachter postieren |
-| **Sicherheitsabstand** | 100 m von Menschenmengen (Open Cat) |
-| **Abstand zu Flughäfen** | 1,5 km von Kontrollzonen-Grenze |
-| **Flugwetter** | Sichtflug-Bedingungen (METAR-tauglich) |
-| **Tageslicht** | zwischen Sonnenauf- und untergang, sonst Beleuchtung |
-
-### §21m — Sichtverbindung (EYE-CONTACT)
-
-| Variante | Erlaubt? |
-|----------|----------|
-| **VLOS** (Visual Line of Sight) | ✅ immer |
-| **EVLOS** (Extended VLOS mit Beobachter) | ✅ bei Specific Category |
-| **BVLOS** (Beyond Visual Line of Sight) | ⚠️ nur mit Genehmigung + Tech (C2-Link) |
-
-**Du brauchst BVLOS für SAR-Einsätze → Genehmigung erforderlich.**
+| Pflicht | Käufer |
+|---------|--------|
+| **EU-Operator-Registrierung** beim LBA | macht er |
+| **Haftpflicht-Versicherung** (mind. 750k SZR) | macht er |
+| **Fernpilot-Zeugnis** (A1/A2/A3 + ggf. STS) | macht er |
+| **LBA-Operating-License** (für Specific Category) | macht er |
+| **SORA-Analyse anpassen** (an seine Mission) | macht er |
+| **Akute Sichtbeobachtung oder Beobachter** | macht er |
 
 ---
 
-## 🗺️ Zonen-Beschränkungen (geografisch)
+## 📦 Was du als „Verkaufs-Paket" lieferst
 
-| Zonenart | Was | Darfst du? |
-|----------|-----|-----------|
-| **CTR** (Kontrollzone Flughafen) | Tower-Lufträume | ❌ ohne Erlaubnis |
-| **RMZ** (Radio Mandatory Zone) | Funk-Pflicht | ⚠️ Funk-Kontakt |
-| **ED-R** (Restricted Areas) | Militär/Sperrgebiete | ❌ |
-| **Nationalparke** | Naturschutz | ❌ oft |
-| **Wohngebiete** | Innerstädtisch | ⚠️ eingeschränkt |
-| **Strände** | Sommer-Sperrung | ✅ wenn nicht Sommer |
-
-**Für dein SAR-Projekt:**
-- **Waldgebiete** ✅ erlaubt
-- **Behörden-Koordination** mit Landratsamt / Polizei
-- **Wildschutz** Behörden-Erlaubnis vom Kreisveterinäramt
+| Nr | Bestandteil | Wert für Käufer |
+|----|-------------|------------------|
+| **1** | Drohne (VTOL, 16 kg) | Hauptprodukt |
+| **2** | Bedienungsanleitung | Pflicht |
+| **3** | Wartungs-Plan | Pflicht + Wert |
+| **4** | SORA 2.5 Vorlage (SAR) | Wochen Arbeit gespart |
+| **5** | ConOps-Vorlage (SAR/Wildschutz) | Wochen Arbeit gespart |
+| **6** | OSO-Checkliste (17 Punkte) | Sofort umsetzbar |
+| **7** | Pilot-Ausbildungs-Empfehlungen | Schneller Start |
+| **8** | Wartungs-Schulungs-Material | Inbetriebnahme-Support |
+| **9** | Support-Hotline / Mail | Langfristige Sicherheit |
 
 ---
 
-## 🛡️ Privacy und DSGVO
+## 🎓 ConOps-Vorlage als Marketing-Hebel
 
-| Wo relevant | Was |
-|-------------|-----|
-| **Film-/Foto-Aufnahmen** | DSGVO beachten |
-| **Personen im Bild** | Einwilligung oder „berechtigtes Interesse" |
-| **Personenbezogene Daten** | Speichern max. nötig, dann löschen |
-| **Lautsprecher** | Mikrofon-Aufnahmen: kritisch |
+| Vorteil für dich | Vorteil für Käufer |
+|------------------|---------------------|
+| **Differenzierung** vom Wettbewerb | Spart 4–8 Wochen SORA-Arbeit |
+| **Höherer Preis** möglich | Schnellere Markteinführung |
+| **Markentreue** | Professioneller Eindruck |
+| **Weniger Anfragen** zur Bedienung | Direkt einsatzbereit |
 
-**Für SAR:** Aufnahmen von Einsatzorten müssen gegen Zugriff geschützt sein.
-
----
-
-## 🔢 Wichtige Zahlen und Grenzen
-
-| Größe | Wert |
-|-------|------|
-| **Operator-Register** | ab 250 g Pflicht (für alle Klassen) |
-| **Sichtverbindung** | meist <500 m |
-| **Höhen-Limit** (Open) | 120 m über Grund |
-| **Personenmengen-Abstand** (Open) | 100 m |
-| **Versicherung** | mindestens 750.000 SZR (~1 Mio €) |
-| **MTOM deiner Drohne** | 16 kg (Specific Category) |
+**Die ConOps-Vorlage ist dein Verkaufs-Plus**, nicht nur Regulatorik-Ballast.
 
 ---
 
-## ✅ Wichtige Checkliste: Operator-Pflichten
+## 💰 Was kostet dich das regulatorisch?
 
-| # | Schritt | Wer | Wo |
-|---|--------|-----|-----|
-| 1 | **LBA-Operator-Registrierung** | du | https://eud.euroavia.eu |
-| 2 | **Haftpflicht-Versicherung** | du + Versicherer | z.B. HDI, Allianz |
-| 3 | **SORA-Analyse** | du (oder Spezialist) | Tool: AirHub, Dronedesk, oder selbst |
-| 4 | **LBA-Genehmigungs-Antrag** | du | LBA-Portal |
-| 5 | **Pilot-Schulung** (A1/A3 + A2) | du + zertifizierter Anbieter | AOPA, UAV DACH |
-| 6 | **Drohnen-Dokumentation** (CoA, Wartung) | du | Lokal |
-| 7 | **Eintragung Landesluftfahrtbehörde** | du | Dein Bundesland |
+| Element | Kosten/Erfordernis |
+|---------|---------------------|
+| **CE-Kennzeichnung** (Klasse C) | intern oder via Zertifizierungs-Stelle (€5–15k) |
+| **Risiko-Analyse / FMEA** | intern, viel Eigenarbeit |
+| **Bedienungsanleitung** | extern (technischer Redakteur) €2–5k |
+| **Produkthaftpflicht-Versicherung** | für dich als Hersteller! ~500–2.000 €/Jahr |
+| **Test-Flüge + Validierung** | eigenes Budget |
+| **Rechtsbeistand** | je nach Komplexität €5–10k |
+| **SORA-Vorlage schreiben** | intern (du nutzt dein eigenes Wissen) |
 
----
-
-## 📌 Sofort-Aktionen für dich
-
-| # | Schritt | Heute/Morgen |
-|---|---------|-------------|
-| 1 | EU-VO 2019/945 (technische Anforderungen) noch runterladen | s. Linkliste |
-| 2 | Beim LBA registrieren wenn noch nicht passiert | https://eud.euroavia.eu |
-| 3 | Versicherung anfragen | HDI / Lupus / Allianz |
-| 4 | Pilot-Schulungsangebote checken | AOPA, UAV DACH |
-| 5 | SORA-Werkzeug suchen | AirHub / Dronedesk / Do-It-Yourself |
+**Gesamt-Initialkosten schätzungsweise €15–35k** über 6–12 Monate.
 
 ---
 
-## 📚 Wo die Originalquellen sind
+## 🔥 Mögliche Käuferprofile
 
-| Dokument | Quelle |
-|----------|--------|
-| **EASA Easy Access Rules** | https://www.easa.europa.eu/en/document-library/easy-access-rules/easy-access-rules-unmanned-aircraft-systems |
-| **Reg. (EU) 2019/947** | https://eur-lex.europa.eu/eli/reg/2019/947/oj |
-| **Reg. (EU) 2019/945** | https://eur-lex.europa.eu/eli/reg/2019/945/oj |
-| **LuftVO** | https://www.gesetze-im-internet.de/luftvo/ |
-| **LBA** | https://www.lba.de |
+| Kundenprofil | Was brauchen sie |
+|--------------|------------------|
+| **SAR-Verein (Helfer-Team)** | 1 Drohne, einfache SORA-Vorlage, Bedienungs-Schulung |
+| **Wildschutz-Behörde** | 1–3 Drohnen, Wildschutz-ConOps-Vorlage, SORA |
+| **Polizei** | 1 Drohne + Ground Station, sicherheits-zertifiziert, SORA |
+| **Infrastruktur-Betreiber** | 1 Drohne + Thermalkamera, Energie-ConOps-Vorlage |
+| **Landwirt / Genossenschaft** | ggf. mehrere Drohnen, Sprüh-ConOps (A2/A3 STS) |
 
 ---
 
-*Diese Kurzfassung wurde am 2026-09-22 erstellt. Bei jeder Aktualisierung prüfen.
-Rechtlich verbindlich ist nur das Original-Dokument.*
+## 🔮 Was du jetzt brauchst
+
+| Anforderung | Quelle |
+|-------------|--------|
+| Welche Klasse (C0-C6 oder Certified)? | EU-VO 2019/945 |
+| Wie sieht ConOps für SAR aus? | JARUS SORA Main Body |
+| Wie sieht Risiko-Mitigation aus? | SORA Annex B (Ground) + C (Air) |
+| Wie sieht Bedienungs-Anleitung aus? | EU-VO 2019/945, Annex |
+
+---
+
+## ⚖️ Versicherung für DICH als Hersteller
+
+| Versicherungs-Typ | Was | Wofür |
+|--------------------|-----|--------|
+| **Produkthaftpflicht** | wenn deine Drohne Schaden anrichtet | Schutz vor Käufer-Klagen |
+| **Betriebshaftpflicht** | wenn in deiner Halle was passiert | Allgemeines Risiko |
+| **Berufshaftpflicht** | als Designer / Ingenieur | Beratungsfehler |
+| **Inhaltsversicherung** | wenn deine Werkstatt abbrennt | Sachschutz |
+
+---
+
+## 📚 Welche Verordnungen für dich am wichtigsten sind
+
+| Verordnung | Wofür |
+|-----------|-------|
+| **EU-VO 2019/945** | Technische Anforderungen, Klassen-C-Kennzeichnung |
+| **JARUS SORA 2.5** | Vorlage für Kunden-ConOps |
+| **Produkthaftungs-Richtlinie 85/374/EWG** | Hersteller-Haftung |
+| **Maschinenrichtlinie 2006/42/EG** | Falls Drohne als „Maschine" gilt |
+| **Funkanlagen-Richtlinie 2014/53/EU** | Funk-Konformität |
+
+---
+
+## 🔴 Pflicht-Aktionen für dich jetzt
+
+| # | Schritt | Wer | Wann |
+|---|--------|-----|------|
+| 1 | **Klasse bestimmen** (C3? C5? Certified?) | du + Berater | bald |
+| 2 | **SORA-Vorlage schreiben** | du (Vorlage) | asap |
+| 3 | **CE-Kennzeichnung vorbereiten** | du | nach Design-Freeze |
+| 4 | **Bedienungsanleitung** | du / extern | nach Design-Freeze |
+| 5 | **Wartungs-Plan** | du | nach Design-Freeze |
+| 6 | **Pilot-Schulungs-Empfehlungen** | Verweis auf AOPA etc. | nach Bedarf |
+| 7 | **Produkthaftpflicht abschließen** | du | vor Verkauf |
+| 8 | **AGB für Verkauf** | Anwalt | vor Verkauf |
+
+---
+
+## 🛡️ Warum du trotzdem SORA-Kenntnisse brauchst
+
+| Grund | Beispiel |
+|-------|----------|
+| **Verkauf an SAR-Kunden** | du brauchst glaubwürdige SORA-Vorlage |
+| **Marketing** | „Ready-to-Use" für SAR mit SORA-Vorlage ist Verkauf-Hebel |
+| **Risiko-Dialog** | du redest mit Behörden auf Augenhöhe |
+| **Produkthaftung** | als Designer musst du die Risiken kennen |
+| **Sicherheits-Relevanz** | du designst ja sicherheits-relevante Hardware |
+
+---
+
+## 📂 Wo die Originaldokumente sind
+
+| Dokument | Lokaler Pfad |
+|----------|--------------|
+| EASA-EAR-UAS-2026-06.pdf | `C:\Users\willow\Documents\EASA\` |
+| EU-VO-2019-947.pdf | dito |
+| EU-VO-2019-945.pdf | dito |
+| LuftVO-2026.pdf | dito |
+| JARUS-SORA 2.5 Dokumente | dito |
+| (Optional) EU-VO-2021-664, EU-VO-785-2004, FAA Part 107 | dito |
+
+---
+
+*Diese Kurzfassung wurde aus Hersteller-Sicht erstellt. Bei Fragen: zur Original-Verordnung springen. Letzte Aktualisierung: 2026-09-22.*
