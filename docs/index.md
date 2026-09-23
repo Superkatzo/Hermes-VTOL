@@ -3,128 +3,112 @@ layout: default
 title: Hermes-VTOL
 ---
 
-<div class="hero">
-  <h1>🚁 Hermes-VTOL</h1>
-  <p class="tagline">Zivile Quadplane-VTOL für SAR, Wildschutz, Behörden &amp; Infrastruktur</p>
-  <p class="tagline" style="opacity: 0.85; font-size: 1rem; margin-top: 0.5rem;"><em>„Der Pickup-Truck der Lüfte" — vielseitig, modular, nützlich.</em></p>
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <h1>Hermes-VTOL</h1>
+      <p class="tagline">Zivile Quadplane-VTOL für SAR, Wildschutz, Behörden &amp; Infrastruktur.</p>
+      <p class="tagline" style="opacity: 0.75; font-size: 1rem; margin-top: -0.5rem; margin-bottom: 1.75rem;"><em>„Der Pickup-Truck der Lüfte" — vielseitig, modular, nützlich.</em></p>
+      <div class="pill-row">
+        <span class="pill pill-accent">16 kg MTOM</span>
+        <span class="pill">2,3 m klappbar</span>
+        <span class="pill">60 min Endurance</span>
+        <span class="pill">2,3 kg Payload</span>
+        <span class="pill">EU Klasse C3</span>
+        <span class="pill">SORA-2.5-konform</span>
+      </div>
+    </div>
+    <div class="hero-visual fade-up">
+      <object type="image/svg+xml" data="{{ '/assets/img/vtol-illustration.svg' | relative_url }}" aria-label="VTOL Illustration"></object>
+    </div>
+  </div>
+</section>
 
-  <div class="stats">
-    <span class="stat-pill">🪶 16 kg MTOM</span>
-    <span class="stat-pill">🦅 2,3 m Spannweite (klappbar)</span>
-    <span class="stat-pill">🔋 60 min Endurance</span>
-    <span class="stat-pill">📦 2,3 kg Payload</span>
-    <span class="stat-pill">🇪🇺 EU-konform (C3)</span>
+<section>
+  <h2 class="section-title">Einsatzbereiche</h2>
+  <div class="card-grid">
+    <div class="card fade-up">
+      <span class="card-icon">🚁</span>
+      <h3 class="card-title">Search and Rescue</h3>
+      <p class="card-text">Vermisstensuche, Lageerkundung, Lawinen-Ortung. Mit Thermalkamera rund um die Uhr einsetzbar.</p>
+    </div>
+    <div class="card fade-up">
+      <span class="card-icon">🦌</span>
+      <h3 class="card-title">Wildschutz</h3>
+      <p class="card-text">Tierbeobachtung, Anti-Wilderei, Habitat-Monitoring. Sehr leise, lange Flugzeit, modular.</p>
+    </div>
+    <div class="card fade-up">
+      <span class="card-icon">🏛️</span>
+      <h3 class="card-title">Behörden-Einsätze</h3>
+      <p class="card-text">Polizei, Zoll, Feuerwehr, THW. Schnell einsatzbereit, robust, dokumentierbar.</p>
+    </div>
+    <div class="card fade-up">
+      <span class="card-icon">⚡</span>
+      <h3 class="card-title">Infrastruktur-Inspektion</h3>
+      <p class="card-text">Stromleitungen, Windkraftanlagen, Pipelines. Detail-Aufnahmen aus nächster Nähe.</p>
+    </div>
   </div>
-</div>
+</section>
 
-## Was ist Hermes-VTOL?
+<section>
+  <h2 class="section-title">Spezifikationen</h2>
+  <div class="stats-grid">
+    <div class="stat-card fade-up"><div class="label">MTOM</div><div class="value">16 kg</div></div>
+    <div class="stat-card fade-up"><div class="label">Spannweite</div><div class="value">2,2–2,4 m</div></div>
+    <div class="stat-card fade-up"><div class="label">Klappbar</div><div class="value">Ja ✓</div></div>
+    <div class="stat-card fade-up"><div class="label">Akku</div><div class="value">14S Li-Ion</div></div>
+    <div class="stat-card fade-up"><div class="label">Endurance</div><div class="value">45–60 min</div></div>
+    <div class="stat-card fade-up"><div class="label">Payload</div><div class="value">2,28 kg</div></div>
+    <div class="stat-card fade-up"><div class="label">Antrieb</div><div class="value">4+1 Quad</div></div>
+    <div class="stat-card fade-up"><div class="label">Schub-Faktor</div><div class="value">2,10×</div></div>
+  </div>
+</section>
 
-Hermes-VTOL ist eine Quadplane-Plattform mit Klappmechanismus, die **vier eigenständige Missionen** in einer Drohne vereint. Anstatt für jeden Use-Case ein eigenes Gerät zu kaufen, bekommst du **eine modulare Plattform** mit austauschbaren Payload-Containern.
+<section>
+  <h2 class="section-title">Dokumentation</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">📋</span>
+      <h3 class="card-title">Lastenheft v1.1</h3>
+      <p class="card-text">Komplette Spezifikation, Antriebsberechnung, Massenverteilung, Profil-Auswahl.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🛡️</span>
+      <h3 class="card-title">ConOps-Vorlage SAR</h3>
+      <p class="card-text">SORA-2.5-konform, alle 17 OSOs als Checkliste. Plug-and-Play für SAR-Käufer.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📜</span>
+      <h3 class="card-title">Regulatorik-Kurzfassung</h3>
+      <p class="card-text">EU/EASA, JARUS-SORA, deutsche LuftVO — aus Hersteller-Sicht.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">💰</span>
+      <h3 class="card-title">Kosten-Realität</h3>
+      <p class="card-text">Initiale Investition €24–108k, laufende Versicherung, Aufschlüsselung pro Block.</p>
+    </div>
+  </div>
+</section>
 
-## Anwendungsbereiche
+<section>
+  <h2 class="section-title">Neueste Updates</h2>
+  <ul class="posts-list">
+    {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url | relative_url }}" class="post-item">
+        <div class="post-meta">
+          <span>{{ post.date | date: "%d.%m.%Y" }}</span>
+          {% if post.categories %}<span class="post-tag">{{ post.categories | first | capitalize }}</span>{% endif %}
+        </div>
+        <h3 class="post-title">{{ post.title }}</h3>
+        {% if post.excerpt %}<p class="post-item-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 
-<div class="card-grid">
-  <div class="card">
-    <div class="card-title">🚁 Search and Rescue (SAR)</div>
-    <p>Vermisstensuche, Lageerkundung, Lawinen-Ortung. Mit Thermalkamera bei Nacht einsetzbar.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">🦌 Wildschutz</div>
-    <p>Tierbeobachtung, Anti-Wilderei, Habitat-Monitoring. Sehr leise, lange Flugzeit, modular.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">🏛️ Behörden-Einsätze</div>
-    <p>Polizei, Zoll, Feuerwehr, THW. Schnell einsatzbereit, robust, dokumentierbar.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">⚡ Infrastruktur-Inspektion</div>
-    <p>Stromleitungen, Windkraftanlagen, Pipelines. Detail-Aufnahmen aus nächster Nähe.</p>
-  </div>
-</div>
-
-## Eckdaten
-
-<div class="stats-grid">
-  <div class="stat-card">
-    <div class="label">MTOM</div>
-    <div class="value">16 kg</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Spannweite</div>
-    <div class="value">2,2 – 2,4 m</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Klappbar</div>
-    <div class="value">Ja ✓</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Akku</div>
-    <div class="value">14S Li-Ion</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Endurance</div>
-    <div class="value">45-60 min</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Payload max.</div>
-    <div class="value">2,28 kg</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Antrieb</div>
-    <div class="value">4+1 (Quadplane)</div>
-  </div>
-  <div class="stat-card">
-    <div class="label">Schwebeschub-Faktor</div>
-    <div class="value">2,10×</div>
-  </div>
-</div>
-
----
-
-## Dokumentation im Überblick
-
-<div class="card-grid">
-  <div class="card">
-    <div class="card-title">📋 Lastenheft v1.1</div>
-    <p>Komplette Spezifikation, Antriebsberechnung, Massenverteilung, Profil-Auswahl.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">🛡️ ConOps-Vorlage SAR</div>
-    <p>SORA-2.5-konform, alle 17 OSOs als Checkliste. Plug-and-Play für SAR-Käufer.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">📜 Regulatorik-Kurzfassung</div>
-    <p>EU/EASA-Verordnungen, JARUS-SORA, deutsche LuftVO — aus Hersteller-Sicht.</p>
-  </div>
-  <div class="card">
-    <div class="card-title">💰 Kosten-Realität</div>
-    <p>Initiale Investition €24-108k, laufende Versicherung, Aufschlüsselung pro Block.</p>
-  </div>
-</div>
-
----
-
-## Neueste Updates
-
-{% for post in site.posts limit:5 %}
-<ul class="posts-list">
-  <li>
-    <div class="post-meta">{{ post.date | date: "%d.%m.%Y" }}</div>
-    <h3 style="margin: 0.2rem 0;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    {% if post.excerpt %}{{ post.excerpt | strip_html | truncate: 180 }}{% endif %}
-  </li>
-</ul>
-{% endfor %}
-
-## Weiterführend
-
-| Dokument | Beschreibung |
-|----------|--------------|
-| 🔗 [GitHub-Repo](https://github.com/Superkatzo/Hermes-VTOL) | Komplette Quelloffene Doku, 13 Verzeichnisse, ~30 Doku-Dateien |
-| 📚 [ConOps-Vorlage SAR](https://github.com/Superkatzo/Hermes-VTOL/blob/main/01_Dokumentation/ConOps-Vorlage-SAR.md) | SORA-2.5-konform, plug-and-play |
-| 📖 [Kosten-Realität](https://github.com/Superkatzo/Hermes-VTOL/blob/main/01_Dokumentation/Kosten-Realitaet.md) | Detaillierte Aufschlüsselung |
-
-<div class="callout-warn">
-  <div class="label">Hard-Rules</div>
-  <p style="margin: 0.4rem 0 0;">Zivil-only. Keine militärische Verwendung. Keine Waffen. Professionelles Design — keine Cyberpunk-Ästhetik.</p>
+<div class="callout callout-accent">
+  <div class="callout-label">Hard-Rules</div>
+  <p style="margin: 0.3rem 0 0;">Zivil-only. Keine militärische Verwendung. Keine Waffen. Professionelles Design — keine Cyberpunk-Ästhetik.</p>
 </div>
