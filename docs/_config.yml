@@ -1,0 +1,40 @@
+title: "Hermes-VTOL"
+description: "Zivile VTOL-Drohne (Quadplane) für SAR, Wildschutz, Behörden und kommerzielle Inspektion. Open-Source-Dokumentation und Entwicklungs-Tagebuch."
+theme: minima
+author: "willow"
+url: "https://Superkatzo.github.io/Hermes-VTOL"
+
+lang: de
+encoding: UTF-8
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /:year/:month/:title/
+paginate: 10
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - LICENSE
+  - CONTRIBUTING.md
+  - 01_Dokumentation
+  - 02_Aerodynamik
+  - 03_CAD
+  - 04_FEM_Simulation
+  - 05_Fertigung
+  - 06_Avionik_Software
+  - 07_Tests
+  - 08_Payload_Module
+  - 09_Regulatorik
+  - 10_Beschaffung
+  - 11_Bilder_Renderings
+  - 12_Skripte_Tools
+  - 13_VPS_Config
+  - .github
+  - Gemfile
+  - Gemfile.lock
