@@ -118,3 +118,29 @@ For triage, here is the frequency observed on a single user installation:
 | 2026-09-23 22:15 | 257,606 | tool-heavy session | response loss observed |
 
 Threshold appears to be **256,000 tokens exactly** (preflight logs show >= 256,000). Compaction duration is 1–3 minutes depending on session size.
+
+## Secondary Trigger: Scroll/Reload (Not Yet Confirmed in Logs)
+
+In addition to the 256k-token compaction trigger, the user has observed the same symptom (response renders for several seconds, then disappears completely) **without a corresponding compaction event** in `desktop.log`. Possible secondary triggers under investigation:
+
+- **Scroll-to-top / scroll-to-bottom:** When user scrolls aggressively while a response is streaming
+- **Tab/window refresh:** When the user manually refreshes the chat tab mid-stream
+- **Background self-improvement review:** The desktop log shows recurring `💾 Self-improvement review` events (patches skills/memory every 5–10 minutes) — these run concurrently with the user session and may reset chat state
+- **Conversation switch:** Switching between multiple chat sessions in the desktop UI
+
+Last observed occurrences of response loss:
+
+| Time (approx.) | Log shows compaction? | User action reported |
+|---|---|---|
+| 2026-09-23 ~22:16 | ✅ Yes (~257,606 tokens) | response lost |
+| 2026-09-23 ~23:00+ | ❌ No compaction in log | response lost — likely background-review or scroll |
+| 2026-09-23 ~23:30 | ❌ No compaction in log | response lost — user scrolled mid-stream |
+
+For triage, the symptom appears to be the same in both cases (compaction vs. non-compaction), suggesting a **unified UI state-loss bug** rather than two distinct issues.
+
+## Recommended Triage Steps for Developers
+
+1. Add response-stream lifecycle hooks in the React/Vue component to log when an assistant response is mounted, updated, and unmounted
+2. Cross-reference unmount events with compaction and self-improvement-review timestamps to identify the actual trigger
+3. Check whether the conversation log on the backend retains the response (i.e. only the UI state is lost)
+4. Implement state re-hydration: if backend has a response but UI state is missing, re-fetch it on next render
