@@ -12,6 +12,7 @@ Rechtliche und regulatorische Dokumentation für EU/US.
 | **UN_383_Akku/** | UN-38.3 Akku-Transport-Test, IATA-Versand |
 | **Versicherung/** | Halterhaftpflicht, Operator-Versicherung, Anbieter-Übersicht |
 | **(Wurzel)** | `Marktvergleich_VTOL.md` — Benchmarking & Konkurrenzanalyse kommerzieller VTOL-Plattformen (Specs, Preise, Zulassung, USPs) |
+| **(Wurzel)** | `Drohnenklasse_C0_bis_C6.md` — Übersicht EASA-Klassen, Hermes-VTOL-Zuordnung, Markt-Stand, Design-Anforderungen |
 
 ## EU-SORA-Zielmarke
 
