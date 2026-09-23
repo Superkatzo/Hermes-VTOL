@@ -41,9 +41,17 @@ check_load() {
 }
 
 check_failed_logins() {
-    local failed=$(sudo -S -p '' grep -c "Failed password" /var/log/auth.log 2>/dev/null || echo "0")
+    # BUGFIX (2026-09-24): Vorher wurde TOTAL aller Failed-Password gezählt (inkl.
+    # sudo-COMMAND-Eintraege, alle Zeiten). Jetzt: nur echte sshd-Eintraege letzte 60 min.
+    local failed=$(sudo journalctl -u ssh --since "1 hour ago" 2>/dev/null | \
+        grep "sshd\[.*\]: Failed password" | grep -v "sudo:" | wc -l)
     if [ "$failed" -gt 10 ]; then
-        ISSUES="${ISSUES}\n- SSH Failed-Password in auth.log: ${failed}x (Schwelle 10)"
+        # Bonus: zeige Top-3-Angreifer-IPs
+        local top_ips=$(sudo journalctl -u ssh --since "1 hour ago" 2>/dev/null | \
+            grep "sshd\[.*\]: Failed password" | grep -v "sudo:" | \
+            grep -oE 'from [0-9.]+' | sort | uniq -c | sort -rn | head -3 | \
+            awk '{print $3}' | paste -sd, -)
+        ISSUES="${ISSUES}\n- SSH Failed-Password (letzte 1h): ${failed}x (Schwelle 10)\n  Top-Angreifer-IPs: ${top_ips}"
     fi
 }
 
