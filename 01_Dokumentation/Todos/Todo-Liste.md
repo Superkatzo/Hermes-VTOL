@@ -175,6 +175,8 @@
 
 | 2026-09-23 21:46 UTC | Via Telegram: Telegram-Sidecar-Test: erfolgreich gepusht um $(date +%H:%M) |
 
+| 2026-09-23 21:50 UTC | Via Telegram: Telegram-Sidecar LIVE-TEST (Token jetzt mit Contents:write) |
+
 ## 📅 Chronik
 
 | Datum | Was hinzugefügt wurde |
