@@ -68,10 +68,21 @@ if ! echo "$TEXT" | grep -qE '^[[:alnum:][:space:][:punct:][:cntrl:]]+$'; then
 fi
 
 # --- Repo-Update ---
+if [ ! -d "$REPO_PATH/.git" ]; then
+    # Repo nicht vorhanden → einmalig klonen (Voraussetzung fuer Connector)
+    echo "[INFO] Repo nicht gefunden, klone nach $REPO_PATH ..."
+    sudo -u hermes git clone "https://github.com/Superkatzo/Hermes-VTOL.git" "$REPO_PATH" \
+        || { echo "[ERROR] git clone fehlgeschlagen" >&2; exit 1; }
+fi
+
 cd "$REPO_PATH" || { echo "[ERROR] Repo-Pfad nicht erreichbar: $REPO_PATH" >&2; exit 1; }
 
+# Git-Identity sicherstellen (für Commit-Autor)
+git config user.email "hermes-vps@superkatzo.local" 2>/dev/null || true
+git config user.name "Hermes VPS Bot" 2>/dev/null || true
+
 # Aktuellen Stand holen
-git pull --rebase --quiet 2>&1 || { echo "[ERROR] git pull fehlgeschlagen" >&2; exit 1; }
+sudo -u hermes git pull --rebase --quiet 2>&1 || { echo "[ERROR] git pull fehlgeschlagen" >&2; exit 1; }
 
 # Todo-Liste patchen — Eintrag vor "## 📅 Chronik" einfügen
 TODO_PATH="$REPO_PATH/$TODO_FILE"

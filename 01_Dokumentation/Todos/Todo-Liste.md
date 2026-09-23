@@ -32,9 +32,9 @@
 
 ### Laufende Aufgaben
 - [ ] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — Aufgabe 4+5 ausstehend
-- [ ] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden)
-- [ ] **Memory-Persistenz** testen: Erinnerung geben, neuen Tab öffnen, prüfen
-- [ ] **Telegram ↔ GitHub Connection einrichten** — Telegram-Bot soll Todo-Liste vom Handy aus ergänzen können (GitHub Personal Access Token auf VPS in .env, Workflow-Regel in Hermes: „speichere X" → push zu GitHub)
+- [x] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden) — Test-Nachrichten (morning_briefing, repo_review, github_cleaning) alle bestätigt
+- [x] **Memory-Persistenz** testen: Ergebnis dokumentiert in `01_Dokumentation/Protokolle/Memory-Persistenz-Test-2026-09-23.md` — Befund: Memory in Subagent-Sessions NICHT verfügbar, in Parent voll (4252/2200). Empfehlung: Persistenz primär via Repo-Dateien.
+- [ ] **Telegram ↔ GitHub Connection einrichten** — Skript `telegram_to_github.sh` auf VPS deployed, wartet auf python-telegram-bot-Integration (siehe `13_VPS_Config/`)
 
 ---
 
