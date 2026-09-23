@@ -36,7 +36,9 @@ echo [%date% %time%] === Hermes-Tunnel-Auto Start >> "%LOGFILE%"
 
 REM --- 1. Aktuellen Docker-Port vom VPS holen ---
 echo [%date% %time%] Frage Docker-Port ab... >> "%LOGFILE%"
-for /f "tokens=*" %%P in ('ssh %SSHHOST% "sudo docker ps --format \"{{.Ports}}\" | grep hermes-agent-ekgx | head -1" 2^>^&1') do set "DOCKERLINE=%%P"
+REM Wichtig: grep ohne fuehrendes '-' (wird sonst als Option missinterpretiert).
+REM Ausserdem: -- um sicherzustellen, dass grep kein 'hermes-agent' als Argument parst.
+for /f "tokens=*" %%P in ('ssh %SSHHOST% "sudo docker ps --format \"{{.Ports}}\" | grep -- 'hermes-agent'" 2^>^&1') do set "DOCKERLINE=%%P"
 
 REM Parse Port: erwartetes Format: "0.0.0.0:32768->4860/tcp, ..."
 set "FOUNDPORT="
@@ -52,10 +54,12 @@ echo [%date% %time%] Aktueller Docker-Port: %FOUNDPORT% >> "%LOGFILE%"
 
 REM --- 2. SSH-Config prüfen + ggf. LocalForward aktualisieren ---
 REM Wir nutzen eine einfache Suchen/Ersetzen-Strategie.
+REM WICHTIG: PowerShell versteht keine Git-Bash-Pfade wie /tmp/... — daher %TEMP% nutzen.
 set "TEMPFILE=%TEMP%\sshconfig_%RANDOM%.tmp"
 findstr /b "LocalForward %LOCALPORT%" "%SSHCFG%" >nul 2>&1
 if !errorlevel! equ 0 (
     REM Zeile gefunden — ersetzen
+    REM %SSHCFG% ist bereits ein Windows-Pfad (%USERPROFILE%\.ssh\config), %TEMPFILE% ebenfalls.
     powershell -Command "(Get-Content '%SSHCFG%') -replace 'LocalForward %LOCALPORT% [0-9.:]+', 'LocalForward %LOCALPORT% 127.0.0.1:%FOUNDPORT%' | Set-Content '%TEMPFILE%'"
     move /y "%TEMPFILE%" "%SSHCFG%" >nul
     echo [%date% %time%] SSH-Config LocalForward aktualisiert auf %FOUNDPORT% >> "%LOGFILE%"
