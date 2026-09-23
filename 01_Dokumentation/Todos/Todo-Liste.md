@@ -180,7 +180,8 @@
 ## 📅 Chronik
 
 | Datum | Was hinzugefügt wurde |
-|-------|------------------------|
+|---
+| 2026-09-23 21:51 UTC | Via Telegram: Telegram-Sidecar FIX-TEST: Chronik-Eintrag korrekt platziert |----|------------------------|
 | 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
 | 2026-09-22 | Job #1 hinzugefügt: Aero-Wing-Bot + Regulatory-Bot erstellen |
 | 2026-09-22 | Telegram ↔ GitHub Connection als laufende Aufgabe hinzugefügt (Falscheintrag CAD-Modell-Rebuild korrigiert) |
