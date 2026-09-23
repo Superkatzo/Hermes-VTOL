@@ -34,6 +34,9 @@
 - [x] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — `Hermes-Tunnel-Auto.bat` getestet, Port 32769 erkannt, Tunnel steht auf :8080, HTTP 302 von Hermes-UI. Scheduled-Task noch manuell anzulegen.
 - [x] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden) — Test-Nachrichten bestätigt
 - [x] **Memory-Persistenz** testen — Ergebnis dokumentiert, Befund: Repo-Dateien bevorzugen
+- [x] **Memory konsolidieren** (24.09.2026) — von 4.252/2.200 (193 %) auf 1.545/2.200 (70 %); Detail-Wissen in `01_Dokumentation/Projekt-Memory.md` ausgelagert
+- [x] **Themenchat-Setup-Files anlegen** (24.09.2026) — 6 Setup-Markdown-Files + README in `01_Dokumentation/Chat-Setups/` (Commit `8918185`)
+- [ ] **Themenchats in Hermes-Desktop anlegen** — manuell via UI (siehe `Chat-Setups/README.md`): 🧠 Strategie, 🏗️ Infra, 🪶 Aerodynamik, ⚙️ Tech, 📜 Regulatorik, 🛒 Vermarktung
 - [ ] **Telegram ↔ GitHub Connection einrichten** — Skript + Sidecar-Bot deployed. Wartet auf (a) GitHub-PAT in `/opt/data/.env` und (b) `systemctl enable hermes-telegram-sidecar`
 
 ---
@@ -185,7 +188,9 @@
 | 2026-09-23 21:57 UTC | Via Telegram: sidecar-live-test (Pipeline-check vom handy) |
 | 2026-09-23 21:57 UTC | Via Telegram: sidecar-live-test (Pipeline-check vom handy) |
 | 2026-09-23 21:51 UTC | Via Telegram: Telegram-Sidecar FINAL-TEST: Trenner intakt, Zeile in Chronik-Tabelle |
-| 2026-09-22 | Initiale Liste erstellt mit heutigem Stand |
+| 2026-09-24 | **Memory konsolidiert** (4.252→1.545 Zeichen, 70 %) + **Projekt-Memory.md angelegt** als ausgelagertes Detail-Wissen |
+| 2026-09-24 | **6 Themenchat-Setup-Files angelegt** in `01_Dokumentation/Chat-Setups/` (Strategie, Aerodynamik, Tech-Stack, Regulatorik, Vermarktung, Infra) + README |
+| 2026-09-24 | Offene Aufgabe: Themenchats in Hermes-Desktop anlegen (manuell via UI) |
 | 2026-09-22 | Job #1 hinzugefügt: Aero-Wing-Bot + Regulatory-Bot erstellen |
 | 2026-09-22 | Telegram ↔ GitHub Connection als laufende Aufgabe hinzugefügt (Falscheintrag CAD-Modell-Rebuild korrigiert) |
 | 2026-09-22 | **Job #0 ganz oben hinzugefügt: Komplett auf VPS umstellen (SECURITY)** — wegen Containment-Argument: Agent-Bugs dürfen nie dein lokales System betreffen |
