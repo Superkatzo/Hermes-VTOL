@@ -7,10 +7,6 @@ url: "https://Superkatzo.github.io/Hermes-VTOL"
 lang: de
 encoding: UTF-8
 
-sass:
-  sass_dir: assets/css
-  style: compressed
-
 markdown: kramdown
 kramdown:
   input: GFM
