@@ -31,10 +31,10 @@
 - [ ] **Erste echte Fragen** testen (Aero: „vergleich 4 Profile", Regulatory: „was gilt für 16 kg in DE?")
 
 ### Laufende Aufgaben
-- [ ] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — Aufgabe 4+5 ausstehend
-- [x] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden) — Test-Nachrichten (morning_briefing, repo_review, github_cleaning) alle bestätigt
-- [x] **Memory-Persistenz** testen: Ergebnis dokumentiert in `01_Dokumentation/Protokolle/Memory-Persistenz-Test-2026-09-23.md` — Befund: Memory in Subagent-Sessions NICHT verfügbar, in Parent voll (4252/2200). Empfehlung: Persistenz primär via Repo-Dateien.
-- [ ] **Telegram ↔ GitHub Connection einrichten** — Skript `telegram_to_github.sh` auf VPS deployed, wartet auf python-telegram-bot-Integration (siehe `13_VPS_Config/`)
+- [x] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — `Hermes-Tunnel-Auto.bat` getestet, Port 32769 erkannt, Tunnel steht auf :8080, HTTP 302 von Hermes-UI. Scheduled-Task noch manuell anzulegen.
+- [x] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden) — Test-Nachrichten bestätigt
+- [x] **Memory-Persistenz** testen — Ergebnis dokumentiert, Befund: Repo-Dateien bevorzugen
+- [ ] **Telegram ↔ GitHub Connection einrichten** — Skript + Sidecar-Bot deployed. Wartet auf (a) GitHub-PAT in `/opt/data/.env` und (b) `systemctl enable hermes-telegram-sidecar`
 
 ---
 
