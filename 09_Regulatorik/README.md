@@ -11,6 +11,7 @@ Rechtliche und regulatorische Dokumentation für EU/US.
 | **FAA_Part107/** | Part-107-Waiver-Anträge, Remote-ID-Komformität |
 | **UN_383_Akku/** | UN-38.3 Akku-Transport-Test, IATA-Versand |
 | **Versicherung/** | Halterhaftpflicht, Operator-Versicherung, Anbieter-Übersicht |
+| **(Wurzel)** | `Marktvergleich_VTOL.md` — Benchmarking & Konkurrenzanalyse kommerzieller VTOL-Plattformen (Specs, Preise, Zulassung, USPs) |
 
 ## EU-SORA-Zielmarke
 
