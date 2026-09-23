@@ -44,15 +44,37 @@ if [ "$CONTAINER_STATUS" != "running" ]; then
 fi
 
 # === Traefik-Container-Status ===
-TRAEFIK_STATUS=$(sudo docker inspect traefik-traefik-1 --format '{{.State.Status}}' 2>/dev/null)
+# BUGFIX (2026-09-24): docker inspect gibt manchmal leeren String zurueck
+# waehrend Docker-Restarts -> false-positive "DOWN". Jetzt: 2x pruefen mit Pause.
+TRAEFIK_STATUS=""
+for attempt in 1 2 3; do
+    TRAEFIK_STATUS=$(sudo docker inspect traefik-traefik-1 --format '{{.State.Status}}' 2>/dev/null)
+    if [ "$TRAEFIK_STATUS" = "running" ]; then
+        break
+    fi
+    sleep 2
+done
 if [ "$TRAEFIK_STATUS" != "running" ]; then
     alert "Traefik-Container NICHT running (Status: ${TRAEFIK_STATUS})"
 fi
 
 # === SSH-Login-Failures (letzte Stunde) ===
-FAIL_COUNT=$(sudo journalctl -u ssh --since "1 hour ago" 2>/dev/null | grep -c "Failed password" || echo 0)
+# BUGFIX (2026-09-24): Vorher wurden eigene 'sudo grep'-Aufrufe mitgezaehlt,
+# weil journalctl diese auch listet. Jetzt: nur echte sshd-Eintraege mit "Failed password"
+# im Message-Text (nicht im sudo-COMMAND).
+FAIL_COUNT=$(sudo journalctl -u ssh --since "1 hour ago" 2>/dev/null | \
+    grep "sshd\[.*\]: Failed password" | grep -v "sudo:" | wc -l)
 if [ "$FAIL_COUNT" -gt 10 ]; then
     alert "Viele fehlgeschlagene SSH-Logins: ${FAIL_COUNT} in letzter Stunde"
+fi
+
+# Bonus: Liste die Top-Angreifer-IPs (fuer Diagnose)
+if [ "$FAIL_COUNT" -gt 0 ]; then
+    TOP_ATTACKERS=$(sudo journalctl -u ssh --since "1 hour ago" 2>/dev/null | \
+        grep "sshd\[.*\]: Failed password" | grep -v "sudo:" | \
+        grep -oE 'from [0-9.]+' | sort | uniq -c | sort -rn | head -3 | \
+        awk '{print $3}' | paste -sd, -)
+    log "SSH-Angreifer-IPs (Top 3): ${TOP_ATTACKERS}"
 fi
 
 # === Disk-I/O-Probleme (I/O wait hoch) ===
