@@ -12,7 +12,7 @@ Strukturelle Lastfälle und Finite-Elemente-Analysen.
 ## Lastfälle (gemäß Lastenheft Kapitel 5.1)
 
 | Lastfall | Faktor | Status |
-|----------|--------|--------|
+| ---------- | -------- | -------- |
 | Manöver-Last positiv | +2,5 g | 🔜 offen |
 | Manöver-Last negativ | −1,5 g | 🔜 offen |
 | Böen-Last | +3,8 g | 🔜 offen |

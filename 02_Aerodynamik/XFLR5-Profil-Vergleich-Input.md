@@ -9,7 +9,7 @@
 ## 1. Profil-Auswahl (3 Kandidaten)
 
 | # | Profil | Datei | Quelle |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | **Wortmann FX 63-137** | `FX_63_137.dat` | [airfoiltools.com](https://airfoiltools.com/airfoil/details?airfoil=fx63137-il) |
 | 2 | **NACA 4412** | `naca4412-il.dat` | [airfoiltools.com](https://airfoiltools.com/airfoil/details?airfoil=naca4412-il) |
 | 3 | **Eppler 423** | `e423-il.dat` | [airfoiltools.com](https://airfoiltools.com/airfoil/details?airfoil=e423-il) |
@@ -27,7 +27,7 @@
 **Eingaben:**
 
 | Parameter | Wert | Begründung |
-|---|---|---|
+| --- | --- | --- |
 | **Re-Zahlen** | 100.000 / 200.000 / 300.000 / 400.000 / 500.000 | Landeanflug → Reiseflug |
 | **α-Bereich** | −5° bis +15° in 0,5°-Schritten | Deckt Cruise bis Stall ab |
 | **Nkrit** | 9 (Standard) | Übliche Laminar-Grenze |
@@ -35,6 +35,7 @@
 | **Output:** | CL, CD, CM, CL/CD | Polaren + α-Kurven |
 
 **Was am Ende rauskommt:**
+
 - 15 α-Werte × 5 Re-Zahlen × 3 Profile = **225 Datenpunkte pro Profil**
 - Polare: CD vs. CL, CL/CD vs. α
 - Stall-Winkel, CL_max pro Re-Zahl
@@ -46,7 +47,7 @@
 **Eingaben für Hermes-Flügel:**
 
 | Parameter | Wert |
-|---|---|
+| --- | --- |
 | **Spannweite** | 2,0 m |
 | **Flügelfläche** | ~50 dm² (geschätzt) |
 | **Sehnentiefe** | Mittel 25 cm, variabel (Trapez?) |
@@ -56,6 +57,7 @@
 | **Anstellwinkel** | −2° bis +12° |
 
 **Was am Ende rauskommt:**
+
 - 3D-CL_alpha-Kurve für die ganze Fläche
 - Induced Drag (CDi) bei verschiedenen α
 - Effektive V-Form-Empfehlung
@@ -70,7 +72,7 @@ Genauer als LLT, aber langsamer. Empfohlen für **Detail-Design** nach Profil-Au
 
 Datei: `02_Aerodynamik/Profil-Vergleich-Ergebnisse.md`
 
-### Inhalts-Template:
+### Inhalts-Template
 
 ```markdown
 # Profil-Vergleich-Ergebnisse (Hermes-VTOL)
@@ -104,7 +106,7 @@ Datei: `02_Aerodynamik/Profil-Vergleich-Ergebnisse.md`
 - Profil wird in CAD übernommen (Flügel-Rippen-Layout, Holmradius)
 - LLT-Bestätigung der Spannweite (vielleicht auf 2,1 m anpassen)
 - Wing-Loading neu rechnen (Flügelfläche jetzt bekannt)
-```
+```text
 
 ---
 
@@ -112,11 +114,11 @@ Datei: `02_Aerodynamik/Profil-Vergleich-Ergebnisse.md`
 
 ### Re-Zahl im Reiseflug
 
-```
+```text
 Re = (ρ × V × c) / μ
    = (1,225 × 18 × 0,25) / 1,81e-5
    ≈ 305.000
-```
+```text
 
 - ρ = 1,225 kg/m³ (Meereshöhe)
 - V = 18 m/s (Cruise)
@@ -125,15 +127,15 @@ Re = (ρ × V × c) / μ
 
 ### Re-Zahl bei Start (langsamer)
 
-```
+```text
 V_Takeoff = 15 m/s (Hub + langsamer Vorwärtsflug)
 Re = 1,225 × 15 × 0,25 / 1,81e-5 ≈ 254.000
-```
+```text
 
 ### Erwartete CD-Werte (zur Plausibilisierung)
 
 | Profil | CD_min bei Re=300k | L/D_max | Quelle |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | FX 63-137 | ~0,0065 | ~40-45 | typische Wert aus UIUC-Datenbank |
 | NACA 4412 | ~0,0080 | ~28-35 | NACA-Report |
 | Eppler 423 | ~0,0060 | ~35-42 | UIUC-Datenbank |
@@ -145,7 +147,7 @@ Re = 1,225 × 15 × 0,25 / 1,81e-5 ≈ 254.000
 ## 5. Workflow-Schritte (konkret)
 
 | # | Schritt | Dauer |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Profile als `.dat` downloaden | 5 min |
 | 2 | XFLR5 öffnen, Profil laden | 2 min |
 | 3 | Direkte Analyse für Re 300k | 10 min |

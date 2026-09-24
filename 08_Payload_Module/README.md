@@ -5,7 +5,7 @@ Vier austauschbare Innenmodule für den Universal-Container.
 ## Übersicht
 
 | Modul-ID | Bezeichnung | Hauptkomponenten | Masse | Strom |
-|----------|-------------|------------------|-------|-------|
+| ---------- | ------------- | ------------------ | ------- | ------- |
 | **M1-SAR** | SAR-Sensorik | Boson 640, Arducam 4K, LED, Mikrofon/Lautsprecher | 280 g | 18 W |
 | **M2-WILD** | Wildschutz | Boson 640, Multispektral (Parrot Sequoia), Akustik | 320 g | 22 W |
 | **M3-BEH** | Behörden | Boson 640, LED 6.000 lm, Lautsprecher 100 dB, TETRA-Bridge | 580 g | 35 W |

@@ -14,12 +14,14 @@
 ## So legst du die 2 neuen Chats an
 
 ### Chat 1: 🛠️ Technik & Hardware
+
 1. Workspace `VTOL-Projekt` aktivieren
 2. `+ New Chat`
 3. Inhalt aus `NEU-01-Technik-Hardware.md` ab **„Du bist jetzt im Technik & Hardware-Chat …"** reinkopieren
 4. Erste Frage: „Hallo Technik-Bot, lies den Stand aus Projekt-Memory.md nach. Was steht heute an?"
 
 ### Chat 2: 🧠 Strategie & Umfeld
+
 1. Workspace `VTOL-Doku` aktivieren
 2. `+ New Chat`
 3. Inhalt aus `NEU-02-Strategie-Umfeld.md` ab **„Du bist jetzt im Strategie & Umfeld-Chat …"** reinkopieren
@@ -30,6 +32,7 @@
 ## Wann welcher Chat?
 
 ### 🛠️ Technik & Hardware
+
 - Profil-Vergleich / Polaren rechnen
 - OpenVSP-Modell aufbauen
 - CAD in Fusion 360
@@ -40,6 +43,7 @@
 - **Alles, was eine Bauplan- oder Spec-Frage ist**
 
 ### 🧠 Strategie & Umfeld
+
 - Wochenrückblick / Priorisierung
 - SORA-Recherche / EASA-C3-Pfad
 - ConOps-Vorlage für Käufer schreiben
@@ -55,6 +59,7 @@
 Die **Todo-Liste** (`01_Dokumentation/Todos/Todo-Liste.md`) ist die Wahrheit zwischen den Chats.
 
 Wenn der Strategie-Bot entscheidet „PX4 statt ArduPilot", schreibt er:
+
 1. Eintrag in `Entscheidungen.md`
 2. Eintrag in `Todo-Liste.md` (Chronik)
 3. → Im nächsten Technik-Chat sagst du: „Brücke aus Strategie: wir haben auf PX4 entschieden. Lade `01_Dokumentation/Entscheidungen.md` und lies die letzte Entscheidung."
@@ -76,6 +81,6 @@ Die alten `00–05` Setup-Files aus dem ersten Entwurf liegen noch im Repo und s
 ## Chronik
 
 | Datum | Änderung |
-|---|---|
+| --- | --- |
 | 2026-09-24 | Initiale 6 Themenchat-Setups + README angelegt |
 | 2026-09-24 | **Überarbeitet auf 2-Chat-Struktur**: 🛠️ Technik & Hardware + 🧠 Strategie & Umfeld. Alte 6-Setups bleiben archiviert im Repo, README aktualisiert |

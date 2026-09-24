@@ -11,7 +11,7 @@
 Die EU-Drohnenregulierung unterscheidet **7 Klassen**, gestaffelt nach MTOM, Geschwindigkeit und Betriebsart. **C0–C4** fallen unter die **Open Category** (kein LBA nötig), **C5–C6** unter **Specific Category mit Standard-Szenarien** (STS-01 / STS-02).
 
 | Klasse | Max MTOM | Max Speed | Char. Dimension | Betrieb | Erforderlich |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | **C0** | < 250 g | – | – | Open, keine Reg. | CE + Klasse-C-Label |
 | **C1** | < 900 g | 19 m/s | – | Open, A1/A3 | CE + Klasse-C-Label |
 | **C2** | < 4 kg | – | – | Open, A1/A2/A3 | CE + Klasse-C-Label + Mode-Switch |
@@ -25,6 +25,7 @@ Die EU-Drohnenregulierung unterscheidet **7 Klassen**, gestaffelt nach MTOM, Ges
 ## Welche Klasse passt zu Hermes-VTOL?
 
 Hermes-VTOL-Spezifikation (Lastenheft v1.1):
+
 - MTOM: **16 kg**
 - Wingspan: **≤ 2 m** (char. Dimension ≤ 3 m)
 - Max Speed: **~30 m/s** (mit Pusher)
@@ -33,7 +34,7 @@ Hermes-VTOL-Spezifikation (Lastenheft v1.1):
 → Hermes-VTOL passt in **C3 / C5 / C6** je nach Use-Case:
 
 | Use-Case | Klasse | Begründung |
-|---|---|---|
+| --- | --- | --- |
 | **VLOS in nicht-kontrolliertem Luftraum** (z. B. lokaler SAR-Einsatz auf offenem Feld mit Sichtkontakt) | **C3** | Open Category, nur Declaration |
 | **BVLOS bis 2 km** (z. B. automatisierte Wildschutz-Patrol, kurze Vermessungsmissionen) | **C5** (STS-01) | Declaration, alle Anforderungen erfüllt |
 | **BVLOS erweitert** (z. B. großflächige SAR-Suche, lange Behörden-Missionen) | **C6** (STS-02) | Declaration + Geo-Caging + FTS |
@@ -92,7 +93,7 @@ Hermes-VTOL-Spezifikation (Lastenheft v1.1):
 ## Hermes-VTOL-Design-Anforderungen (aus C6 abgeleitet)
 
 | Funktion | Implementierung | Status |
-|---|---|---|
+| --- | --- | --- |
 | **Geo-Caging** | PX4-Parameter `GF_ACTION`, `GF_MAX_HOR_DIST`, `GF_MAX_VER_DIST` | ✅ PX4 built-in |
 | **FTS** | PX4 FailureInjector + Auto-Landing bei C2-Loss > 5s | ⚠️ zu verifizieren |
 | **M2-Mitigation** | Optionaler Fallschirm (z. B. MARS Parachutes MFG-02-RAVEN) | ⚠️ optional, empfohlen |
@@ -109,7 +110,7 @@ Hermes-VTOL-Spezifikation (Lastenheft v1.1):
 Auf der offiziellen EASA-Liste der **C-klassifizierten Drohnen** ([easa.europa.eu](https://www.easa.europa.eu/en/domains/drones-air-mobility/drones-evtol-designs/drones-eu-operations)) sind:
 
 | Hersteller | Modell | Klasse | Topologie |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | CAVOK UAS | CK4 / CK9 / CK25 / CK7-2 | C5/C6 | Multirotor |
 | AIR6 SYSTEMS | AIR4 NANO / LIGHT / MICRO | C5/C6 | Multirotor |
 | OBJECTIF DRONE PRODUCTION | CHRONOS / ARES / ATLAS / MANTA | C5/C6 | Multirotor |
@@ -147,7 +148,7 @@ Auf der offiziellen EASA-Liste der **C-klassifizierten Drohnen** ([easa.europa.e
 Das Lastenheft v1.1 sollte explizit auf **C5/C6 als Design-Ziel** ausgerichtet sein:
 
 | Lastenheft-Anforderung | Implikation |
-|---|---|
+| --- | --- |
 | Akku-Redundanz | OSO #2 erfüllt |
 | IMU-Redundanz (2 Sensoren) | OSO #2 erfüllt |
 | GPS-Redundanz (Dual-Antenne) | OSO #2 erfüllt |
@@ -163,7 +164,7 @@ Das Lastenheft v1.1 sollte explizit auf **C5/C6 als Design-Ziel** ausgerichtet s
 
 ## Weiterführende Doku
 
-- **EASA Opinion No 05-2019** — STS-01/STS-02-Einführung, C5/C6-Definition: [Link](https://www.easa.europa.eu/sites/default/files/dfu/Opinion%20No%2005-2019.pdf)
+- **EASA Opinion No 05-2019** — STS-01/STS-02-Einführung, C5/C6-Definition: [EASA Opinion 05-2019 (PDF)](https://www.easa.europa.eu/sites/default/files/dfu/Opinion%20No%2005-2019.pdf)
 - **EASA C-Class-Liste** (Live): [easa.europa.eu](https://www.easa.europa.eu/en/domains/drones-air-mobility/drones-evtol-designs/drones-eu-operations)
 - **SORA-Schritte-Skelett:** siehe `01_Dokumentation/ConOps-Vorlage-SAR.md` + Skill `vtol-experte` Sektion 13
 - **Marktvergleich:** `Marktvergleich_VTOL.md`

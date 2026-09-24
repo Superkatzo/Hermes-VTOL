@@ -5,7 +5,7 @@ Boden- und Flugtests, Protokolle.
 ## Inhalt
 
 | Ordner | Zweck |
-|--------|-------|
+| -------- | ------- |
 | **Boden_Tests/** | Vibration, EMV, IP-Rating, Temperatur-Schock |
 | **Flug_Tests/** | Hover, Transition, Endurance, BVLOS |
 | **Test_Protokolle/** | Ausgefüllte Testberichte, Checklisten |
@@ -14,7 +14,7 @@ Boden- und Flugtests, Protokolle.
 ## Test-Phasen (gemäß Lastenheft Kapitel 6.2.1)
 
 | Phase | Dauer | Betriebsbewilligung |
-|-------|-------|---------------------|
+| ------- | ------- | --------------------- |
 | 1 — Ground Tests | 2 Wo | keine |
 | 2 — Tethered Hover | 1 Wo | Indoor / gesichert |
 | 3 — Free Hover | 2 Wo | Open-A1 |

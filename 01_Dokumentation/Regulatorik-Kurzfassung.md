@@ -10,7 +10,7 @@
 ## 🎯 Dein Standpunkt in 60 Sekunden
 
 | Als Hersteller/Verkäufer... | Was du NICHT machst |
-|-----------------------------|----------------------|
+| ----------------------------- | ---------------------- |
 | ✅ Drohne designen und produzieren | ❌ Du kaufst keine Operator-Versicherung |
 | ✅ SORA-Vorlage erstellen (Marketing-Hebel) | ❌ Du machst keine Pilot-Lizenz |
 | ✅ ConOps-Vorlage liefern (SAR, Wildschutz etc.) | ❌ Du meldest dich nicht beim LBA als Operator an |
@@ -29,7 +29,7 @@
 ### 1️⃣ Type-Design und Bau
 
 | Pflicht | Quelle |
-|---------|--------|
+| --------- | -------- |
 | Drohne nach EU-VO 2019/945 in eine Klasse einordnen (C0-C6) | EU-VO 2019/945 |
 | Sicherheits-Anforderungen einhalten (Schub-Limit, Akku-Schutz, etc.) | EU-VO 2019/945 |
 | Identifikations-System einbauen (Direct Remote Identification) | EU-VO 2019/945 |
@@ -38,7 +38,7 @@
 ### 2️⃣ CE-Kennzeichnung
 
 | Klasse | Was | Beispiel |
-|--------|-----|----------|
+| -------- | ----- | ---------- |
 | **Klasse C0** | bis 250 g, in Open Category | Spielzeug-Drohne |
 | **Klasse C1** | bis 80 Joule kinetische Energie, < 900 g | DJI Mini-Style |
 | **Klasse C2** | bis 4 kg, mechanical/electronic ID | Kleine Pro |
@@ -54,7 +54,7 @@
 ### 3️⃣ Produkthaftung
 
 | Was du dokumentieren musst | Wo |
-|----------------------------|-----|
+| ---------------------------- | ----- |
 | Design-Historie | im Qualitäts-Management-System |
 | Material-Liste (BoM) | im Wartungs-Plan |
 | Test-Protokolle (Schub, Vibration, etc.) | intern + beim Kunden |
@@ -65,7 +65,7 @@
 ### 4️⃣ Bedienungsanleitung + Dokumentation
 
 | Lieferumfang | Was |
-|--------------|-----|
+| -------------- | ----- |
 | **Bedienungsanleitung** (multi-language) | Pflicht |
 | **Wartungs-Plan** | Pflicht |
 | **Sicherheits-Anweisungen** | Pflicht |
@@ -79,7 +79,7 @@
 ## 🛡️ Was bleibt beim Käufer (deiner Verantwortung nicht)
 
 | Pflicht | Käufer |
-|---------|--------|
+| --------- | -------- |
 | **EU-Operator-Registrierung** beim LBA | macht er |
 | **Haftpflicht-Versicherung** (mind. 750k SZR) | macht er |
 | **Fernpilot-Zeugnis** (A1/A2/A3 + ggf. STS) | macht er |
@@ -92,7 +92,7 @@
 ## 📦 Was du als „Verkaufs-Paket" lieferst
 
 | Nr | Bestandteil | Wert für Käufer |
-|----|-------------|------------------|
+| ---- | ------------- | ------------------ |
 | **1** | Drohne (VTOL, 16 kg) | Hauptprodukt |
 | **2** | Bedienungsanleitung | Pflicht |
 | **3** | Wartungs-Plan | Pflicht + Wert |
@@ -108,7 +108,7 @@
 ## 🎓 ConOps-Vorlage als Marketing-Hebel
 
 | Vorteil für dich | Vorteil für Käufer |
-|------------------|---------------------|
+| ------------------ | --------------------- |
 | **Differenzierung** vom Wettbewerb | Spart 4–8 Wochen SORA-Arbeit |
 | **Höherer Preis** möglich | Schnellere Markteinführung |
 | **Markentreue** | Professioneller Eindruck |
@@ -121,7 +121,7 @@
 ## 💰 Was kostet dich das regulatorisch?
 
 | Element | Kosten/Erfordernis |
-|---------|---------------------|
+| --------- | --------------------- |
 | **CE-Kennzeichnung** (Klasse C) | intern oder via Zertifizierungs-Stelle (€5–15k) |
 | **Risiko-Analyse / FMEA** | intern, viel Eigenarbeit |
 | **Bedienungsanleitung** | extern (technischer Redakteur) €2–5k |
@@ -137,7 +137,7 @@
 ## 🔥 Mögliche Käuferprofile
 
 | Kundenprofil | Was brauchen sie |
-|--------------|------------------|
+| -------------- | ------------------ |
 | **SAR-Verein (Helfer-Team)** | 1 Drohne, einfache SORA-Vorlage, Bedienungs-Schulung |
 | **Wildschutz-Behörde** | 1–3 Drohnen, Wildschutz-ConOps-Vorlage, SORA |
 | **Polizei** | 1 Drohne + Ground Station, sicherheits-zertifiziert, SORA |
@@ -149,7 +149,7 @@
 ## 🔮 Was du jetzt brauchst
 
 | Anforderung | Quelle |
-|-------------|--------|
+| ------------- | -------- |
 | Welche Klasse (C0-C6 oder Certified)? | EU-VO 2019/945 |
 | Wie sieht ConOps für SAR aus? | JARUS SORA Main Body |
 | Wie sieht Risiko-Mitigation aus? | SORA Annex B (Ground) + C (Air) |
@@ -160,7 +160,7 @@
 ## ⚖️ Versicherung für DICH als Hersteller
 
 | Versicherungs-Typ | Was | Wofür |
-|--------------------|-----|--------|
+| -------------------- | ----- | -------- |
 | **Produkthaftpflicht** | wenn deine Drohne Schaden anrichtet | Schutz vor Käufer-Klagen |
 | **Betriebshaftpflicht** | wenn in deiner Halle was passiert | Allgemeines Risiko |
 | **Berufshaftpflicht** | als Designer / Ingenieur | Beratungsfehler |
@@ -171,7 +171,7 @@
 ## 📚 Welche Verordnungen für dich am wichtigsten sind
 
 | Verordnung | Wofür |
-|-----------|-------|
+| ----------- | ------- |
 | **EU-VO 2019/945** | Technische Anforderungen, Klassen-C-Kennzeichnung |
 | **JARUS SORA 2.5** | Vorlage für Kunden-ConOps |
 | **Produkthaftungs-Richtlinie 85/374/EWG** | Hersteller-Haftung |
@@ -183,7 +183,7 @@
 ## 🔴 Pflicht-Aktionen für dich jetzt
 
 | # | Schritt | Wer | Wann |
-|---|--------|-----|------|
+| --- | -------- | ----- | ------ |
 | 1 | **Klasse bestimmen** (C3? C5? Certified?) | du + Berater | bald |
 | 2 | **SORA-Vorlage schreiben** | du (Vorlage) | asap |
 | 3 | **CE-Kennzeichnung vorbereiten** | du | nach Design-Freeze |
@@ -198,7 +198,7 @@
 ## 🛡️ Warum du trotzdem SORA-Kenntnisse brauchst
 
 | Grund | Beispiel |
-|-------|----------|
+| ------- | ---------- |
 | **Verkauf an SAR-Kunden** | du brauchst glaubwürdige SORA-Vorlage |
 | **Marketing** | „Ready-to-Use" für SAR mit SORA-Vorlage ist Verkauf-Hebel |
 | **Risiko-Dialog** | du redest mit Behörden auf Augenhöhe |
@@ -210,7 +210,7 @@
 ## 📂 Wo die Originaldokumente sind
 
 | Dokument | Lokaler Pfad |
-|----------|--------------|
+| ---------- | -------------- |
 | EASA-EAR-UAS-2026-06.pdf | `C:\Users\willow\Documents\EASA\` |
 | EU-VO-2019-947.pdf | dito |
 | EU-VO-2019-945.pdf | dito |

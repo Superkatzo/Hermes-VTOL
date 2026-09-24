@@ -15,6 +15,7 @@ When a conversation crosses the **256,000-token threshold** and Hermes performs 
 ### Expected Behavior
 
 After compaction, the app should:
+
 - Keep the previous response visible in the chat history (summarized or truncated)
 - OR replace it with an explicit "Context was compacted" indicator
 - At minimum: the summary of the previous response should remain visible
@@ -32,7 +33,7 @@ From `C:/Users/willow/AppData/Local/hermes/logs/desktop.log`:
 
 ### Recurring Compaction Events
 
-```
+```text
 [2026-09-22T19:17:59.817Z] [hermes] 📦 Preflight compression: ~256,029 tokens >= 256,000 threshold. This may take a moment.
 [2026-09-22T19:17:59.824Z] [hermes] 🗜️ Compacting context — summarizing earlier conversation so I can continue...
 [2026-09-22T19:39:41.822Z] [hermes] 📦 Preflight compression: ~256,029 tokens >= 256,000 threshold. This may take a moment.
@@ -42,7 +43,7 @@ From `C:/Users/willow/AppData/Local/hermes/logs/desktop.log`:
 [2026-09-23T18:41:43.953Z] [hermes] 🗜️ Compacting context — still summarizing earlier conversation so I can continue...
 [2026-09-23T22:15:52.462Z] [hermes] 📦 Preflight compression: ~257,606 tokens >= 256,000 threshold. This may take a moment.
 [2026-09-23T22:15:52.468Z] [hermes] 🗜️ Compacting context — summarizing earlier conversation so I can continue...
-```
+```text
 
 ### Concrete Case: Disappearance around 22:15:52
 
@@ -50,11 +51,11 @@ From `C:/Users/willow/AppData/Local/hermes/logs/desktop.log`:
 
 **At 22:15:52**: compaction starts, 3-minute pause
 
-```
+```text
 22:15:52.462 → Preflight compression: ~257,606 tokens
 22:15:52.468 → Compacting context — summarizing...
 22:18:51.678 → (◔_◔) reflecting...   ← first response after compaction
-```
+```text
 
 This **3-minute pause** (`22:15:52` → `22:18:51`) corresponds to the time window during which the previous response disappeared from the UI.
 
@@ -111,7 +112,7 @@ This looks like a **React/Vue state-update bug** in the chat UI:
 For triage, here is the frequency observed on a single user installation:
 
 | Date | Token Count | Time | Notes |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 2026-09-22 19:17 | 256,029 | first compaction of session | log shows back-to-back |
 | 2026-09-22 19:39 | 256,029 | after restart | log shows back-to-back |
 | 2026-09-23 18:40 | 256,516 | long session | "still summarizing" — compaction > 1 min |
@@ -131,7 +132,7 @@ In addition to the 256k-token compaction trigger, the user has observed the same
 Last observed occurrences of response loss:
 
 | Time (approx.) | Log shows compaction? | User action reported |
-|---|---|---|
+| --- | --- | --- |
 | 2026-09-23 ~22:16 | ✅ Yes (~257,606 tokens) | response lost |
 | 2026-09-23 ~23:00+ | ❌ No compaction in log | response lost — likely background-review or scroll |
 | 2026-09-23 ~23:30 | ❌ No compaction in log | response lost — user scrolled mid-stream |

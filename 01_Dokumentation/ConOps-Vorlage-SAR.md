@@ -9,14 +9,14 @@
 
 ### 1.1 Missions-Name
 
-```
+```text
 [Missions-Name, z.B. „SAR-Einsatz Südhang 2026"]
-```
+```text
 
 ### 1.2 Organisation
 
 | Feld | Wert |
-|-------|------|
+| ------- | ------ |
 | **Operator-Name** | _[Verein / Firma]_ |
 | **EU-Operator-Nummer** | _[DE-OP-XXXXX]_ |
 | **Land / Bundesland** | _[z.B. Bayern / Oberbayern]_ |
@@ -25,7 +25,7 @@
 ### 1.3 Einsatz-Typen (Mehrfachauswahl)
 
 | Einsatz | Ankreuzen |
-|---------|----------|
+| --------- | ---------- |
 | Vermisste Person suchen (Wald, Berg) | ☐ |
 | Lawinen-Vermisste Person orten | ☐ |
 | Hochwasser-Pegel/Reichweiten erfassen | ☐ |
@@ -38,7 +38,7 @@
 ### 1.4 Einsatz-Zeiten
 
 | Wann | Erlaubt? |
-|------|----------|
+| ------ | ---------- |
 | Tageslicht-Flug | ✅ |
 | Sonnenuntergang ± 30 min | ⚠️ nur mit Beleuchtung |
 | Nacht (Sonne unter Horizont) | ⚠️ nur mit LBA-Erlaubnis |
@@ -46,7 +46,7 @@
 ### 1.5 Wiederkehr der Mission
 
 | Variante | Häufigkeit |
-|----------|-----------|
+| ---------- | ----------- |
 | **Ad-hoc** | nach Alarm, oft kurzfristig |
 | **Geplant** | z.B. 1x pro Woche Training |
 | **Bereitschaft** | 24/7-Rufbereitschaft |
@@ -58,7 +58,7 @@
 ### 2.1 Klasse des Geräts
 
 | Eigenschaft | Wert |
-|------------|------|
+| ------------ | ------ |
 | **MTOM** | 16 kg |
 | **Klasse nach EU-VO 2019/945** | **C3** |
 | **Konfiguration** | Quadplane Pusher + 4 Hub |
@@ -69,7 +69,7 @@
 ### 2.2 Betriebs-Kategorie
 
 | Element | Wert |
-|---------|------|
+| --------- | ------ |
 | **EU-Kategorie** | **Specific** (SORA-basiert) |
 | **SORA-Analyse (Version)** | JARUS SORA 2.5 |
 | **SAIL-Level** | [z.B. SAIL II] |
@@ -78,7 +78,7 @@
 ### 2.3 Pflichten des Operators
 
 | Pflicht | Status |
-|---------|--------|
+| --------- | -------- |
 | **Operator-Registrierung** (LBA) | ✅ / ☐ |
 | **Haftpflicht-Versicherung** (mind. 750k SZR) | ✅ / ☐ |
 | **LBA-Specific-Cat-Genehmigung** | ✅ / ☐ |
@@ -88,7 +88,7 @@
 ### 2.4 Behörden-Koordination
 
 | Behörde | Vor Flug zu informieren? |
-|---------|--------------------------|
+| --------- | -------------------------- |
 | **LBA (Luftfahrt-Bundesamt)** | bei SORA-relevanten Änderungen |
 | **Landesluftfahrtbehörde** (DE-BY = Regierung Oberbayern) | immer |
 | **Polizei / Rettungsleitstelle** | bei Einsätzen in deren Bereich |
@@ -102,7 +102,7 @@
 ### 3.1 Erlaubte Lufträume
 
 | Bedingung | Erlaubt? |
-|-----------|----------|
+| ----------- | ---------- |
 | **CTR (Kontrollzone Flughafen)** | ❌ ohne Tower-Freigabe |
 | **RMZ (Radio Mandatory Zone)** | ⚠️ mit Funk-Kontakt |
 | **ED-R (Restricted Areas)** | ❌ |
@@ -114,10 +114,10 @@
 
 ### 3.2 Definierte Einsatz-Gebiete
 
-```
+```text
 [Mission-spezifische Geokoordinaten einfügen]
 [z.B. Polygon „Einsatzgebiet Südhang" als GeoJSON-Datei]
-```
+```text
 
 | Gebiet-Name | Eckpunkte (lat/lon) |
 |-------------|---------------------|
@@ -131,7 +131,7 @@
 ### 4.1 Schlüsselrollen
 
 | Rolle | Person | Qualifikation |
-|-------|--------|---------------|
+| ------- | -------- | --------------- |
 | **Pilot in Command (PIC)** | _[Name]_ | A2 STS oder höher |
 | **Visual Observer (VO)** | _[Name]_ | mind. A1/A3 |
 | **Mission Commander** | _[Name]_ | SAR-Ausbildung |
@@ -142,7 +142,7 @@
 ### 4.2 Personal-Anforderungen
 
 | Anforderung | Pflicht |
-|-------------|--------|
+| ------------- | -------- |
 | **Fernpilot-Zeugnis A2 STS** | 🔴 |
 | **Medizinische Tauglichkeit** (JARUS OSO) | 🔴 |
 | **SAR-spezifische Schulung** (Mindesthöhe, Suchmethoden) | 🔴 |
@@ -156,7 +156,7 @@
 ### 5.1 Hauptdrohne: Hermes-VTOL
 
 | Spezifikation | Wert |
-|---------------|------|
+| --------------- | ------ |
 | **Hersteller** | [dein Name] |
 | **Modell** | Hermes-VTOL Mk.I |
 | **MTOM** | 16 kg |
@@ -170,7 +170,7 @@
 ### 5.2 Payload
 
 | Standard-Payloads | Optional |
-|-----------------|----------|
+| ----------------- | ---------- |
 | **RGB-Kamera** (Tag-Nacht-Sensor) | LiDAR |
 | **Thermal-Kamera** (Vermisstenortung) | Multispektral (Waldbrand) |
 | **Lautsprecher / Megafon** | SAR-Transponder |
@@ -179,7 +179,7 @@
 ### 5.3 Bodenstation
 
 | Komponente | Modell / Spezifikation |
-|------------|----------------------|
+| ------------ | ---------------------- |
 | **Tablet** mit Ground-Control-Software | iPad Pro / Samsung Tab |
 | **C2-Funk** (Command-and-Control) | z.B. RFD900, Mobile Mesh |
 | **Video-Receiver** für Telemetrie | 5,8 GHz / LTE |
@@ -188,7 +188,7 @@
 ### 5.4 Wartungs-Equipment
 
 | Werkzeug | Aufgabe |
-|----------|---------|
+| ---------- | --------- |
 | Multimeter | Spannungs-Test |
 | Schraubendreher-Set | Service |
 | Ersatz-Props (5 Stück) | Verschleiß |
@@ -202,7 +202,7 @@
 ### 6.1 Standard-Mission (Schritt für Schritt)
 
 | Schritt | Was | Verantwortlich |
-|---------|-----|----------------|
+| --------- | ----- | ---------------- |
 | **1** | Einsatzauftrag vom Einsatzleiter | Mission Commander |
 | **2** | Briefing (Wetter, Gebiet, Gefahren, Rollen) | PIC + Team |
 | **3** | Pre-Flight-Check (Drohne, Akku, Funk, Sensor) | Drohnen-Techniker |
@@ -219,7 +219,7 @@
 ### 6.2 Such-Systematik (SAR-spezifisch)
 
 | Methode | Effizienz | Einsatz-Bedingungen |
-|--------|-----------|---------------------|
+| -------- | ----------- | --------------------- |
 | **Parallele Bahnen** („Lawn-Mower") | mittel | offenes Gelände |
 | **Expandierendes Rechteck** | gut | bekannte POI-Region |
 | **Lineare Küsten-/Waldkante** | mittel | Waldbrand-Kante |
@@ -230,7 +230,7 @@
 ### 6.3 Kommunikation
 
 | Kanal | Von → An | Inhalt |
-|-------|---------|--------|
+| ------- | --------- | -------- |
 | **PIC ↔ VO** | direkt (Funk) | Hindernisse, andere Luftfahrzeuge |
 | **PIC ↔ Einsatzleiter** | Daten-LTE oder Funk | Fortschritt, Befunde |
 | **PIC ↔ Tower** | Funk 5,8 GHz | falls in CTR |
@@ -239,7 +239,7 @@
 ### 6.4 Daten-Management
 
 | Daten-Typ | Speicherort | Aufbewahrung |
-|-----------|------------|--------------|
+| ----------- | ------------ | -------------- |
 | **Telemetrie (Log)** | SD-Karte Drohne + Cloud | 2 Jahre (Behörden-Audit) |
 | **Video-Aufnahmen** | interne SSD Groundstation | so lange für Einsatz nötig, max 30 Tage |
 | **Fotos** | Cloud (verschlüsselt) | so lange für Einsatz nötig |
@@ -248,7 +248,7 @@
 ### 6.5 Notfall-Szenarien
 
 | Notfall | Reaktion |
-|---------|----------|
+| --------- | ---------- |
 | **Funkverbindung verloren** | Auto-RTH (Return-to-Home) |
 | **GPS verloren** | Manuelle Stabilisierung, sofortige Landung |
 | **Akku kritisch (<30%)** | Sofortige Rückkehr |
@@ -264,7 +264,7 @@
 ### 7.1 SORA-OSO-Checkliste (17 Punkte)
 
 | # | OSO | Status | Maßnahme |
-|---|-----|--------|----------|
+| --- | ----- | -------- | ---------- |
 | 1 | UAS Design + Construction | ✅ | Klasse C3 erfüllt |
 | 2 | UAS Maintenance | ✅ | Wartungs-Plan lokal |
 | 3 | Manufacturer's Manual | ✅ | Bedienungs-Anleitung |
@@ -286,7 +286,7 @@
 ### 7.2 Bodenrisiko-Minderung (M1)
 
 | Maßnahme | M1-Typ | Wirkung |
-|----------|--------|--------|
+| ---------- | -------- | -------- |
 | Fallschirm-System | M1 (B) | reduziert iGRC um ~2 Stufen |
 | Geo-Fence | M1 (A) | vermeidet bewohntes Gebiet |
 | Manuell übersteuerbar | M1 (A) | PIC kann sofort eingreifen |
@@ -295,7 +295,7 @@
 ### 7.3 Luftrisiko-Minderung (M2)
 
 | Maßnahme | Wirkung |
-|----------|---------|
+| ---------- | --------- |
 | Funk-Kontakt mit nahem Tower | reduziert ARC |
 | ADSB-Empfänger (sofern Drohne unterstützt) | erkennt bemannte Luftfahrzeuge |
 | Fluggebiet <120 m AGL | meist außerhalb kontrollierter Luft |
@@ -304,7 +304,7 @@
 ### 7.4 Performance-Anforderungen (Robustheits-Level)
 
 | OSO | Level | Begründung |
-|-----|-------|------------|
+| ----- | ------- | ------------ |
 | 1, 3, 5, 6, 7 | **Hoch** | direkt sicherheitsrelevant |
 | 2, 4, 8, 9 | **Mittel** | betrieblich wichtig |
 | 10, 11 | **Hoch** | direkt sicherheitsrelevant |
@@ -319,7 +319,7 @@
 ### 8.1 Wartungs-Intervalle
 
 | Komponente | Intervall | Aufgabe |
-|------------|-----------|---------|
+| ------------ | ----------- | --------- |
 | **Motor-Lager** | jede 50 h | Schmierung, Verschleiß-Check |
 | **Propeller** | vor jedem Flug | Sicht-Check + Riss-Check |
 | **Akku** | nach jedem Flug | Spannung-Check + Balancing |
@@ -331,7 +331,7 @@
 ### 8.2 Spezifikation Drohne
 
 | Element | Wert |
-|---------|------|
+| --------- | ------ |
 | **Max Schub pro Motor** | 4,5 kg |
 | **Schwebeschub-Bedarf** | ca. 8 kg pro Motor @ 50% Throttle |
 | **Pusher-Max-Schub** | 4 kg (Cruise-Flug) |
@@ -346,7 +346,7 @@
 ## 9. Anhänge (zu erstellen)
 
 | Anhang | Inhalt |
-|--------|--------|
+| -------- | -------- |
 | **Anhang A** | Karten-Material (Einsatzgebiete als GeoJSON) |
 | **Anhang B** | Crew-Liste + Qualifikations-Nachweise |
 | **Anhang C** | Drohnen-Wartungs-Logbuch |
@@ -365,6 +365,6 @@
 
 ---
 
-*Diese Vorlage ist „Plug and Play" — der Käufer passt die []-Werte an, dann ist die ConOps für die SORA-Analyse fertig.*
+_Diese Vorlage ist „Plug and Play" — der Käufer passt die []-Werte an, dann ist die ConOps für die SORA-Analyse fertig._
 
-*SORA-2.5-konform — bei jeder LBA-Anpassung der Regulierung diese Vorlage aktualisieren.*
+_SORA-2.5-konform — bei jeder LBA-Anpassung der Regulierung diese Vorlage aktualisieren._

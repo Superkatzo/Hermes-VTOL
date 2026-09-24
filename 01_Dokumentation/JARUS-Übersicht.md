@@ -7,9 +7,9 @@
 
 ## 📦 Lokales Archiv-Verzeichnis
 
-```
+```text
 C:\Users\willow\Documents\EASA\JARUS\
-```
+```text
 
 (Die Originaldateinamen werden so belassen, wie sie von JARUS kommen.)
 
@@ -18,7 +18,7 @@ C:\Users\willow\Documents\EASA\JARUS\
 ## 🗂️ Dokumenten-Matrix (was wofür)
 
 | Original-Name | Datum | Zweck | Größe ca. | Pfad |
-|---------------|-------|-------|-----------|------|
+| --------------- | ------- | ------- | ----------- | ------ |
 | *eintragen* | 2024-05-13 | Main Body — die Hauptmethodik | ~2 MB | `JARUS\` |
 | *eintragen* | 2024-06 | Annex A — Flight Geography | ~0,5 MB | `JARUS\` |
 | *eintragen* | 2024-06 | Annex B — Ground Risk Mitigations | ~0,3 MB | `JARUS\` |
@@ -37,6 +37,7 @@ C:\Users\willow\Documents\EASA\JARUS\
 > **Was SORA ist und wie die 10-Schritte-Methodik funktioniert.**
 
 Inhalt:
+
 - Die 10 Schritte (Operation beschreiben, iGRC, ARC, SAIL, OSO, etc.)
 - Definitionen der SAIL-Levels (I-VI)
 - ConOps-Anforderungen
@@ -46,6 +47,7 @@ Inhalt:
 > **Wie groß sind deine Flugräume um die geplante Operation?**
 
 Inhalt:
+
 - Berechnung der **Flight Geography (FG)**
 - Berechnung der **Contingency Volume (CV)**
 - **Ground Risk Buffer (GRB)**
@@ -56,6 +58,7 @@ Inhalt:
 > **Wie kannst du Bodenrisiko reduzieren?**
 
 Inhalt:
+
 - M1 Strategische Mitigations
 - M2 Tactical Mitigations
 - Anerkannte Maßnahmen (z.B. Fallschirm, Auswahl der Drohne)
@@ -65,6 +68,7 @@ Inhalt:
 > **Wie kannst du Luftrisiko (Mid-Air-Collision) reduzieren?**
 
 Inhalt:
+
 - ARC-bestimmung
 - Strategische Maßnahmen (Flugverkehrsmanagement)
 - Tactical Mitigations
@@ -74,6 +78,7 @@ Inhalt:
 > **Welches SAIL-Level ergibt sich aus iGRC × ARC?**
 
 Inhalt:
+
 - SAIL-Matrix
 - Containment-Anforderungen
 
@@ -82,6 +87,7 @@ Inhalt:
 > **Wie zeigst du, dass du die OSOs erfüllst?**
 
 Inhalt:
+
 - 17 OSOs
 - Robustness Levels (Low / Medium / High)
 - Evidenz-Anforderungen
@@ -91,6 +97,7 @@ Inhalt:
 > **Wie viele Menschen sind in der Gefahrenzone?**
 
 Inhalt:
+
 - Kernel-Method (Sliding Window)
 - GHS-POP Datengrundlage
 - Assemblies of People
@@ -105,7 +112,7 @@ Inhalt:
 
 | Was | URL |
 |-----|-----|
-| **JARUS-Webseite** | https://jarus-rpas.org |
+| **JARUS-Webseite** | <https://jarus-rpas.org> |
 | **JARUS → Publications** | (Login erforderlich für neuere Annexe) |
 
 ---
@@ -113,7 +120,7 @@ Inhalt:
 ## 🔢 Aktualisierungs-Plan
 
 | Wann | Aktion |
-|------|--------|
+| ------ | -------- |
 | **Quartalsweise** | JARUS-Website auf Updates prüfen |
 | **Bei jeder neuen SORA-Edition** | Datum-Notiz oben in diese Matrix eintragen |
 | **Vor jedem SORA-Antrag** | Versionsstand verifizieren mit LBA / Behörde |
@@ -132,21 +139,21 @@ Inhalt:
 
 Falls du die Dateinamen doch noch anpassen willst — minimal-invasiv:
 
-```
+```text
 ORIGINALNAME_2024.pdf
-```
+```text
 
 Beispiel:
 
-```
+```text
 JAR-del_WG6_D.04_2024-06.pdf
-```
+```text
 
 Oder mit Reverse-Datum als Prefix:
 
-```
+```text
 2024-06_JAR-del_WG6_D.04.pdf
-```
+```text
 
 **Status:** aktuell Originaldateinamen belassen.
 

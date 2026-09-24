@@ -8,6 +8,7 @@
 ## ⚠️ Sicherheits-Empfehlung: **Fine-Grained PAT** statt klassischer PAT
 
 GitHub rät seit 2023 zu **Fine-Grained Personal Access Tokens**, weil sie:
+
 - Nur **einzelne Repos** autorisieren (nicht alle)
 - Nur **nötige Scopes** haben
 - **Ablaufdatum** haben (du vergisst sie nicht ewig)
@@ -18,14 +19,14 @@ GitHub rät seit 2023 zu **Fine-Grained Personal Access Tokens**, weil sie:
 
 ### 1. Browser-URL öffnen
 
-👉 https://github.com/settings/tokens?type=beta
+👉 <https://github.com/settings/tokens?type=beta>
 
 ### 2. „Generate new token" klicken
 
 ### 3. Einstellungen
 
 | Feld | Wert |
-|---|---|
+| --- | --- |
 | **Token name** | `hermes-vps-telegram-bot` |
 | **Expiration** | 90 days (du wirst erinnert) |
 | **Description** | `Telegram-Bot auf VPS → Push Todo-Liste Updates in Hermes-VTOL Repo` |
@@ -38,13 +39,13 @@ GitHub rät seit 2023 zu **Fine-Grained Personal Access Tokens**, weil sie:
 ### 5. Repository permissions (nur diese zwei nötig)
 
 | Permission | Access |
-|---|---|
+| --- | --- |
 | **Contents** | Read and write |
 | **Metadata** | Read-only (Default, nicht ändern) |
 
 ### 6. „Generate token" klicken
 
-### 7. **Token SOFORT kopieren** — er wird nur einmal angezeigt!
+### 7. **Token SOFORT kopieren** — er wird nur einmal angezeigt
 
 Format: `github_pat_11XXXXXX...`
 
@@ -54,11 +55,12 @@ Format: `github_pat_11XXXXXX...`
 
 Schick mir den Token als Antwort im Chat, z. B.:
 
-```
+```text
 Mein GitHub-PAT: github_pat_11XXXXXX...rest
-```
+```text
 
 Ich werde ihn dann:
+
 1. Per `ssh hermes-vps` sicher auf den VPS übertragen
 2. In `/docker/hermes-agent-ekgx/data/.env` als `GITHUB_PAT=<token>` ablegen
 3. Den `telegram_to_github.sh` so anpassen, dass er den Token nutzt (statt SSH-Key)
@@ -70,7 +72,7 @@ Ich werde ihn dann:
 ## 🔒 Was du danach behältst
 
 - Token läuft in 90 Tagen ab — du wirst vom GitHub-Cleaning-Tag (freitags 11:30 MESZ) erinnert, einen neuen zu generieren
-- Wenn du früher widerrufen willst: https://github.com/settings/tokens?type=beta → Token anklicken → „Delete"
+- Wenn du früher widerrufen willst: <https://github.com/settings/tokens?type=beta> → Token anklicken → „Delete"
 
 ---
 

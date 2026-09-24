@@ -13,12 +13,14 @@
 **Ergebnis:** ❌ **Fehlgeschlagen**
 
 **Befund (vom Subagent dokumentiert):**
+
 - `memory`-Tool ist in Subagent-Sessions **nicht verfügbar** — weder als top-level tool, noch über `tool_search`/`tool_describe`/`tool_call` (alle 15 deferred-Kataloge geprüft), noch über `hermes_tools`-Python-Modul
 - Bestätigt durch `import hermes_tools as ht; print(sorted([n for n in dir(ht) if not n.startswith('_')]))` → Liste enthält **kein** `memory` oder `skills_list`
 - Auch `skills_list` ist in Subagent-Sessions nicht verfügbar
 - Nur diese Tools sind im Subagent verfügbar: `terminal`, `tool_search`, `tool_describe`, `tool_call`, `execute_code`, `read_file`, `write_file`, `patch`, `search_files`, `web_search`, `web_extract`, `browser_*`, `vision_analyze`, `text_to_speech`
 
 **Konsequenz:**
+
 - Memory-Persistenz kann nur in der **Parent-Session** getestet werden
 - Subagent-Tasks können keine persistenten Notizen für die Zukunft hinterlassen
 - Persistente Findings müssen via `write_file` ins Repo oder via `delegate_task(action='spawn')` mit explizitem Output-to-Repo-Pfad festgehalten werden
@@ -32,11 +34,13 @@
 **Ergebnis:** ❌ **Schon der add()-Call scheitert** — `Memory at 4,252/2,200 chars. Adding this entry would exceed the limit.`
 
 **Befund:**
+
 - Aktuelles Memory-Budget: **4.252/2.200** (also bereits **193% überfüllt**)
 - Mehrere redundante Einträge (VPS-Port-Info 2× vorhanden, Cronjob-Stand veraltet mit nur 5 Jobs statt aktuell 11, Sicherheits-Containment doppelt mit Projekt-Todo-Liste)
 - Die "Persistenz" der Memory scheitert schon am Speicherplatz, bevor ein neuer Test-Marker überhaupt gespeichert werden könnte
 
 **Konsequenz:**
+
 - Memory braucht dringend eine **Konsolidierung** — siehe `01_Dokumentation/Todos/Todo-Liste.md` Abschnitt "🟠 VPS & Infrastruktur"
 - Empfehlung: In einer ruhigen Minute alle Einträge auf das Wesentliche reduzieren (Ziel: <1.500/2.200 Zeichen)
 
@@ -49,7 +53,7 @@
 **Status:** ⚠️ **Teilweise getestet, Ergebnis besorgniserregend**
 
 | Erwartet | Realität |
-|---|---|
+| --- | --- |
 | Erinnerung in neuem Tab sichtbar | Theoretisch ja — aber `memory()` ist in Subagent-Sessions **nicht verfügbar**; in Parent-Sessions schon, aber **Speicher voll** |
 | Persistente Notizen über Session-Grenzen | Nur über **Repo-Dateien** zuverlässig (`01_Dokumentation/Protokolle/`, Todo-Liste) — Memory nicht |
 | Empfehlung | **Repo-Dateien bevorzugen** für alle persistenten Notizen. Memory nur für sehr kurze, hochrelevante Fakten (Ziel <50% Auslastung) |

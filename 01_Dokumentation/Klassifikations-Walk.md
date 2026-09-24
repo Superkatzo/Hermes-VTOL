@@ -30,7 +30,7 @@
 ### Klasse der Drohne (Produkt-Kennzeichnung)
 
 | Klasse | Definition | Wahrscheinlich? |
-|--------|-----------|-----------------|
+| -------- | ----------- | ----------------- |
 | **C0** | ≤250 g, Public-Safety, langsam | ❌ du bist 16 kg |
 | **C1** | ≤80 Joule kinetische Energie, ≤900 g | ❌ du bist zu schwer |
 | **C2** | 80–<500 Joule, ≤4 kg | ❌ du bist zu schwer |
@@ -46,7 +46,7 @@
 ### C3 vs C4
 
 | Frage | C3 | C4 |
-|-------|----|----|
+| ------- | ---- | ---- |
 | **Max MTOM** | 25 kg | 25 kg |
 | **Personen-Überflug** | Eingeschränkt möglich | **Nein** |
 | **Annex-Teil der VO 945** | Part 1, Anhang | Part 1, Anhang |
@@ -58,7 +58,7 @@
 ### 🎯 Welche passt für SAR?
 
 | Use-Case | Empfehlung |
-|----------|------------|
+| ---------- | ------------ |
 | **SAR** (Über Suchgebieten) | **C3** — eingeschränkter Personen-Überflug möglich |
 | **Wildschutz** (über Wald/Tier) | **C3 oder C4** — beide möglich |
 | **Infrastruktur-Inspektion** (Brücken, Strom) | **C3** — oft über Strassen/Parkplätze |
@@ -75,7 +75,7 @@
 Deine Drohne kommt in die **Specific Category**, wenn:
 
 | Bedingung | Relevant für dich? |
-|-----------|---------------------|
+| ----------- | --------------------- |
 | Über Menschenmengen | ✅ SAR möglich |
 | Betrieb außerhalb Sichtweite (BVLOS) | ✅ du brauchst BVLOS |
 | Über Wohngebieten | ⚠️ wenn du in Städten suchst |
@@ -90,7 +90,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 ### 🚨 „Certified Category" (= Type-Certificate)
 
 | Wann? | Relevant? |
-|-------|-----------|
+| ------- | ----------- |
 | Transport von Menschen | ❌ nein |
 | >25 kg, hohes Risiko | ❌ du bist 16 kg |
 | Flughafen-Nähe, hohes Risiko | ⚠️ je nach Mission |
@@ -106,7 +106,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 ## 🎯 Deine finale Klassifikation
 
 | Frage | Antwort |
-|-------|---------|
+| ------- | --------- |
 | **Produkt-Klasse** | **C3** (oder C4 wenn keine SAR-Personen-Überflüge) |
 | **Betriebs-Kategorie** | **Specific Category** (SORA erforderlich) |
 | **Type-Design-Requirement** | entsprechend Klasse C3 herstellen |
@@ -119,7 +119,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 ### Pflicht-Komponenten für C3
 
 | Komponente | Pflicht |
-|-----------|---------|
+| ----------- | --------- |
 | **Direct Remote Identification** (Broadcast von ID + Position) | 🔴 Pflicht |
 | **Geo-Awareness** (eingebaut, update-fähig) | 🔴 Pflicht |
 | **Akustisches Limit** (z.B. 85 dB) | 🔴 Pflicht |
@@ -130,7 +130,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 ### Freiwillig, aber für SAR + BVLOS dringend empfohlen
 
 | Komponente | Warum |
-|-----------|-------|
+| ----------- | ------- |
 | **Fallschirm-System** | ASTM F3322 konform, Notfall-Landung über Menschen |
 | **Auto-Landing** | wenn Funkverbindung weg |
 | **Geo-Fence** | virtuelle NO-FLY-Zonen |
@@ -144,7 +144,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 ### Variante 1: Klasse C3 + Specific-Betrieb (Käufer macht SORA)
 
 | Was | Kosten |
-|-----|--------|
+| ----- | -------- |
 | **C3-Compliance nachweisen** | intern (€5–15k) |
 | **Konformitäts-Test** | Zertifizierer (€5–10k) |
 | **Bedienungs-Anleitung** | extern (€2–5k) |
@@ -154,7 +154,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 ### Variante 2: Klasse C5 oder Certified (falls nötig)
 
 | Was | Kosten |
-|-----|--------|
+| ----- | -------- |
 | **EASA Type-Certificate** | €80–250k |
 | **C5-Compliance** | €20–50k |
 | **Zertifizierer** | zusätzlich |
@@ -169,7 +169,7 @@ Deine Drohne kommt in die **Specific Category**, wenn:
 Falls du irgendwann auf 25–150 kg skalieren willst:
 
 | Klasse | Größe | Aufwand |
-|--------|-------|---------|
+| -------- | ------- | --------- |
 | **C5** | 25–100 kg, „privat" | mittel-hoch (eigenes Zertifizierungs-Verfahren) |
 | **C6** | wie C5, eingeschränkt | mittel-hoch |
 | **Certified** | kommerziell behördlich | hoch |
@@ -181,11 +181,13 @@ Falls du irgendwann auf 25–150 kg skalieren willst:
 ## 📂 Welche Original-Dokumente für was?
 
 | Dokument | Welche Kapitel? |
-|----------|-----------------|
+| ---------- | ----------------- |
 | **EU-VO 2019/945** | Annex Part 1 (Klasse C3/C4 Definitionen) |
 | **EU-VO 2019/947** | Artikel 5 (Specific Category Definition) |
 | **JARUS SORA 2.5** | die ganze Methodik |
 
 ---
 
-*Letzte Aktualisierung: 2026-09-22*
+## Letzte Aktualisierung
+
+2026-09-22

@@ -5,7 +5,7 @@
 ## Inhalt
 
 | Ordner | Zweck | Versioniert? |
-|--------|-------|--------------|
+| -------- | ------- | -------------- |
 | **Fusion360_Master/** | Originale Fusion-360-Dateien (.f3d, .f3z) | NEIN (in Git LFS) |
 | **CAD_Exports_STEP/** | Neutrales CAD-Format für andere Tools | JA |
 | **CAD_Exports_IGES/** | Älteres Neutralformat | JA |
@@ -13,7 +13,7 @@
 
 ## Hauptmodell-Struktur (geplant)
 
-```
+```text
 Hermes-VTOL.f3z (Master-Datei)
 ├── 01_Rumpf
 ├── 02_Fluegel_Links
@@ -26,7 +26,7 @@ Hermes-VTOL.f3z (Master-Datei)
 ├── 09_Payload_Container
 ├── 10_Kleinteile (Schrauben, Buchsen, Klipse)
 └── 11_Baugruppen (Master-Assembly)
-```
+```text
 
 ## Versions-Strategie
 

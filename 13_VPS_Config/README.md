@@ -5,7 +5,7 @@ Konfiguration und Setup-Skripte für den Hostinger VPS (Hermes-Agent-Instanz).
 ## Überblick
 
 | Element | Wert |
-|---------|------|
+| --------- | ------ |
 | **Anbieter** | Hostinger |
 | **Plan** | KVM 1 |
 | **Standort** | Deutschland (DSGVO) |
@@ -15,7 +15,7 @@ Konfiguration und Setup-Skripte für den Hostinger VPS (Hermes-Agent-Instanz).
 ## Inhalt
 
 | Datei | Zweck |
-|-------|-------|
+| ------- | ------- |
 | `bootstrap.sh` | Initiales Setup auf einem frischen Ubuntu-VPS |
 | `harden_ssh.sh` | SSH-Härtung: Key-only, no root, fail2ban |
 | `setup_firewall.sh` | UFW-Firewall-Konfiguration |
@@ -46,6 +46,7 @@ Konfiguration und Setup-Skripte für den Hostinger VPS (Hermes-Agent-Instanz).
 ## Wiederherstellung
 
 Falls etwas schiefgeht:
+
 1. Hostinger-Panel → VPS → **Reset/Snapshot**
 2. Bootstrap-Skripte erneut laufen lassen
 3. Memory-Backup zurückspielen

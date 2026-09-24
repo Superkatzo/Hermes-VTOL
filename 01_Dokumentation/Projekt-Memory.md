@@ -3,7 +3,7 @@
 > **Zweck:** Diese Datei ist das ausgelagerte Detail-Gedächtnis für das VTOL-Projekt.
 > Das **Hermes-Memory** (testbot-Profil) hält nur den Quick-Reference-Teil;
 > alles Spezifische, das nicht jeder Chat braucht, lebt hier und wird bei Bedarf geladen.
-
+>
 > **Pflege:** Manuell oder per Chat-Befehl „speichere X in die Memory-Datei".
 > Letzte Aktualisierung: 2026-09-24
 
@@ -14,12 +14,14 @@
 **Zielplattform:** Zivile VTOL-Drohne, Pusher-Quadplane-Konfiguration, ≤ 2 m Spannweite, CFK-Bauweise, BVLOS-vorbereitet.
 
 **Use-Cases:**
+
 - 🚁 SAR (Safety & Rescue) — Personensuche, Lageerkundung
 - 🦌 Wildschutz — Tiererkennung, Monitoring
 - 🏛️ Behörden — Lagebilder, Katastrophenmanagement
 - 📷 Kommerzielle Inspektion — Vermessung, Industriekontrolle
 
 **Tech-Stack:**
+
 - **Flight-Controller:** PX4 oder ArduPilot (Entscheidung offen, Job in Todo-Liste)
 - **Aerodynamik-Tools:** XFLR5 (Profil-Polaren), OpenVSP (3D-Modell)
 - **CAD:** Fusion 360 (primär), Onshape (nur Kleinteile) — siehe User-Profil
@@ -34,6 +36,7 @@
 **Entscheidung:** Drohne wird **nicht selbst geflogen**, sondern **verkauft** (Hersteller/Designer-Perspektive).
 
 **Konsequenzen für den User:**
+
 - Operator-Pflichten entfallen (Pilot-Lizenz, Versicherung, SORA-LBA-Antrag → Käufer)
 - Hauptfokus jetzt: **CE-Kennzeichnung** (Klasse C3 wahrscheinlich) + **Produkthaftung** + **SORA-Vorlage als Verkauf-Hebel**
 - **ConOps-Vorlage-SAR.md** ist der größte Verkaufs-Trumpf (Käufer kann sofort loslegen)
@@ -45,6 +48,7 @@
 ## 🏗️ VPS-Infrastruktur (Hostinger KVM 1)
 
 **Server:**
+
 - Hostname: `srv1998925.hstgr.cloud`
 - IP: `179.198.208.197`
 - SSH-Alias: `hermes-vps` (in `~/.ssh/config`)
@@ -52,6 +56,7 @@
 - Admin-Passwort wurde vom User über hPanel geändert
 
 **Hermes-Agent-Container:**
+
 - Name: `hermes-agent-ekgx-hermes-agent-1`
 - Image: `ghcr.io/hostinger/hvps-hermes-agent:latest`
 - Interner Port: 4860
@@ -73,7 +78,7 @@
 Alle Skripte versioniert in `13_VPS_Config/`. Telegram-Vorlage: Token live aus `/opt/data/.env` (`docker exec ... grep ^TELEGRAM_BOT_TOKEN`), CHAT_ID = `858968389` (TELEGRAM_HOME_CHANNEL). UTC ↔ MESZ = +2 im Sommer.
 
 | Cron | Skript | Zweck |
-|---|---|---|
+| --- | --- | --- |
 | `0 * * * *` | `hermes_health_monitor.sh` | Stündlicher Health-Check |
 | `*/10 * * * *` | `check_self_ssh.sh` | Selbst-SSH alle 10 min |
 | `*/15 * * * *` | `vps_monitor.sh` | VPS-Ressourcen alle 15 min |
@@ -104,11 +109,12 @@ Alle Skripte versioniert in `13_VPS_Config/`. Telegram-Vorlage: Token live aus `
 ## 🤖 Geplante Experten-Bots (Job #1)
 
 | Bot | Domäne | Verweist bei … |
-|---|---|---|
+| --- | --- | --- |
 | **aero-wing-bot** | Aerodynamik + Profil-Design (Tragflügel, XFLR5, OpenVSP, Polaren, Reynolds, Stall, Böen-Lasten) | Struktur/Antrieb/Avionik auf andere Bots |
 | **regulatory-bot** | Regulatorik + Zulassung (EU/EASA, USA/FAA, SORA, Pilot-Lizenzen, Versicherung, Drohnenklassen) | Technische Fragen auf andere Bots |
 
 **Setup-Plan:**
+
 1. Profile in Hermes anlegen (VPS bevorzugt nach Job #0)
 2. Persona-Dokumente für jeden Bot (Rollen, Tools, Ausschlüsse)
 3. Wissen einspeisen (1. Konversation pro Bot mit Domänenwissen)
@@ -127,6 +133,7 @@ Alle Skripte versioniert in `13_VPS_Config/`. Telegram-Vorlage: Token live aus `
 **Aktueller Status:** Mischbetrieb, Umstellung läuft.
 
 **Konkrete Aufgaben (Job #0 in Todo-Liste):**
+
 - [ ] MiniMax-Account auf VPS-Hermes ist der einzige — kein lokaler MiniMax-Login mehr
 - [ ] Hermes-Desktop-App auf PC: VPS-Profil nutzen
 - [ ] Hermes-Desktop-App auf Laptop: VPS-Profil nutzen
@@ -144,6 +151,7 @@ Alle Skripte versioniert in `13_VPS_Config/`. Telegram-Vorlage: Token live aus `
 **Symptom:** Bei Compaction (256k-Token-Threshold) oder Scroll/Reload verschwinden gerenderte Antworten komplett aus dem UI-State. Backend hat sie noch.
 
 **Workaround (kurzfristig):**
+
 1. Nach jeder Antwort: `Ctrl+A` → `Ctrl+C` in `.md` oder Chat
 2. Bei sensiblen Inhalten: Erst Repo-Commit, dann Antwort lesen
 3. Bei 256k-Token-Nähe: Neue Session starten mit Checkpoint-File
@@ -172,7 +180,7 @@ Alle Skripte versioniert in `13_VPS_Config/`. Telegram-Vorlage: Token live aus `
 ## 🧩 Wichtige Repo-Pfade (Quick-Reference)
 
 | Pfad | Inhalt |
-|---|---|
+| --- | --- |
 | `01_Dokumentation/Lastenheft/` | Lastenheft v1.1 |
 | `01_Dokumentation/Todos/Todo-Liste.md` | **Haupt-TODO** (dynamisch via Chat) |
 | `01_Dokumentation/ConOps/` | ConOps-Vorlagen (SAR als Verkauf-Trumpf) |

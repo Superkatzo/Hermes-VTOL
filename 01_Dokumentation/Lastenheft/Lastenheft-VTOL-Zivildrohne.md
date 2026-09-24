@@ -11,7 +11,7 @@
 ## Versionsverlauf
 
 | Version | Datum | Änderung |
-|---------|-------|----------|
+| --------- | ------- | ---------- |
 | 0.1 | initial | Erstanlage |
 | 0.5 | – | Anforderungs-Sammlung |
 | 1.0 | – | Erstes vollständiges Lastenheft mit allen Festlegungen |
@@ -33,6 +33,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 1.2 Abgrenzung
 
 **Explizit ausgeschlossen:**
+
 - Militärische Anwendungen
 - Bewaffnung oder Nutzlasten, die Personen gefährden können
 - Operationen außerhalb der zivilen Luftfahrtgesetzgebung (EU 2019/947, FAA Part 107)
@@ -40,7 +41,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 1.3 Referenzdokumente
 
 | Dokument | Beschreibung |
-|----------|--------------|
+| ---------- | -------------- |
 | EU-Verordnung 2019/947 | Drohnen-Betrieb in Europa |
 | EU-Verordnung 2019/945 | Technische Anforderungen EU |
 | EASA SORA JARUS | Specific Operations Risk Assessment |
@@ -66,14 +67,14 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 2.1.2 Erweiterungs-Anwendungsfälle (zweite Phase)
 
 | Use-Case | Priorität | Hauptanforderung |
-|----------|-----------|-------------------|
+| ---------- | ----------- | ------------------- |
 | **Behörden — Polizei/Feuerwehr** | MITTEL | Verschlüsselte C2, TETRA-Bridge, Scheinwerfer |
 | **Kommerziell — Vermessung** | MITTEL | Lidar, PPK-GNSS, hohe Präzision |
 
 ### 2.2 Umgebungsbedingungen
 
 | Parameter | Anforderung |
-|-----------|-------------|
+| ----------- | ------------- |
 | **Einsatzraum** | Mischbetrieb ländlich/kleinstädtisch (Mitteleuropa / Deutschland) |
 | **Klimatische Bedingungen** | Mitteleuropäisch, regenwasserresistent (mind. IP54 für Elektronik) |
 | **Temperaturbereich Betrieb** | −10 °C bis +40 °C (mit Akku-Vorkonditionierung im Winter) |
@@ -85,7 +86,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 2.3 Performance-Anforderungen
 
 | Anforderung | Zielwert | Minimalwert | Bemerkung |
-|-------------|----------|-------------|-----------|
+| ------------- | ---------- | ------------- | ----------- |
 | **MTOM (Maximum Take-Off Mass)** | 16,0 kg | ≤ 16,5 kg | EU-Schwelle 25 kg unterschritten, Schwebeschub-Faktor 2,10× |
 | **Spannweite** | 2,30 m (klappbar) | ≤ 2,40 m | Transport in Standard-Transportbox |
 | **Endurance** | ≥ 68 min | ≥ 55 min | Bei Cruise-Bedingungen, 50 % Hover-Anteil |
@@ -121,6 +122,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 3.1 Systemarchitektur
 
 **Konfiguration:** **Quadplane mit Pusher-Antrieb**
+
 - 4× Hub-Quad (VTOL-Hover)
 - 1× Pusher (Festflügel-Cruise)
 - Elektrische Trennung mit MOSFET-Switches
@@ -128,7 +130,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 3.2 Abmessungen und Hauptkonstanten
 
 | Parameter | Wert |
-|-----------|------|
+| ----------- | ------ |
 | **Spannweite** | 2,30 m (klappbar auf 2× 1,18 m) |
 | **Rumpflänge** | 1,20 m |
 | **Rumpf-Durchmesser (max)** | 0,18 m |
@@ -146,7 +148,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.3.1 Strukturmasse (3,54 kg)
 
 | Komponente | Masse | Material |
-|-----------|-------|----------|
+| ----------- | ------- | ---------- |
 | Rumpf (CFK-Sandwich) | 650 g | T800 + Airex C70.75 |
 | Flügel-Doppel-Holm | 180 g | T800-CFK-Rohr ⌀22 × 1,5 mm, 2 Stk. |
 | Flügel-Beplankung | 380 g | 3-lagig Biaxial + 1× Unidirektional |
@@ -163,7 +165,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.3.2 Antriebsmasse (3,60 kg)
 
 | Komponente | Modell | Stk. | Masse/Stk. | Gesamt |
-|-----------|--------|------|-----------|--------|
+| ----------- | -------- | ------ | ----------- | -------- |
 | Hub-Motor | T-Motor P60 KV170 | 4 | 375 g | 1.500 g |
 | Hub-ESC | T-Motor AIR 80A 14S | 4 | 130 g | 520 g |
 | Hub-Propeller | 22×6,6 Carbon-Faltprop | 4 | 110 g | 440 g |
@@ -180,7 +182,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.3.3 Avionik und Sensorik (0,70 kg)
 
 | Komponente | Modell | Masse |
-|-----------|--------|-------|
+| ----------- | -------- | ------- |
 | Flight-Controller | Holybro Pixhawk 6X | 35 g |
 | Companion-Computer | NVIDIA Jetson Orin NX 16GB + Carrier Board | 165 g |
 | GPS-Modul | Zubax GNSS 2.1 (M10) | 42 g |
@@ -201,7 +203,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.3.4 Energie-System (5,88 kg)
 
 | Komponente | Spezifikation | Masse |
-|-----------|---------------|-------|
+| ----------- | --------------- | ------- |
 | Akku A (Pusher-Versorgung) | 14S3P Molicel P45B 21700 (1.152 Wh) | 3.129 g |
 | Akku B (Hub-Versorgung) | 14S2P Molicel P45B 21700 (768 Wh) | 2.086 g |
 | BMS Akku A | Daly 14S 60A | 95 g |
@@ -214,7 +216,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.3.5 Massen-Bilanz Übersicht
 
 | Block | Masse | Anteil MTOM |
-|-------|-------|-------------|
+| ------- | ------- | ------------- |
 | Struktur | 3.540 g | 22,1 % |
 | Antrieb | 3.600 g | 22,5 % |
 | Avionik + Sensorik | 704 g | 4,4 % |
@@ -230,7 +232,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.4.1 Hub-Motoren (4× P60 KV170)
 
 | Parameter | Wert |
-|-----------|------|
+| ----------- | ------ |
 | **Modell** | T-Motor P60 KV170 |
 | **KV** | 170 RPM/V |
 | **Masse pro Motor** | 375 g |
@@ -243,7 +245,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.4.2 Pusher-Motor (MN501-S KV340)
 
 | Parameter | Wert |
-|-----------|------|
+| ----------- | ------ |
 | **Modell** | T-Motor MN501-S KV340 |
 | **KV** | 340 RPM/V |
 | **Masse** | 290 g |
@@ -255,7 +257,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.4.3 Leistungsbudget
 
 | Modus | Leistung | Anteil |
-|-------|----------|--------|
+| ------- | ---------- | -------- |
 | **Hover (Vollgas)** | 4× 1.800 W = 7.200 W | kurzzeitig (beim Start) |
 | **Hover (Schweben, 70 %)** | ca. 3.000 W | 10 % der Missionszeit |
 | **Transition Fixed-Wing** | ca. 800 W | 30 s pro Übergang |
@@ -266,20 +268,20 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 
 #### 3.5.1 Akku-Topologie
 
-**Konfiguration: Asymmetrisches Dual-Akku-System**
+## Konfiguration: Asymmetrisches Layout
 
-```
+```text
 [Akku A 14S3P] ──[MOSFET-Switch A]──┐
    (Pusher-Versorgung)              │
                                      ├──[Bus-Bar]──[Verteilung]
 [Akku B 14S2P] ──[MOSFET-Switch B]──┘
    (Hub-Versorgung)
-```
+```text
 
 #### 3.5.2 Akku-Spezifikationen
 
 | Parameter | Akku A | Akku B |
-|-----------|--------|--------|
+| ----------- | -------- | -------- |
 | **Konfiguration** | 14S3P | 14S2P |
 | **Zellen** | 42× Molicel P45B 21700 (6.500 mAh) | 28× Molicel P45B 21700 (6.500 mAh) |
 | **Nominalspannung** | 51,8 V | 51,8 V |
@@ -292,7 +294,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.5.3 Lastverteilung pro Modus
 
 | Modus | Akku A | Akku B |
-|-------|--------|--------|
+| ------- | -------- | -------- |
 | **Hover (Start/Landung)** | inaktiv | aktiv (100 % Hub-Strom) |
 | **Transition Hub → Cruise** | inaktiv | aktiv (80 % Hub-Strom) |
 | **Reiseflug** | aktiv (100 % Pusher) | aktiv (20 %, Stabilisierung) |
@@ -303,7 +305,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.5.4 MOSFET-Switches
 
 | Parameter | Spezifikation |
-|-----------|---------------|
+| ----------- | --------------- |
 | **FET-Typ** | IRLB3034 (oder vergleichbar) |
 | **Spannungsfestigkeit** | ≥ 75 V |
 | **Dauerstrom** | ≥ 80 A (Pusher) / ≥ 240 A (Hub, mit Parallelschaltung) |
@@ -333,7 +335,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.6.3 Sensorik (Standard-Container-Modul)
 
 | Sensor | Modell | Auflösung | Funktion |
-|--------|--------|-----------|----------|
+| -------- | -------- | ----------- | ---------- |
 | **Thermal** | FLIR Boson 640 + 24° Optik | 640×512 @ 60 Hz | Wärmebild, Personensuche, Tierbeobachtung |
 | **RGB** | Arducam IMX477 (Sony) | 4K @ 30 fps | Tageslicht-Aufnahmen, KI-Training |
 | **Airspeed** | EagleTree F5 + Pitotrohr | ±80 m/s | Fixed-Wing-Geschwindigkeitsmessung |
@@ -345,7 +347,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.7.1 Materialien
 
 | Komponente | Material | Begründung |
-|-----------|----------|-----------|
+| ----------- | ---------- | ----------- |
 | Flügel-Holme | **T800-CFK-Rohr** ⌀22 × 1,5 mm (2 Stk.) | Standard-Modul, günstig, gute Festigkeit |
 | Flügel-Beplankung | **T800 Biaxial (3 Lagen) + Unidirektional (1 Lage)** | Steifigkeit + Festigkeit |
 | Flügel-Rippen | **Balsa 3 mm + CFK-Beschichtung** | Leicht, einfach zu CNC-fräsen |
@@ -357,7 +359,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 3.7.2 Klebstoffe
 
 | Anwendung | Klebstoff | Zertifizierung |
-|-----------|-----------|----------------|
+| ----------- | ----------- | ---------------- |
 | Struktur-Holme | 3M AF-163-2 | FAA/EASA anerkannt |
 | Hochtemperatur-Bereich | 3M FM 300 | FAA/EASA anerkannt |
 | Reparaturen | Hysol EA 9394 | MIL-Spec |
@@ -374,7 +376,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 4.1.1 Schnittstellen
 
 | Schnittstelle | Spezifikation |
-|---------------|---------------|
+| --------------- | --------------- |
 | **Stromversorgung** | 14S (51,8 V) Direktanschluss, max. 5 A Dauerstrom |
 | **Daten** | CAN-Bus + UART + USB 3.0, wasserdichte M12-Stecker |
 | **Mechanisch** | 4× Schnellverschluss (Cam-Lock), Bajonett-Design |
@@ -384,7 +386,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 4.2 Modul-Optionen (Universal-Container mit austauschbaren Innenmodulen)
 
 | Modul-ID | Bezeichnung | Hauptkomponenten | Masse | Strom |
-|----------|-------------|------------------|-------|-------|
+| ---------- | ------------- | ------------------ | ------- | ------- |
 | **M1-SAR** | SAR-Sensorik | Boson 640, Arducam 4K, LED-Scheinwerfer, Mikrofon/Lautsprecher | 280 g | 18 W |
 | **M2-WILD** | Wildschutz-Sensorik | Boson 640, Multispektral (Parrot Sequoia), Akustik-Sensor | 320 g | 22 W |
 | **M3-BEH** | Behörden-Sensorik | Boson 640, Hochleistungs-LED (6.000 lm), Lautsprecher (100 dB), TETRA-Bridge | 580 g | 35 W |
@@ -393,7 +395,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 4.3 Vibrations- und Thermik-Anforderungen
 
 | Parameter | Anforderung |
-|-----------|-------------|
+| ----------- | ------------- |
 | **Vibrationsfrequenz-Bereich** | 5–500 Hz |
 | **Max. Beschleunigung (RMS)** | 5 g (Vibration), 15 g (Schock) |
 | **Dämpfung** | Sorbothane 30 Shore, 4-Punkt-Aufhängung |
@@ -407,7 +409,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 5.1 Strukturelle Lastfälle
 
 | Lastfall | Faktor | Anwendung |
-|----------|--------|-----------|
+| ---------- | -------- | ----------- |
 | **Manöver-Last (positiv)** | +2,5 g | Scharfe Kurve, Transition |
 | **Manöver-Last (negativ)** | −1,5 g | Plötzlicher Down-Draft |
 | **Böen-Last** | +3,8 g (vertikal) | 95-Perzentil-Böe + Manöver |
@@ -417,7 +419,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 5.2 Redundanz-Anforderungen
 
 | System | Redundanz | Bemerkung |
-|--------|-----------|-----------|
+| -------- | ----------- | ----------- |
 | **Energie** | Dual-Akku (asymmetrisch 14S3P + 14S2P), MOSFET-trennbar | SORA-relevante OSO erfüllt |
 | **Flight-Controller** | Dual-IMU (Pixhawk 6X hat ICM-42688P + BMI088), Dual-Magnetometer (intern + extern) | Standard PX4-Redundanz |
 | **GPS** | Dual-Antenne (optional Zubax Sentinel + TW4721) | für BVLOS empfohlen |
@@ -430,7 +432,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 5.3.1 Motor-Ausfall
 
 | Szenario | Reaktion |
-|----------|----------|
+| ---------- | ---------- |
 | **1 Hub-Motor aus** | PX4 erhöht Schub der verbleibenden 3 Motoren (Motor-Out-Landing) |
 | **2 Hub-Motoren aus** | Notlandung als Fixed-Wing (Gleitflug 1:15) |
 | **Pusher-Motor aus** | Akku-B-Shift (MOSFET umschalten), Notlandung als Multirotor |
@@ -462,7 +464,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 6.1 Bodentests
 
 | Test | Standard | Akzeptanzkriterium |
-|------|----------|---------------------|
+| ------ | ---------- | --------------------- |
 | **Vibration (Sinus + Random)** | DO-160G, Kategorie S | Funktionsfähig in 5–500 Hz, 5 g RMS |
 | **Schock (50 g, 11 ms)** | DO-160G | Strukturelle Integrität |
 | **EMV (leitungsgebunden + gestrahlt)** | EN 55032 / EN 55035 | Klasse B (Wohn-/Leichtindustrie) |
@@ -475,7 +477,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 6.2.1 Erprobungs-Phasen
 
 | Phase | Beschreibung | Dauer | Betriebsbewilligung |
-|-------|-------------|-------|---------------------|
+| ------- | ------------- | ------- | --------------------- |
 | **1 — Ground Tests** | Motor-Standläufe, Sensor-Kalibrierung | 2 Wochen | keine |
 | **2 — Tethered Hover** | Geschützter Hover-Test mit Kabel | 1 Woche | Indoor / gesicherter Außenbereich |
 | **3 — Free Hover** | Freier Hover bis 5 m | 2 Wochen | Open-A1 |
@@ -506,7 +508,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 7.1 Wartungsintervalle
 
 | Intervall | Wartungsarbeiten |
-|-----------|------------------|
+| ----------- | ------------------ |
 | **Vor jedem Flug** | Sichtprüfung Rumpf, Flügel, Props; Akku-Spannung; C2-Link-Test |
 | **Alle 10 Flugstunden** | Props auf Beschädigung prüfen, Lager der Hub-Motoren prüfen |
 | **Alle 50 Flugstunden** | Vollständige Sichtprüfung, Schraubensitz prüfen, Gimbal kalibrieren |
@@ -516,7 +518,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 ### 7.2 Ersatzteil-Logistik
 
 | Ersatzteil | Empfohlener Lagerbestand |
-|-----------|---------------------------|
+| ----------- | --------------------------- |
 | 22×6,6 Carbon-Faltprop | 4 Stück |
 | 15×8 Carbon-Klappprop | 2 Stück |
 | P60 KV170 Motor | 1 Stück (Ersatz bei Ausfall) |
@@ -547,7 +549,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 #### 8.1.1 Verwendete Tools
 
 | Tool | Hauptanwendung | Lizenz |
-|------|---------------|--------|
+| ------ | --------------- | -------- |
 | **Fusion 360** | Haupt-CAD, CAM, FEM-Simulation | Bildungslizenz / kommerziell |
 | **Onshape** | Kleinteile, kollaboratives Review (Ausnahmen) | Free (1 User) |
 | **OpenVSP** | Aerodynamik-Konzept | NASA Open Source |
@@ -556,7 +558,7 @@ Dieses Lastenheft definiert die Anforderungen an eine **VTOL-Festflügler-Drohne
 
 #### 8.1.2 Workflow-Übersicht
 
-```
+```text
 OpenVSP (Aerodynamik-Konzept)
         │
         ▼
@@ -573,24 +575,24 @@ CNC-Fräsung + 3D-Druck
         │
         ▼
 Layup + Aushärtung
-```
+```text
 
 ### 8.2 Berechnungsgrundlagen
 
 #### 8.2.1 Schwebeschub-Berechnung
 
-```
+```text
 MTOM = 16,0 kg
 Schub benötigt (2,0× Sicherheit) = 16,0 × 9,81 × 2,0 = 313,9 N = 32,0 kg
 Schub pro Hub-Motor = 32,0 / 4 = 8,0 kg
 Erforderlicher Schub pro P60 KV170 mit 22×6,6 Prop = 8,4 kg (Hersteller-Test)
 Sicherheits-Faktor = 33,6 / 16,0 = 2,10× (komfortabel über 2,0×)
 Schub-Reserve = 33,6 − 16,0 = 17,6 kg (für Steigflug, Wind, Manöver)
-```
+```text
 
 #### 8.2.2 Energie-Berechnung
 
-```
+```text
 Reiseflug-Leistung = Drag × V = (L / L/D) × V = (157 N / 15) × 18 = 188 W
 Mit Sicherheitsfaktor 1,3: P_cruise = 245 W
 Energie pro Minute = 245 Wh / 60 = 4,08 Wh/min
@@ -606,20 +608,20 @@ Gesamt: Akku A: 245 Wh (21,3 % DOD), Akku B: 420 Wh (60,8 % DOD)
 → Sicherheitsreserve bis 80 % DOD: weitere 30 min möglich
 
 Gesamt-Endurance bei MTOM 16 kg: ca. 68–73 min
-```
+```text
 
 #### 8.2.3 Reichweite
 
-```
+```text
 Reiseflug-Geschwindigkeit = 18 m/s
 Reichweite = Endurance × V = 70 min × 60 s × 18 m/s = 75,6 km
 Mit Sicherheitsreserve (80 % der Endurance): 60 km
-```
+```text
 
 ### 8.3 Glossar
 
 | Begriff | Bedeutung |
-|---------|-----------|
+| --------- | ----------- |
 | **A2 (EU)** | Drohnen-Subkategorie für nahen Flug (max. 5 m horizontal) |
 | **BVLOS** | Beyond Visual Line of Sight |
 | **CFK** | Carbon-Faser-verstärkter Kunststoff |
@@ -641,7 +643,7 @@ Mit Sicherheitsreserve (80 % der Endurance): 60 km
 ## 9. Offene Punkte / ToDo
 
 | Nr. | Thema | Status | Verantwortlich |
-|-----|-------|--------|----------------|
+| ----- | ------- | -------- | ---------------- |
 | 1 | Genaue Hub-Motor-Wahl (P60 vs. Vergleichsmodelle) | OFFEN | Recherche läuft |
 | 2 | Klapp-Propeller-Material (Carbon vs. Holz-Kern) | OFFEN | Testreihe geplant |
 | 3 | SORA-Antrag Vorlage | OFFEN | nach Lastenheft-Final |
@@ -655,11 +657,11 @@ Mit Sicherheitsreserve (80 % der Endurance): 60 km
 
 ---
 
-**Ende des Lastenhefts (Version 1.1)**
-
+## Ende des Lastenhefts (Version 1.1)
 **Letzte Änderung:** MTOM von 17,0 kg auf 16,0 kg reduziert → Schwebeschub-Faktor von 1,97× auf 2,10× angehoben (Variante A, vom Projektverantwortlichen bestätigt). Payload-Budget entsprechend auf 2,28 kg reduziert; alle 4 Container-Module bleiben nutzbar.
 
 **Nächste Schritte:**
+
 1. Profil-Polaren in XFLR5 für Wortmann FX 63-137 berechnen
 2. OpenVSP-Modell für 2,3-m-Konfiguration aufbauen
 3. Aerodynamik validieren (L/D, Stall, Stabilität)

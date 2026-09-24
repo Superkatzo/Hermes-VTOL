@@ -5,7 +5,7 @@ CNC-Fräsung, 3D-Druck, CFK-Layup und alle Herstellungs-Workflows.
 ## Inhalt
 
 | Ordner | Zweck |
-|--------|-------|
+| -------- | ------- |
 | **CNC_Fräsen/** | G-Code-Programme für Spanten, Mittelstück, Container (Fusion-CAM-Output) |
 | **3D_Druck/** | STL/Slicer-Profile für Formen-Innenschalen, Kleinteile |
 | **Sandwich_Formen/** | Negativformen für Vakuuminfusion (SLA-gedruckt) |
@@ -14,7 +14,7 @@ CNC-Fräsung, 3D-Druck, CFK-Layup und alle Herstellungs-Workflows.
 
 ## Fertigungs-Pipeline
 
-```
+```text
 CAD-Modell (.step)
         │
         ▼
@@ -44,4 +44,4 @@ Fusion 360 CAM
                 │
                 ▼
             Montage
-```
+```text

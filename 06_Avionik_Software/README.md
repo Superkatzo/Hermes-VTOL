@@ -5,7 +5,7 @@ Flight-Controller-Konfiguration, Companion-Computer-Code, KI-Modelle.
 ## Inhalt
 
 | Ordner | Zweck |
-|--------|-------|
+| -------- | ------- |
 | **PX4_Config/** | Airframe-Config, Parameter-Files, Mixer-Setups für Quadplane |
 | **Jetson_Code/** | Python/C++ Code für Jetson Orin NX (Objekterkennung, Bildverarbeitung) |
 | **YOLO_Modelle/** | Trainierte YOLO/RT-DETR Modelle für SAR, Wildschutz, Behörden |
@@ -22,7 +22,7 @@ Flight-Controller-Konfiguration, Companion-Computer-Code, KI-Modelle.
 
 ## Jetson-Pipeline
 
-```
+```text
 Boson 640 (Thermal)
         │
         ▼
@@ -31,7 +31,7 @@ GStreamer-Pipeline
         ├──▶ YOLOv10 / RT-DETR (Detektion)
         │
         └──▶ MAVLink Telemetry → GCS
-```
+```text
 
 ## KI-Modelle
 

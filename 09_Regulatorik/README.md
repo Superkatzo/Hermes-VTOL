@@ -5,7 +5,7 @@ Rechtliche und regulatorische Dokumentation für EU/US.
 ## Inhalt
 
 | Ordner | Zweck |
-|--------|-------|
+| -------- | ------- |
 | **EU_SORA/** | SORA-Dokumentation (JARUS), OSO-Nachweise, CONOPS |
 | **EASA_PDRA/** | Predefined Risk Assessment Templates |
 | **FAA_Part107/** | Part-107-Waiver-Anträge, Remote-ID-Komformität |

@@ -16,7 +16,7 @@ Diese Quickstart hilft dir, die ConOps in **30 Minuten** aufzusetzen statt in 8 
 ## Schritt 1: Basics (5 min)
 
 | Frage | Beispiel-Antwort |
-|---|---|
+| --- | --- |
 | **Wer fliegt?** | Bergwacht Bereitschaft XYZ, Pilot: M. Mustermann |
 | **Was?** | Vermisstensuche im alpinen Gelände |
 | **Wo?** | Bayern, Oberland, bis 2 km Radius um die Basis |
@@ -25,7 +25,7 @@ Diese Quickstart hilft dir, die ConOps in **30 Minuten** aufzusetzen statt in 8 
 ## Schritt 2: Equipment (10 min)
 
 | Hermes-VTOL-Komponente | Deine Konfiguration |
-|---|---|
+| --- | --- |
 | **M1 SAR-Modul** | ✅ Thermal (640×512), Lautsprecher, Scheinwerfer, TETRA-Relay |
 | **Akku** | 14S3P Molicel P45B, ~700 Wh |
 | **Bodenstation** | QGroundControl auf Rugged-Laptop |
@@ -35,7 +35,7 @@ Diese Quickstart hilft dir, die ConOps in **30 Minuten** aufzusetzen statt in 8 
 ## Schritt 3: Personal (10 min)
 
 | Rolle | Person | Zertifikat |
-|---|---|---|
+| --- | --- | --- |
 | **PIC (Pilot-in-Command)** | M. Mustermann | A2 + STS-01 |
 | **Beobachter (VO)** | optional | Online-Training |
 | **Operator-Manager** | E. Schmidt | LBA-Registrierung |

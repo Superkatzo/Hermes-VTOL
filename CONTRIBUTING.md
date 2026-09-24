@@ -5,7 +5,7 @@ Danke für dein Interesse am Hermes-VTOL-Projekt! Dieses Dokument beschreibt die
 ## Branch-Strategie
 
 | Branch | Zweck |
-|--------|-------|
+| -------- | ------- |
 | `main` | Stabile, freigegebene Versionen (nur über PR) |
 | `dev` | Aktive Entwicklung |
 | `feature/<name>` | Neue Features / Designänderungen |
@@ -14,18 +14,18 @@ Danke für dein Interesse am Hermes-VTOL-Projekt! Dieses Dokument beschreibt die
 
 ## Commit-Konvention (Conventional Commits)
 
-```
+```text
 <typ>(<scope>): <beschreibung>
 
 [optional Body]
 
 [optional Footer]
-```
+```text
 
 **Typen:**
 
 | Typ | Zweck |
-|-----|-------|
+| ----- | ------- |
 | `feat` | Neues Feature |
 | `fix` | Fehlerbehebung |
 | `docs` | Nur Dokumentation |
@@ -35,6 +35,7 @@ Danke für dein Interesse am Hermes-VTOL-Projekt! Dieses Dokument beschreibt die
 | `chore` | Build, Tools, Hilfsmittel |
 
 **Beispiele:**
+
 - `feat(lastenheft): add SORA section`
 - `fix(aerodynamik): correct polar data for Re=300k`
 - `docs(readme): update status table`
@@ -80,7 +81,7 @@ git checkout -b feature/mein-feature
 git add .
 git commit -m "feat(scope): beschreibung"
 git push origin feature/mein-feature
-```
+```text
 
 ## Kontakt
 

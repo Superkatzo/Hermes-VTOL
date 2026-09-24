@@ -5,14 +5,15 @@ Profil-Koordinaten für XFLR5- und OpenVSP-Analysen.
 ## Herkunft
 
 Alle Profile stammen aus der **UIUC Airfoil Coordinates Database** (Prof. Michael Selig, University of Illinois):
-- Quelle: https://m-selig.ae.illinois.edu/ads/coord_database.html
+
+- Quelle: <https://m-selig.ae.illinois.edu/ads/coord_database.html>
 - Lizenz: Public Domain (Forschungsdaten, frei verfügbar)
 - Format: Selig-Format (Standard `.dat`)
 
 ## Verfügbare Profile
 
 | Datei | Profil | max Dicke | max Wölbung | Reynolds-Optimum | Bemerkung |
-|-------|--------|-----------|-------------|-------------------|-----------|
+| ------- | -------- | ----------- | ------------- | ------------------- | ----------- |
 | `fx63137.dat` | **Wortmann FX 63-137** | 13,7 % | 6,0 % | 250.000–400.000 | **Hauptwahl** für Flügel |
 | `naca4412.dat` | NACA 4412 | 12 % | 4 % | 100.000–1.000.000 | Standard-Fallback |
 | `eppler423.dat` | Eppler 423 | ~12,5 % | ~3,5 % | 200.000–500.000 | Sehr gutes L/D |
@@ -50,6 +51,7 @@ Alle Profile stammen aus der **UIUC Airfoil Coordinates Database** (Prof. Michae
 ## Nächste Schritte
 
 Nach den Profilen folgt:
+
 - Polaren-Berechnung (Cl/Cd über alpha) bei Re=250k, 300k, 350k
 - 3D-Flügel-Analyse in OpenVSP mit LLT-Methode
 - Vergleich der Profile im Markdown-Bericht

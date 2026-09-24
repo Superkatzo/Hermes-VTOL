@@ -17,6 +17,7 @@ Wenn eine Konversation den **256.000-Token-Threshold** überschreitet und Hermes
 ### Erwartetes Verhalten
 
 Nach der Compaction sollte:
+
 - Die vorherige Antwort weiterhin im Verlauf sichtbar sein (zusammengefasst oder gekürzt)
 - ODER durch einen expliziten "Context wurde komprimiert"-Indikator ersetzt werden
 - Mindestens: Der Summary der vorherigen Antwort sollte sichtbar sein
@@ -34,7 +35,7 @@ Aus `C:/Users/willow/AppData/Local/hermes/logs/desktop.log`:
 
 ### Wiederkehrende Compaction-Events
 
-```
+```text
 [2026-09-22T19:17:59.817Z] [hermes] 📦 Preflight compression: ~256,029 tokens >= 256,000 threshold. This may take a moment.
 [2026-09-22T19:17:59.824Z] [hermes] 🗜️ Compacting context — summarizing earlier conversation so I can continue...
 [2026-09-22T19:39:41.822Z] [hermes] 📦 Preflight compression: ~256,029 tokens >= 256,000 threshold. This may take a moment.
@@ -44,7 +45,7 @@ Aus `C:/Users/willow/AppData/Local/hermes/logs/desktop.log`:
 [2026-09-23T18:41:43.953Z] [hermes] 🗜️ Compacting context — still summarizing earlier conversation so I can continue...
 [2026-09-23T22:15:52.462Z] [hermes] 📦 Preflight compression: ~257,606 tokens >= 256,000 threshold. This may take a moment.
 [2026-09-23T22:15:52.468Z] [hermes] 🗜️ Compacting context — summarizing earlier conversation so I can continue...
-```
+```text
 
 ### Konkret: Verschwinden um 22:15:52
 
@@ -52,11 +53,11 @@ Aus `C:/Users/willow/AppData/Local/hermes/logs/desktop.log`:
 
 **Um 22:15:52**: Compaction startet, 3-Minuten-Pause
 
-```
+```text
 22:15:52.462 → Preflight compression: ~257,606 tokens
 22:15:52.468 → Compacting context — summarizing...
 22:18:51.678 → (◔_◔) reflecting...   ← erste Antwort nach Compaction
-```
+```text
 
 **Diese 3-Min-Pause** (`22:15:52` → `22:18:51`) entspricht dem Zeitfenster, in dem die vorherige Antwort aus dem UI verschwand.
 

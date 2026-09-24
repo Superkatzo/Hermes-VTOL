@@ -13,7 +13,7 @@ Beim **Live-Test des Telegram-Sidecars** (Schritt 2 des Quick-Win-Plans am 2026-
 ## Zeitstrahl
 
 | Zeit (MESZ) | Ereignis |
-|---|---|
+| --- | --- |
 | 21:50 | Sidecar gestartet via `nohup python3 telegram_sidecar.py` |
 | 21:52:52 | Erster Konflikt im Hauptbot: `previous session still held open on Telegram's servers` |
 | 21:55:06 | Retry 1/5 (Hauptbot versucht erneut, Waiting 20s) |
@@ -37,6 +37,7 @@ Telegram erlaubt **nur EINEN** `getUpdates`-Request pro Bot gleichzeitig. Sobald
 ### Hauptbot-Verhalten
 
 Der Hauptbot hat eine **eingebaute Retry-Strategie**:
+
 - 1/5: 20s warten
 - 2/5: 30s warten
 - 3/5: 40s warten
@@ -55,7 +56,7 @@ Diese Strategie hat den Konflikt automatisch aufgelöst, **nachdem** der Sidecar
 ## Was wurde behoben
 
 | Maßnahme | Status |
-|---|---|
+| --- | --- |
 | Sidecar gestoppt | ✅ erledigt |
 | Sidecar-Test-Log gelöscht (`sidecar_test.log`) | ✅ erledigt |
 | Hauptbot recovered automatisch | ✅ erledigt |
@@ -80,6 +81,7 @@ Diese Strategie hat den Konflikt automatisch aufgelöst, **nachdem** der Sidecar
 Telegram-API prüft jeden `getUpdates`-Aufruf und verwirft alle anderen Polling-Sessions.
 
 **Wenn ich den Bot testen will:**
+
 - Via `curl POST .../sendMessage` (schickt Message, Bot empfängt über getUpdates)
 - Oder via `getMe` (kein Polling-Konflikt)
 - Oder Logs lesen (kein API-Call)
@@ -98,11 +100,11 @@ Die Telegram-Bot-Doku beschreibt das Limit klar: **Nur 1× Polling gleichzeitig*
 
 **Hauptbot auf Webhook umstellen**, Sidecar weiter Polling:
 
-```
+```text
 TELEGRAM_WEBHOOK_URL=https://srv1998925.hstgr.cloud:8443/telegram
 TELEGRAM_WEBHOOK_PORT=8443
 TELEGRAM_WEBHOOK_CERT=/path/to/cert.pem
-```
+```text
 
 → Hauptbot empfängt via HTTPS-Push vom Telegram-Server
 → Sidecar kann dauerhaft parallel via `getUpdates` pollen

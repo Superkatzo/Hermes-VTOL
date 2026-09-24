@@ -15,7 +15,7 @@ Einsatzraum: **Mitteleuropa / Deutschland** (Mischbetrieb urban/ländlich), rege
 **Use-Cases (MVP):**
 
 | Modul | Funktion |
-|-------|----------|
+| ------- | ---------- |
 | **M1 SAR** | Personensuche, Thermal-Kamera |
 | **M2 Wildschutz** | Tier-Tracking, Wildzählung |
 | **M3 Behörden** | Lagebilder, Einsatzdokumentation |
@@ -26,7 +26,7 @@ Einsatzraum: **Mitteleuropa / Deutschland** (Mischbetrieb urban/ländlich), rege
 ## 2. Wo stehen wir?
 
 | Phase | Status | Datum |
-|-------|--------|-------|
+| ------- | -------- | ------- |
 | **Lastenheft v1.1** | ✅ fertig | 2026-09-22 |
 | **MTOM 16 kg, Payload 2,28 kg, Schwebeschub-Faktor 2,10×** | ✅ validiert | 2026-09-22 |
 | **Profil-Recherche + Python-Analyse** | ✅ 4 Profile heruntergeladen (Wortmann FX 63-137 Favorit) | 2026-09-22 |
@@ -50,8 +50,8 @@ Einsatzraum: **Mitteleuropa / Deutschland** (Mischbetrieb urban/ländlich), rege
 ## 3. Wo lebt alles?
 
 | Asset | Pfad |
-|-------|------|
-| **Repo (public)** | https://github.com/Superkatzo/Hermes-VTOL |
+| ------- | ------ |
+| **Repo (public)** | <https://github.com/Superkatzo/Hermes-VTOL> |
 | **Lastenheft** | `01_Dokumentation/Lastenheft/Lastenheft-VTOL-Zivildrohne.md` |
 | **Todo-Liste** | `01_Dokumentation/Todos/Todo-Liste.md` |
 | **CAD (geplant)** | `03_CAD/` (Fusion 360 STEP/STL) |
@@ -66,7 +66,7 @@ Einsatzraum: **Mitteleuropa / Deutschland** (Mischbetrieb urban/ländlich), rege
 ## 4. Kernzahlen (komprimiert)
 
 | Größe | Wert |
-|-------|------|
+| ------- | ------ |
 | **MTOM** | 16 kg |
 | **Payload** | 2,28 kg |
 | **Spannweite** | 2,30 m klappbar (≤ 2,40 m Transportmaß) |
@@ -83,7 +83,7 @@ Einsatzraum: **Mitteleuropa / Deutschland** (Mischbetrieb urban/ländlich), rege
 ## 5. Wie du mit dem Projekt arbeitest
 
 | Stil | Detail |
-|------|--------|
+| ------ | -------- |
 | **Sprache** | Deutsch mit englischen Fachbegriffen |
 | **Physik-Ansatz** | Realistisch, nicht optimistisch — Massen/Toleranzen mit echten Datenblättern |
 | **Entscheidungen** | „Runde für Runde" mit a/b/c-Fragen; Empfehlungen als Default |
@@ -108,7 +108,7 @@ Details in der **Todo-Liste** (`01_Dokumentation/Todos/Todo-Liste.md`).
 ## 7. Dein Team
 
 | Wer | Rolle |
-|-----|-------|
+| ----- | ------- |
 | **Du** | „Dirigent" — entscheidest, koordinierst |
 | **testbot (default)** | Hauptkonto für alles, koordiniert Experten-Bots |
 | **aero-wing-bot (geplant)** | Spezialist für Aerodynamik + Profil-Design |

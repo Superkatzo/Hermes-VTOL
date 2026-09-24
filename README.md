@@ -1,6 +1,8 @@
 # Hermes-VTOL
 
-**VTOL-Zivildrohne (Quadplane-Konfiguration) für SAR, Wildschutz, Behörden und kommerzielle Anwendungen**
+## VTOL-Zivildrohne (Quadplane-Konfiguration)
+
+<p><em>Für SAR, Wildschutz, Behörden und kommerzielle Anwendungen</em></p>
 
 ## Projektübersicht
 
@@ -14,7 +16,7 @@ Dieses Repository dokumentiert die Entwicklung einer modularen, zivilen VTOL-Dro
 ## Status
 
 | Phase | Status |
-|-------|--------|
+| ------- | -------- |
 | Lastenheft v1.1 | ✅ fertig |
 | Profil-Recherche (XFLR5) | 🔜 in Arbeit |
 | Aerodynamik-Profil-Analyse | 🔜 in Arbeit |
@@ -26,7 +28,7 @@ Dieses Repository dokumentiert die Entwicklung einer modularen, zivilen VTOL-Dro
 ## System-Hauptdaten
 
 | Parameter | Wert |
-|-----------|------|
+| ----------- | ------ |
 | MTOM | 16,0 kg |
 | Spannweite | 2,3 m (klappbar auf 1,18 m) |
 | Profil | Wortmann FX 63-137 |
@@ -44,7 +46,7 @@ Dieses Repository dokumentiert die Entwicklung einer modularen, zivilen VTOL-Dro
 
 ## Verzeichnisstruktur
 
-```
+```text
 Hermes-VTOL/
 ├── 01_Dokumentation/          Lastenheft, Pflichtenheft, SORA, Zulassung, Protokolle
 ├── 02_Aerodynamik/            XFLR5-Profile, OpenVSP-Modelle, Polaren
@@ -61,7 +63,7 @@ Hermes-VTOL/
 ├── 13_VPS_Config/             Hostinger-VPS-Setup (Hermes-Agent-Instanz)
 ├── build/                     Generierte Outputs (Git-ignored)
 └── .github/                   CI/CD Workflows + Issue-Templates
-```
+```text
 
 ## Dokumentation
 
@@ -86,7 +88,7 @@ cd Hermes-VTOL
 git add .
 git commit -m "Aussagekräftige Beschreibung"
 git push
-```
+```text
 
 ## Lizenz
 

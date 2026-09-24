@@ -36,7 +36,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ## Ring 1 — Direkte Vergleichsklasse (14–25 kg MTOW, Quadplane/Tilt-rotor)
 
 | Modell | Hersteller | Wingspan | MTOW | Payload | Endurance (leer / max payload) | Range | Cruise Speed | Wind-Toleranz | IP | Topologie | **Preis (USD, ca.)** | Quelle |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **DeltaQuad Evo** | DeltaQuad (NL) | 2,69 m | 10 kg | 3 kg (dual bay) | 4,5 h / ~2 h | **270 km** | 16,5 m/s (60 km/h) | 12,5 m/s TO/L, 14 m/s cruise | n/a (Drizzle 7 mm/h) | Quadplane, dual-boom, CFK | Quote (Enterprise, >$50k) | [deltaquad.com/evo](https://www.deltaquad.com/products/evo) |
 | **T-DRONES VA23** | T-DRONES / T-Motor (CN) | 2,30 m | 12,5 kg | 2,5 kg | 4 h / 3 h (1,5 kg) | 240 km | 18–20 m/s | "Level 5" (≈10 m/s) | n/a | Quadplane, CFK | **$8.000–12.000** (Händler) | [t-drones.com/VA23](https://www.t-drones.com/product/VA23.html) |
 | **Autel Dragonfish Lite** | Autel (CN/US) | 1,60 m | 5,5 kg | 1,0 kg | 81 min / 75 min | 30 km | bis 30 m/s | 15 m/s (FW) / 12 m/s (MR) | **IP43** | Tilt-rotor, CFK | **$22.000–30.000** | [autelrobotics.com/dragonfish](https://www.autelrobotics.com/productdetail/dragonfish-series-drones/) |
@@ -57,7 +57,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ## Ring 2 — Kommerzielle Mapping/SAR-Standards (1,0–1,3 m Wingspan)
 
 | Modell | Hersteller | Wingspan | MTOW | Payload | Endurance | Range | Cruise | Wind | **Preis (USD)** | Topologie | Quelle |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **WingtraOne Gen II** | Wingtra (CH) | 1,25 m | 4,8 kg | 0,8 kg | 59 min | 10 km | 16 m/s | 12 m/s sustained | **$20.000–29.000** | Tailsitter (transition durch Kippe) | [wingtra.com](https://wingtra.com) |
 | **WingtraRAY** | Wingtra | n/a | ~5 kg | MAP61 int. | 59 min | 10 km | 16 m/s | 12 m/s | **$90.000–120.000+** | Tailsitter | [Wingtra VTOL-Drone-Seite](https://wingtra.com/vtol-drone/?srsltid=AU7gw4UnDWTUYnZr6wkymOrAfef5WfmoHvpuMpUEBu5Rvi06iWbmRB3x) |
 | **senseFly eBee X** | AgEagle / senseFly (CH/US) | 1,16 m | 1,6 kg | 0,8 kg | 90 min | 8 km | 11–30 m/s | 12,8 m/s | **$15.000–20.000** | Hand-launch / belly-land (KEIN VTOL!) | [sensefly.com](https://www.sensefly.com/solutions/drones) |
@@ -78,7 +78,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ## Ring 3 — DIY/Open-Source-Quadplanes (Bauweise-Referenzen)
 
 | Plattform | Wingspan | MTOW | Flight Controller | Quelle |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **PX4 Quadplane-Reference** | 1,2 m | ~3 kg | Pixhawk + PX4 | [discuss.px4.io/37557](https://discuss.px4.io/t/4-1-vtol-drone-1-2-meter-wingspan-looking-for-feedback/37557) |
 | **Quanum-Observer Quadplane (Instructables)** | 2,0 m | 4,8 kg | Pixhawk APM 3.6 | [instructables.com](https://instructables.com/id/Quadplane-Hybrid-Drone) |
 | **FX-79 Buffalo QuadPlane Conversion** | 2,0 m | ~5 kg | APM / Pixhawk | [discuss.ardupilot.org/34493](https://discuss.ardupilot.org/t/fx-79-buffalo-quadplane-conversion-part-2/34493) |
@@ -100,7 +100,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### Akku- und Energie-Daten
 
 | Modell | Akku-Typ | Konfiguration | Wh | Flugzeit ohne Payload | Flugzeit mit Payload | Ladezeit |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | **DeltaQuad Evo** | Semi-Solid-State Li-Ion | 6S, 22 Ah (×2) | ~270 Wh/Akku | 272 min | 110 min (1 kg) | n/a |
 | **T-DRONES VA23** | LiPo / Li-Ion | 12S 22–30 Ah | ~880–1200 Wh | 240 min | 180 min (1,5 kg) | n/a |
 | **Autel Dragonfish Lite** | Smart-Battery Li-Ion | n/a | 277 Wh (1×) | 81 min | 75 min (1 kg) | 120 min |
@@ -113,7 +113,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### Betriebstemperatur & Schutzklassen
 
 | Modell | Operating Temp | IP-Rating | Wind-Toleranz sustained | Wind-Toleranz Böen |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **DeltaQuad Evo** | −20 °C bis +45 °C | nicht spezifiziert | 12,5 m/s | 14 m/s cruise |
 | **T-DRONES VA23** | −10 °C bis +40 °C | n/a | "Level 5" (~10 m/s) | n/a |
 | **Autel Dragonfish alle** | −20 °C bis +50 °C | **IP43** | 15 m/s (FW) | n/a |
@@ -124,7 +124,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### Autopilot & Software-Stack
 
 | Modell | Autopilot | GCS | Open-Source? | SDK / API |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | **DeltaQuad Evo/Pro** | PX4 (Pixhawk-Ökosystem) | QGroundControl | Ja (PX4) | MAVLink |
 | **T-DRONES VA23** | PX4 / Ardupilot-kompatibel | QGroundControl | Ja | MAVLink |
 | **Autel Dragonfish** | Autel-eigener FC | Autel Voyager | **Nein** (Closed) | Autel-API |
@@ -136,7 +136,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### Payload-Optionen
 
 | Modell | Payload-Bay | Standard-Sensoren | Thermal | Multi-Spectral | LiDAR |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | **DeltaQuad Evo** | 20 × 20 × 11 cm, dual | EO/IR-Kombinationen, 61MP Sony A7R IV | Ja (gimbal) | Ja | Ja (verschiedene) |
 | **T-DRONES VA23** | n/a spezifiziert | Kameras, Gimbal | optional | optional | optional |
 | **Autel Dragonfish** | Schnellverschluss (toolless) | L20T (4K + Thermal + LR), L50T | Ja | Nein (Standard) | Lidar-Optionen |
@@ -161,7 +161,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### Konsequenz für alle Marktteilnehmer
 
 | Kategorie | Plattformen | Regulatorischer Status |
-|---|---|---|
+| --- | --- | --- |
 | **C-Class VTOL (C5/C6)** | (noch) keine | — |
 | **Specific Category (LBA + SORA pro Betreiber)** | WingtraOne, DeltaQuad Pro/Evo, Autel Dragonfish, JOUAV CW-15, Quantum Trinity | Jeder Betreiber braucht eigene SORA-Genehmigung |
 | **STS-01/STS-02 (BVLOS mit C5/C6-Drohne)** | noch nicht für VTOL/Festflügler nutzbar | C5/C6 fehlt |
@@ -171,7 +171,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### EASA-Klassen-Grenzwerte (zur Einordnung Hermes-VTOL)
 
 | Klasse | Max MTOM | Max Speed (C6) | Betrieb |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | C0 | <250 g | – | Open, keine Registrierung |
 | C1 | <900 g | – | Open, A1/A3 |
 | C2 | <4 kg | – | Open, A1/A2/A3 |
@@ -188,7 +188,7 @@ Die Vergleichsringe sind deshalb so gewählt, dass Hermes-VTOL entweder direkter
 ### Marktsegment-Preisspanne (USD, ohne Sensorik)
 
 | Marktsegment | Preisspanne | Konkurrenz-Modelle |
-|---|---|---|
+| --- | --- | --- |
 | **Hobbyklasse / DIY** | <$5.000 | Lidl-Glider, Eigenbau (PX4/Ardupilot) |
 | **Entry Commercial** | **$8.000–20.000** | T-DRONES VA23, DeltaQuad Pro, senseFly eBee X |
 | **Mid Commercial (Zielgruppe Hermes)** | **$20.000–40.000** | WingtraOne Gen II, Quantum Trinity Pro, JOUAV CW-15 |
@@ -208,7 +208,7 @@ Mit MTOW ~16 kg, 4 austauschbaren Payload-Containern + Universal-Modul, Quadplan
 ## Architektur-Anleihen für Hermes-VTOL
 
 | Hermes-VTOL-Designwahl | Beste Referenz | Übernommene Eigenschaft |
-|---|---|---|
+| --- | --- | --- |
 | Pusher-Quadplane (~2 m, CFK) | **T-DRONES VA23** | Größenklasse, CFK-Bauweise, günstige Lern-Referenz |
 | 4 austauschbare Payload-Container | **DeltaQuad Pro** (#MAP/#VIEW/#CARGO) | Mission-Segmentierung als Vorbild, aber **funktionalere Container** statt nur Kamera-Tausch |
 | IP43/IP54, Wind 12–15 m/s | **JOUAV CW-15 / Dragonfish** | Wind-Toleranz und IP-Schutzklassen sind Industriestandard |

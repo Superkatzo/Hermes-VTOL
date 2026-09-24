@@ -5,7 +5,7 @@ Visuelle Dokumentation.
 ## Inhalt
 
 | Ordner | Zweck |
-|--------|-------|
+| -------- | ------- |
 | **CAD_Renderings/** | Exportierte Renderings aus Fusion 360 |
 | **Prototyp_Fotos/** | Fotos vom realen Prototypen-Bau |
 | **Marketing/** | Präsentationen, Konzeptbilder |

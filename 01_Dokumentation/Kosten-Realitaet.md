@@ -10,7 +10,7 @@
 Es gibt **drei große Blöcke**, die du trennen musst:
 
 | Block | Was | Wann | Niedrig | Mittel | Hoch |
-|-------|-----|------|--------|--------|------|
+| ------- | ----- | ------ | -------- | -------- | ------ |
 | **Block A** | CAD + Engineering | laufend | €500 | €1.5k | €3k |
 | **Block B** | Prototyp + Werkstatt | 0-6 Monate | €13k | €30k | €53k |
 | **Block C** | Regulatorik + Recht | 6-12 Monate | €10k | €24k | €48k |
@@ -24,7 +24,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ## 📦 Block A: CAD und Engineering-Software
 
 | Posten | Was | Wann | Niedrig | Mittel | Hoch |
-|--------|-----|------|--------|--------|------|
+| -------- | ----- | ------ | -------- | -------- | ------ |
 | **Fusion 360** (Standard-Lizenz) | CAD/CAM/FEM | dauerhaft | €500/Jahr | €600/Jahr | €1.500/Jahr (höhere Stufe) |
 | **XFLR5** | Profil-Analyse | dauerhaft | €0 (kostenlos) | €0 | €0 |
 | **OpenVSP** | Konzept-Geometrie | dauerhaft | €0 | €0 | €0 |
@@ -41,7 +41,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### B.1 Werkstatt-Equipment (einmalig)
 
 | Equipment | Preis |
-|-----------|-------|
+| ----------- | ------- |
 | **3D-Drucker** (z.B. Bambu Lab X1E, Prusa MK4) | €800 – €2k |
 | **Lötstation** + Zubehör | €150 – €500 |
 | **Multimeter + Oszilloskop** | €200 – €2k |
@@ -56,7 +56,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### B.2 Material-Prototyp 1 (ein Prototyp)
 
 | Material | Was | Niedrig | Mittel | Hoch |
-|----------|-----|--------|--------|------|
+| ---------- | ----- | -------- | -------- | ------ |
 | **CFK-Gewebe** (T800) | 1-3 Lagen je Fläche | €1k | €3k | €6k |
 | **Schaumkern / Nomex-Waben** | Sandwich-Kern | €500 | €2k | €5k |
 | **Epoxid-Harz + Härter** | + 50% Sicherheit | €300 | €1k | €2k |
@@ -84,7 +84,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### B.3 Verschleiß + Unerwartetes
 
 | Posten | Kosten |
-|--------|--------|
+| -------- | -------- |
 | **Reparatur-Set** (Crash + Verbrauch) | €300 – €1k |
 | **Werkstatt-Betriebskosten** (Strom, Wasser, Verschleiß) | €500 – €2k |
 | **Verschiedenes** (Schutzbrillen, Handschuhe, Absaugung) | €200 – €500 |
@@ -100,7 +100,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### C.1 Regulatorische Compliance (C3-Klasse)
 
 | Posten | Wer | Niedrig | Mittel | Hoch |
-|--------|-----|--------|--------|------|
+| -------- | ----- | -------- | -------- | ------ |
 | **C3-Konformitätsbewertung** | intern | €0 | €2k | €6k |
 | **EMV-Test** (elektromagnetische Verträglichkeit) | externes Labor | €2k | €4k | €7k |
 | **Funk-Konformitätstest** (RED-Richtlinie) | externes Labor | €1k | €3k | €6k |
@@ -114,7 +114,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### C.2 Dokumentation
 
 | Posten | Wer | Niedrig | Mittel | Hoch |
-|--------|-----|--------|--------|------|
+| -------- | ----- | -------- | -------- | ------ |
 | **Bedienungsanleitung** (DE+EN) | du / extern | €1k | €3k | €8k |
 | **Wartungs-Plan** | du | €200 | €500 | €1k |
 | **Risiko-Analyse (FMEA)** | du / Berater | €0 | €2k | €8k |
@@ -127,7 +127,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### C.3 Rechtliches
 
 | Posten | Kosten |
-|--------|--------|
+| -------- | -------- |
 | **Rechtsbeistand für AGB** | €2k – €8k |
 | **Produkthaftpflicht-Versicherung** (Initial + Jahr 1) | €500 – €2.000 |
 | **Berufshaftpflicht-Versicherung** (Initial + Jahr 1) | €300 – €1k |
@@ -142,7 +142,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ## 🔁 Block D: Laufende Kosten (ab Verkauf)
 
 | Posten | Niedrig | Mittel | Hoch |
-|--------|--------|--------|------|
+| -------- | -------- | -------- | ------ |
 | **Produkthaftpflicht** (jährlich) | €500 | €1.000 | €2.000 |
 | **Berufshaftpflicht** | €300 | €600 | €1.000 |
 | **Inhaltsversicherung Werkstatt** | €400 | €800 | €1.500 |
@@ -159,7 +159,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### Initiale Investition (Monate 0-12)
 
 | Szenario | Was du tust | Gesamt |
-|----------|-------------|--------|
+| ---------- | ------------- | -------- |
 | **🏠 Hobby-Phase** | alles selbst, kein Anwalt, eigene Tests | **€24k** |
 | **🔧 Pragmatisch** | einige externe Tests, eigene Doku | **€58k** |
 | **🏢 Semi-professionell** | Berater, alle externen Tests | **€108k** |
@@ -168,7 +168,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### Zeitliche Verteilung
 
 | Phase | Monate | Kosten |
-|-------|--------|--------|
+| ------- | -------- | -------- |
 | **Phase 1: Konzept + CAD** | 1-3 | ~€1k (deine Zeit + Tools) |
 | **Phase 2: Prototyp 1** | 3-6 | ~€10k |
 | **Phase 3: Test-Flüge** | 6-8 | ~€2k |
@@ -184,7 +184,7 @@ Es gibt **drei große Blöcke**, die du trennen musst:
 ### 💡 Cashflow-Optimierung
 
 | Tipp | Spart dir |
-|------|----------|
+| ------ | ---------- |
 | **Eigene Tests** (soweit möglich) | EMV ~€2-4k |
 | **Anwalt nur für AGB** (nicht für alles) | ~€5k |
 | **Marketing-Inhalte selbst** (GitHub-Pages) | ~€5k |
@@ -202,7 +202,7 @@ Wenn du **€30k** in der Tasche hast, kannst du starten. Wenn du **€80k** wil
 ## 🚨 Was noch nicht in der Rechnung ist
 
 | Posten | Warum nicht inkludiert |
-|--------|----------------------|
+| -------- | ---------------------- |
 | **Deine eigene Lebenshaltung** | das ist eine andere Rechnung |
 | **Steuerberater** | ab Gewerbeanmeldung |
 | **Gewerbeanmeldung** | ~€30-100 (Stadt, je nach Gemeinde) |
@@ -217,12 +217,12 @@ Wenn du **€30k** in der Tasche hast, kannst du starten. Wenn du **€80k** wil
 ## 📂 Bezug zu Original-Dokumenten
 
 | Was | Wo nachlesen |
-|-----|--------------|
+| ----- | -------------- |
 | **C3-Anforderungen** | EU-VO 2019/945, Annex |
 | **SORA-Vorlage** | JARUS SORA 2.5 Main Body |
 | **EMV-Anforderungen** | EU-VO 2019/945, ETSI EN 303 358 |
 | **Akkus** (UN-38.3) | UNECE Manual of Tests and Criteria |
-| **Fallschirm** (ASTM F3322) | https://www.astm.org/f3322-22.html |
+| **Fallschirm** (ASTM F3322) | <https://www.astm.org/f3322-22.html> |
 
 ---
 

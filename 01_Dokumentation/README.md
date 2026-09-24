@@ -5,7 +5,7 @@ Vollständige Projektdokumentation, gegliedert nach Dokumenttyp.
 ## Inhalt
 
 | Ordner | Zweck |
-|--------|-------|
+| -------- | ------- |
 | **Lastenheft/** | Anforderungskatalog (Ziel: was wollen wir bauen) — siehe v1.1 |
 | **Pflichtenheft/** | Technische Spezifikation (Wie setzen wir es um) — folgt nach CAD-Konzept |
 | **SORA/** | Specific Operations Risk Assessment für EU-Zulassung |

@@ -4,6 +4,7 @@
 > Diese Liste wird **bei jeder Erwähnung im Chat** ergänzt: einfach „speichere dies für später" sagen.
 
 **Verwendung:**
+
 - Neue Tasks unten anhängen
 - Erledigte mit `[x]` markieren (nicht löschen — Historie behalten)
 - Cron-Jobs können einzelne Sektionen automatisieren
@@ -14,6 +15,7 @@
 ## 🔴 Aktuell in Arbeit (Heute / Morgen)
 
 ### Job #0 — Komplett auf VPS umstellen (SECURITY, 2026-09-22)
+
 - [ ] **MiniMax-Account auf VPS-Hermes ist der einzige** — kein lokaler MiniMax-Login mehr auf PC/Laptop
 - [ ] **Hermes-Desktop-App auf PC: VPS-Profil nutzen** (nicht lokales Profil) — Desktop-App wird zum reinen Client
 - [ ] **Hermes-Desktop-App auf Laptop: VPS-Profil nutzen** — Laptop darf KEINEN direkten MiniMax-Zugang haben
@@ -23,6 +25,7 @@
 - [ ] **Containment-Ziel erreicht:** Agent-Bugs beschränken sich auf VPS, niemals auf PC/Laptop
 
 ### Job #1 — Experten-Bot-Team für VTOL (2026-09-22)
+
 - [ ] **Aero-Wing-Bot erstellen** — Persona: Aerodynamik + Profil-Design (Tragflügel, XFLR5, OpenVSP, Polaren, Reynolds, Stall, Böen-Lasten). Verweist bei Struktur/Antrieb/Avionik auf andere Bots.
 - [ ] **Regulatory-Bot erstellen** — Persona: Regulatorik + Zulassung (EU/EASA, USA/FAA, SORA, Pilot-Lizenzen, Versicherung, Drohnenklassen). Verweist bei technischen Fragen auf andere Bots.
 - [ ] **Profile in Hermes anlegen** (VPS bevorzugt nach Job #0)
@@ -31,6 +34,7 @@
 - [ ] **Erste echte Fragen** testen (Aero: „vergleich 4 Profile", Regulatory: „was gilt für 16 kg in DE?")
 
 ### Laufende Aufgaben
+
 - [x] **SSH-Tunnel auf PC automatisieren** (Scheduled Task) — `Hermes-Tunnel-Auto.bat` getestet, Port 32769 erkannt, Tunnel steht auf :8080, HTTP 302 von Hermes-UI. Scheduled-Task noch manuell anzulegen.
 - [x] **Telegram-Bot** vollständig testen (mehrere Nachrichten senden) — Test-Nachrichten bestätigt
 - [x] **Memory-Persistenz** testen — Ergebnis dokumentiert, Befund: Repo-Dateien bevorzugen
@@ -77,6 +81,7 @@
 ## 🟢 VTOL-Design (laufendes Projekt)
 
 ### Aerodynamik
+
 - [ ] **Profil-Vergleich** mit XFLR5: Wortmann FX 63-137 vs. NACA 4412 vs. Eppler 423
 - [ ] **OpenVSP-Modell** aufbauen (Flügel + Rumpf + Ausleger)
 - [ ] **Polaren-Berechnung** für 4 Profile (CL, CD, CM bei Re=300000)
@@ -84,6 +89,7 @@
 - [ ] **Böen-Lasten** nach ECS / DIN 8947
 
 ### Struktur (CFK)
+
 - [ ] **Materialauswahl** T800 vs. T700 vs. M40J (Festigkeit/Gewicht/Kosten)
 - [ ] **Laminat-Aufbau** definieren (Biax/Unidirectional-Verhältnis)
 - [ ] **Holm-Dimensionierung** (statische + dynamische Lasten)
@@ -92,6 +98,7 @@
 - [ ] **FEM-Analyse** mit Fusion 360 oder ANSYS
 
 ### Antrieb
+
 - [ ] **Motor-Auswahl** final (T-Motor P60 KV170 vs. MN501-S KV340 vs. KDE)
 - [ ] **Propeller-Dimensionierung** (15×8 Klappprop?)
 - [ ] **Akku-Konfiguration** final (14S3P vs. 14S4P, Molicel P45B vs. Samsung 40T)
@@ -99,6 +106,7 @@
 - [ ] **Reichweiten-Berechnung** (effektiver Verbrauch, Reserve)
 
 ### Avionik & Software
+
 - [ ] **Flight-Stack-Entscheidung** (PX4 vs. ArduPilot)
 - [ ] **Companion-PC-Auswahl** (NVIDIA Jetson Orin NX 16GB)
 - [ ] **KI-Modell** für Object-Detection (YOLOv8?)
@@ -106,6 +114,7 @@
 - [ ] **Telemetrie-Cloud** (an VPS anbinden)
 
 ### Payload-Module
+
 - [ ] **M1 SAR-Modul** (Thermal, Personenerkennung)
 - [ ] **M2 Wildschutz-Modul** (Multispektral, Tiererkennung)
 - [ ] **M3 Behörden-Modul** (Kamera + LiDAR)
@@ -117,6 +126,7 @@
 ## 🔵 Regulatorik & Zulassung (für Regulatory-Bot)
 
 ### EU (EASA)
+
 - [ ] **Drohnenklassen** (C0-C6) und Pflichten
 - [ ] **MTOM-Klassifizierung** (aktuell 16 kg → Kategorie „offen" oder „speziell"?)
 - [ ] **SORA-Pfad** (Specific Operations Risk Assessment)
@@ -125,12 +135,14 @@
 - [ ] **Versicherungs-Pflichten**
 
 ### USA (FAA)
+
 - [ ] **Part 107** (Commercial Drone Operations)
 - [ ] **Remote ID** (Compliance ab 2023)
 - [ ] **Waivers** (für BVLOS, Nacht, Personen)
 - [ ] **LAANC** (Low Altitude Authorization)
 
 ### International
+
 - [ ] **Versicherungs-Vergleich** (HDI, Allianz, Drone-Guard)
 - [ ] **Export-Kontrolle** (falls Komponenten aus USA)
 
@@ -166,7 +178,7 @@
 ## 📊 Status-Übersicht
 
 | Bereich | Erledigt | Offen | Total |
-|---------|----------|-------|-------|
+| --------- | ---------- | ------- | ------- |
 | VPS & Infrastruktur | 11 | 3 | 14 |
 | Hermes-Setup | 5 | 3 | 8 |
 | VTOL-Design | 0 | 26 | 26 |

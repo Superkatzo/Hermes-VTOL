@@ -5,11 +5,11 @@
 ## Diese Nacht (22:00–23:30 MESZ) — Was wir gemacht haben
 
 | # | Aktion | Status | Datei/Commit |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Telegram-Sidecar-Pipeline getestet | ✅ 3 Messages → 3 GitHub-Commits | — |
 | 2 | Token-Permission-Bug behoben (fine-grained PAT, push=false → push=true) | ✅ | — |
 | 3 | Token in Container-`.env` als `GITHUB_PAT=...` | ✅ | — |
-| 4 | `telegram_to_github.sh` umgeschrieben (HTTPS+PAT statt SSH) | ✅ Commit `eb2addc` |
+| 4 | `telegram_to_github.sh` umgeschrieben (HTTPS+PAT statt SSH) | ✅ | `eb2addc` |
 | 5 | Scheduled Task `Hermes-Tunnel-Auto` angelegt | ✅ Tunnel funktioniert (HTTP 302) | — |
 | 6 | Skill `vtol-experte` erweitert (5 neue Sektionen) | ✅ lokal, 15 KB, 19 Sektionen | — |
 | 7 | `Drohnenklasse_C0_bis_C6.md` erstellt | ✅ gepusht | Commit `73933be` |
@@ -23,7 +23,7 @@
 ## Offene Punkte
 
 | # | Was | Status |
-|---|---|---|
+| --- | --- | --- |
 | Hauptbot auf Webhook umstellen | Langfristige Lösung Sidecar-Konflikt, **nicht kurzfristig** | ⚠️ offen |
 | Memory-Konsolidierung | Memory 4.252/2.200 (193 % überfüllt) | ⚠️ blockiert (vom Tool) |
 | Repo-Review | einmaliger Reminder-Cronjob am **30.09.2026 10:00 MESZ** | ⏳ geplant |
@@ -37,7 +37,7 @@ ssh hermes-vps
 python3 /home/hermes/telegram_sidecar.py --force
 # ... wenn fertig:
 # Ctrl+C
-```
+```text
 
 Nur wenn du aktiv vom Handy "speichere X" schicken willst. Sonst ignorieren.
 

@@ -5,7 +5,7 @@ Live-Konfiguration des produktiven Hermes-VPS (Stand: aktiv).
 ## Server-Übersicht
 
 | Element | Wert |
-|---------|------|
+| --------- | ------ |
 | **Anbieter** | Hostinger |
 | **Plan** | KVM 1 |
 | **Standort** | Deutschland |
@@ -18,7 +18,7 @@ Live-Konfiguration des produktiven Hermes-VPS (Stand: aktiv).
 ## Zugang
 
 | Methode | Befehl |
-|---------|--------|
+| --------- | -------- |
 | **SSH (Standard)** | `ssh hermes-vps` |
 | **SSH mit Hostname** | `ssh srv1998925` |
 | **Tunnel für UI** | `ssh -L 8080:127.0.0.1:32768 -N hermes-vps` |
@@ -27,7 +27,7 @@ Live-Konfiguration des produktiven Hermes-VPS (Stand: aktiv).
 ## LLM-Konfiguration
 
 | Element | Wert |
-|---------|------|
+| --------- | ------ |
 | **Provider** | `minimax-oauth` |
 | **Modell** | `MiniMax-M3` |
 | **Endpunkt** | `https://api.minimax.io/anthropic` |
@@ -37,7 +37,7 @@ Live-Konfiguration des produktiven Hermes-VPS (Stand: aktiv).
 ## Sicherheit
 
 | Aspekt | Status |
-|--------|--------|
+| -------- | -------- |
 | **Root-Login** | deaktiviert |
 | **Passwort-Login** | deaktiviert |
 | **SSH-Key-Auth** | aktiv (ed25519) |
@@ -58,7 +58,7 @@ Live-Konfiguration des produktiven Hermes-VPS (Stand: aktiv).
 Hermes komprimiert automatisch den Kontext:
 
 | Setting | Wert |
-|---------|------|
+| --------- | ------ |
 | **Enabled** | ja |
 | **Threshold** | 50 % des Token-Caps |
 | **Token-Cap** | 256.000 Tokens |
@@ -70,7 +70,7 @@ Hermes komprimiert automatisch den Kontext:
 ## Persistente Pfade
 
 | Pfad im Container | Pfad auf VPS |
-|-------------------|-------------|
+| ------------------- | ------------- |
 | `/opt/data/config.yaml` | `/docker/hermes-agent-ekgx/data/config.yaml` |
 | `/opt/data/.env` | `/docker/hermes-agent-ekgx/data/.env` |
 | `/opt/data/SOUL.md` | `/docker/hermes-agent-ekgx/data/SOUL.md` |
@@ -85,7 +85,7 @@ sudo docker exec hermes-agent-ekgx-hermes-agent-1 /opt/hermes/bin/hermes <comman
 
 # Interaktive Shell:
 sudo docker exec -it hermes-agent-ekgx-hermes-agent-1 /bin/bash
-```
+```text
 
 ## Nächste Schritte
 

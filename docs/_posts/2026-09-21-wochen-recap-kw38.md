@@ -6,7 +6,7 @@ categories: wochenrecap
 excerpt: "Diese Woche: ConOps-Vorlage-SAR.md veröffentlicht, fünf regulatorische Dokumente gesammelt, Telegram-Cron-Monitoring für den VPS aufgesetzt. Plus: Strategie-Wechsel vom Piloten zum Hersteller."
 ---
 
-# Wochen-Recap KW 38 / 2026
+## Wochen-Recap KW 38 / 2026
 
 > Eine produktive Woche zwischen regulatorischer Tiefenarbeit und System-Aufbau.
 
@@ -39,7 +39,7 @@ Die **wichtigste Woche-Arbeit**: Eine **„Plug-and-Play"-ConOps-Vorlage** für 
 
 ```text
 Wert für Käufer: Spart 4-8 Wochen Arbeit + €5-10k Berater-Kosten
-```
+```text
 
 → [ConOps-Vorlage-SAR.md](https://github.com/Superkatzo/Hermes-VTOL/blob/main/01_Dokumentation/ConOps-Vorlage-SAR.md)
 
@@ -48,7 +48,7 @@ Wert für Käufer: Spart 4-8 Wochen Arbeit + €5-10k Berater-Kosten
 Wir haben die Kosten **transparent** aufgeschlüsselt:
 
 | Kategorie | Niedrig | Mittel | Hoch |
-|-----------|--------|--------|------|
+| ----------- | -------- | -------- | ------ |
 | **Initial gesamt** | €24k | €58k | €108k+ |
 | CAD + Software (laufend) | €500/Jahr | €1.5k/Jahr | €3k/Jahr |
 | Versicherungen | €1.2k/Jahr | €2.5k/Jahr | €4.5k/Jahr |
@@ -62,7 +62,7 @@ Wir haben die Kosten **transparent** aufgeschlüsselt:
 Heute Abend habe ich ein **9-Cronjob-Monitoring-System** aufgesetzt:
 
 | Job | Intervall | Was |
-|-----|-----------|-----|
+| ----- | ----------- | ----- |
 | `check_self_ssh.sh` | 10 min | SSH-Daemon-Status |
 | `vps_monitor.sh` | 15 min | Disk, RAM, Load, Backups |
 | `check_connectivity.sh` | 30 min | Telegram, GitHub, MiniMax |
@@ -82,7 +82,7 @@ Test-Alerts wurden verifiziert — **4 Test-Nachrichten erfolgreich empfangen**.
 ## 🔮 Was als Nächstes kommt
 
 | KW 39 Plan | Was |
-|------------|-----|
+| ------------ | ----- |
 | **CAD-Phase startet** | Erste Komponenten in Fusion 360 |
 | **MySQL-Verschiebung** | VPS-Architektur für Käufer-Vorlagen-API |
 | **Newsletter-Wochen-Rhythmus etablieren** | dieser Artikel wird Pattern |
