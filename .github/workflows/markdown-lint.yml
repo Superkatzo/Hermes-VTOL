@@ -6,7 +6,6 @@ on:
     paths:
       - '**.md'
     paths-ignore:
-      # SPAM-FIX 2026-09-24: Todo-/Chronik-Commits loesen keinen Lint mehr aus
       - '01_Dokumentation/Todos/**'
       - 'docs/_posts/**'
       - 'CHANGELOG.md'
