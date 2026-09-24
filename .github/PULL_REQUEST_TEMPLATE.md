@@ -1,4 +1,4 @@
-## Zusammenfassung
+# Zusammenfassung
 
 Kurze Beschreibung der Änderungen.
 
