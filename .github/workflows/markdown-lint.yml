@@ -5,8 +5,19 @@ on:
     branches: [main]
     paths:
       - '**.md'
+    paths-ignore:
+      # SPAM-FIX 2026-09-24: Todo-/Chronik-Commits loesen keinen Lint mehr aus
+      - '01_Dokumentation/Todos/**'
+      - 'docs/_posts/**'
+      - 'CHANGELOG.md'
   pull_request:
     branches: [main]
+    paths:
+      - '**.md'
+    paths-ignore:
+      - '01_Dokumentation/Todos/**'
+      - 'docs/_posts/**'
+      - 'CHANGELOG.md'
 
 jobs:
   lint:
