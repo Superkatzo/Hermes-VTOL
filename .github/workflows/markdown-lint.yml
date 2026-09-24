@@ -3,20 +3,8 @@ name: Markdown Lint
 on:
   push:
     branches: [main]
-    paths:
-      - '**.md'
-    paths-ignore:
-      - '01_Dokumentation/Todos/**'
-      - 'docs/_posts/**'
-      - 'CHANGELOG.md'
   pull_request:
     branches: [main]
-    paths:
-      - '**.md'
-    paths-ignore:
-      - '01_Dokumentation/Todos/**'
-      - 'docs/_posts/**'
-      - 'CHANGELOG.md'
 
 jobs:
   lint:
@@ -33,11 +21,24 @@ jobs:
       - name: Install markdownlint
         run: npm install -g markdownlint-cli
 
-      - name: Run markdownlint
+      - name: Run markdownlint (excluding TODO/, blog/, CHANGELOG.md)
         run: |
-          markdownlint '**/*.md' \
+          set -e
+          # Nur "echte" Doku-MDs linten - TODOs, Blog-Posts und CHANGELOG ausschliessen
+          FILES=$(find . -type f -name '*.md' \
+            -not -path './node_modules/*' \
+            -not -path './.git/*' \
+            -not -path '*/build/*' \
+            -not -path './01_Dokumentation/Todos/*' \
+            -not -path './docs/_posts/*' \
+            -not -name 'CHANGELOG.md')
+          if [ -z "$FILES" ]; then
+            echo "Keine MD-Dateien zum Linten."
+            exit 0
+          fi
+          echo "$FILES" | tr ' ' '\n'
+          markdownlint $FILES \
             --disable MD013 \
             --disable MD024 \
             --disable MD033 \
-            --disable MD060 \
-            --ignore build/
+            --disable MD060
